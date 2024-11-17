@@ -1,0 +1,141 @@
+.navbar-brand {
+  margin-right: 10%;
+
+}
+
+#logo {
+  font-family: Corinthia;
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+  margin-left: 70%;
+  margin-right: 70%
+}
+
+.nav-link {
+  font-weight: 300;
+  margin-top: 35%;
+  margin-right: 4%;
+  margin-left: 13%;
+}
+
+
+
+#dr-flag {
+  height: 15px;
+  margin-top: -40px;
+}
+
+.logo-bottom {
+  margin-top: -20px;
+}
+
+
+.nav-item {
+  margin-top: 20%;
+}
+
+.navbar-brand {
+  margin-left: 2%;
+  font-family: Corinthia;
+  font-size: x-large;
+
+}
+
+#address {
+  margin-top: 15%;
+  margin-bottom: 20%;
+  font-size: xx-large;
+  font-weight: 200;
+  text-align: center;
+  padding-right: 2%;
+}
+
+.card {
+  background-image: url('public/dr-flag-sms.png');
+  background-repeat: no-repeat;
+  margin-top: 10%;
+  margin-left: 40%;
+  width: 300px;
+  /* Define a width */
+  height: 200px;
+  /* Define a height */
+  background-size: 100%;
+  /* Ensure the image covers the element */
+  overflow: hidden;
+
+}
+
+
+
+.card:hover .hours ul {
+  background-image: none;
+  visibility: visible;
+  opacity: 1;
+  /* Fully visible on hover */
+  transition: opacity 3.0s ease, transform 0.3s ease;
+  ;
+
+
+}
+
+.hours ul {
+  margin-top: 10%;
+  margin-bottom: 20%;
+  transition: opacity 3s ease, transform 0.5s ease;
+  /* Smooth fade effect */
+  visibility: hidden;
+  opacity: 0;
+  display: inline;
+  list-style-type: none;
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+}
+
+#booking-button {
+  margin-top: 5%;
+  margin-left: 42%;
+  text-decoration: none;
+  color: black;
+}
+
+#booking-button:hover {
+  opacity: 50%;
+}
+
+#arrow {
+  height: 20px;
+  margin-top: 5%;
+}
+
+#carouselExampleFade2 {
+  background-attachment: fixed; /* Parallax effect */
+  /* Fixes the image in place */
+}
+
+.logo{
+  height: 40px;
+  margin-right: 10%;
+  margin-left: 10%;
+  
+
+}
+
+
+#footer{
+  text-align: center;
+  margin-bottom: 30%;
+  margin-top: 10%;
+}
+
+#copyrite{
+  margin-left: 98%;
+  margin-bottom: 1%;
+  writing-mode: vertical-rl; /* Makes text vertical */
+  text-orientation: upright; /* Ensures letters stay upright */
+  font-family: honk;
+}
+.copyrite-logo{
+  height: 8px;
+}
