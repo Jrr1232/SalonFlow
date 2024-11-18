@@ -3,7 +3,7 @@ import React from "react";
 function Card() {
     return (
         <>
-            <div className="card" style={{ width: "17rem" }}>
+            <div className="card" style={{ width: "17rem" }} id ="hourcard">
                 <div className="card-body">
                     <div className="hours" style={{ display: 'flex' }}>
                         <ul>
