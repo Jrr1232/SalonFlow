@@ -5,7 +5,6 @@ import Offcanvas from "./offcanvas";
 function Body() {
     return (
         <>
-
             <Card />
             <Offcanvas />            
             <hr id="hours-divider"></hr>

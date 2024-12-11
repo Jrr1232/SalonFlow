@@ -1,4 +1,15 @@
+#root {
+  background-color: rgba(247, 247, 247, 0);
+  background-image: url("/bright-light-black-background_23-2148132465.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* navbar */
+
+#navbar-header {
+height: 50 px;
+}
 
 .navbar-brand {
   margin-right: 10%;
@@ -26,8 +37,9 @@
 /* logo */
 
 #dr-flag {
-  height: 15px;
   margin-top: -40px;
+  height: 15px;
+
 }
 
 .logo-bottom {
@@ -45,39 +57,31 @@
 
 /* Hours */
 
+
+
 #hourcard {
+  margin-top: 10%;
+  margin-left: 42%;
+  width: 300px;
+  height: 200px;
+  background-size: 100%;
   background-image: url('public/dr-flag-sms.png');
   background-repeat: no-repeat;
-  margin-top: 10%;
-  margin-left: 40%;
-  width: 300px;
-  /* Define a width */
-  height: 200px;
-  /* Define a height */
-  background-size: 100%;
-  /* Ensure the image covers the element */
   overflow: hidden;
 
 }
-
-
 
 #hourcard:hover .hours ul {
   background-image: none;
   visibility: visible;
   opacity: 1;
-  /* Fully visible on hover */
-  transition: opacity 3.0s ease, transform 0.3s ease;
-  ;
-
-
+  transition: opacity 2.0s ease, transform 0.3s ease;
 }
 
 .hours ul {
   margin-top: 10%;
   margin-bottom: 20%;
   transition: opacity 3s ease, transform 0.5s ease;
-  /* Smooth fade effect */
   visibility: hidden;
   opacity: 0;
   display: inline;
@@ -89,10 +93,10 @@
 
 /* Divider */
 
-#hours-divider{
+#hours-divider {
   color: red;
   margin-top: 150px;
-  border: 1.5px solid gray; 
+  border: 1.5px solid gray;
   width: 90%;
   margin-left: 5%;
 }
@@ -100,21 +104,24 @@
 /* Address  */
 
 #address {
-  margin-top: 15%;
-  margin-bottom: 20%;
-  font-size: xx-large;
+  margin-top: 20%;
+  margin-bottom: 10%;
+  font-size: 50px;
   font-weight: 200;
   text-align: center;
   padding-right: 2%;
+  color: aliceblue;
 }
 
 /* Booking Button */
 
 #booking-button {
-  margin-top: 5%;
-  margin-left: 42%;
+  margin-top: 3%;
+  margin-left: 39%;
   text-decoration: none;
-  color: black;
+  color: rgb(242, 243, 243);
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #booking-button:hover {
@@ -122,15 +129,15 @@
 }
 
 #arrow {
-  height: 20px;
-  margin-top: 5%;
+  height: 40px;
+  margin-top: 3%;
 }
 
 /* Offcanvas */
 
 /* log in Button */
 
-#login{
+#login {
   height: 35px;
   margin-left: 90px;
   margin-bottom: 40px;
@@ -138,12 +145,12 @@
   border: 0px;
 }
 
-#dropdownMenuButton{
+#dropdownMenuButton {
   border-radius: 5px;
   border: 0px;
 }
 
-#login-link{
+#login-link {
   text-decoration: none;
   color: black;
   font-weight: 350;
@@ -191,7 +198,7 @@
   background-color: rgba(0, 0, 0, 0.679);
   text-align: center;
   margin-left: 20%;
-  margin-top: 10%;
+  margin-top: 25%;
   display: flex;
   flex-wrap: wrap;
   height: 320px;
@@ -216,11 +223,15 @@
   margin-bottom: 1px;
 }
 
+/* Sign In/Sign up Title */
+
+
+
 /* Email/Password field */
 
 #email {
   margin-bottom: 20px;
-  
+
 
 }
 
@@ -290,7 +301,7 @@ hr {
   background-color: rgba(0, 0, 0, 0.679);
   text-align: center;
   margin-left: 20%;
-  margin-top: 10%;
+  margin-top: 25%;
   display: flex;
   flex-wrap: wrap;
   height: 420px;
@@ -302,7 +313,7 @@ hr {
 
 .forms {
   display: flex;
-  
+
 }
 
 /* Username field */
@@ -317,7 +328,7 @@ hr {
 #username-form {
   margin-top: 20px;
   margin-right: 80px;
-  
+
 
 }
 
@@ -329,7 +340,7 @@ hr {
   width: 130px;
   border-radius: 2px;
   border: 0px;
-  
+
 }
 
 #firstname-form {
@@ -395,4 +406,115 @@ hr {
 #name-field {
   display: flex;
 
+}
+
+
+/* SCROLL Text 1*/
+
+#scroll-container1 {
+  display: flex;
+  margin-bottom: 0px;
+  background-color: rgb(217, 129, 0);
+  overflow-x: hidden;
+  position: relative;
+  z-index: 10;
+  height: 300px;
+  width: 100%;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+#scroll-container1:hover .background-video {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease, visibility 0s 0s;
+  font-size: x-large;
+  color: aliceblue;
+
+}
+
+#scroll-container1:hover p {
+  color: aliceblue;
+}
+
+
+/* SCROLL Text 2*/
+
+#scroll-container2 {
+  display: flex;
+  margin-bottom: 0px;
+  background-color: rgb(251, 165, 186);
+  overflow-x: hidden;
+  position: relative;
+  z-index: 10;
+  height: 300px;
+  width: 100%;
+}
+
+#scroll-container2:hover .background-video {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease, visibility 0s 0s;
+  font-size: x-large;
+  color: aliceblue;
+
+}
+
+#scroll-container2:hover p {
+  color: aliceblue;
+}
+
+
+/* SCROLL TEXT GENERAL */
+
+#scroll-text {
+  white-space: nowrap;
+  width: fit-content;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 40px;
+  font-size: 140px;
+  font-weight: lighter;
+  word-spacing: 500px;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-animation: my-animation 40s linear infinite;
+  animation: my-animation 40s linear infinite;
+}
+
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
 }

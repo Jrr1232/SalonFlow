@@ -93,7 +93,7 @@ function Login() {
               </fieldset>
               <button type="submit" className="btn-signup">Sign Up</button>
               <hr></hr>
-              <div class="g-signin2" data-onsuccess="onSignIn"></div> <Google />
+              <Google />
             </form>
           </div>
         </div>

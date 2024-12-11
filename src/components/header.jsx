@@ -4,7 +4,7 @@ function Header() {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container-fluid">
+                <div className="container-fluid" id="navbar-header">
                     <a className="navbar-brand" href="#">JU</a>
                     <button
                         className="navbar-toggler"
