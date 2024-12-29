@@ -3,19 +3,22 @@ import Header from '../components/header';
 import Carousel from "../components/carousel";
 import Body from "../components/body";
 import Footer from "../components/footer";
-import Login from "../components/login-form";
+import Scrolltext1 from "../components/scrolltext1";
+import Scrolltext2 from "../components/scrolltext2";
+import Scrolltext3 from "../components/scrolltext3";
+
 function Home() {
     return (
         <>
 
-                <Header />
-                <Carousel/>
-                <Body/>
-                <hr id="hours-divider"></hr>
-                <Login/>
-                <hr id="hours-divider"></hr>
-                <Footer/>
-                
+            <Header />
+            <Carousel />
+            <Body />
+            <Scrolltext1 />
+            <Scrolltext2 />
+            <Scrolltext3 />
+            <hr id="hours-divider"></hr>
+
         </>
     );
 }

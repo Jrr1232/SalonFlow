@@ -2,9 +2,13 @@ import React from "react";
 import Card from "./card";
 import Book from "./book-button";
 import Offcanvas from "./offcanvas";
+import Scrolltext1 from "./scrolltext1";
+import Scrolltext2 from "./scrolltext2";
 function Body() {
     return (
         <>
+        
+       
             <Card />
             <Offcanvas />            
             <hr id="hours-divider"></hr>

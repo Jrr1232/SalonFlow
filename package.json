@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "develop": "concurrently \"npm run start\" \"cd client && npm run dev\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mui/x-data-grid": "^7.23.5",
     "bootstrap": "^5.3.3",
     "connect-session-sequelize": "^7.1.7",
     "cookies": "^0.9.1",

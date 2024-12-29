@@ -12,8 +12,7 @@ function Carousel() {
                     </div>
 
                 </div>
-                <Scrolltext1/>
-                <Scrolltext2/>
+        
             </div>
         </>
     );
