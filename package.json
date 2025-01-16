@@ -3,12 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "postinstall": "npm run build",
     "dev": "vite",
     "build": "vite build",
     "develop": "concurrently \"npm run start\" \"cd client && npm run dev\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start-all": "npm-run-all --parallel build develop"
+    "start-all": "npm-run-all --parallel build develop",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@mui/x-data-grid": "^7.23.5",
