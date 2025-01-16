@@ -32,7 +32,7 @@ const signupFormHandler = async (event, formState) => {
             console.log('Response from server:', response); // Log the response
 
             if (response.ok) {
-                document.location.replace('/Services');
+                document.location.replace('/calendar');
             }
 
             alert(response.ok ? 'Signed Up' : 'Failed to sign up');

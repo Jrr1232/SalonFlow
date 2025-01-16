@@ -6,11 +6,23 @@ const Billing = require("../../client/models/billing");
 router.post("/", async (req, res) => {
     try {
         const cart = req.body.cart;
+        const hour = req.body.hour;
+        const date = req.body.date;
+        let arr
+        let hourFormatted
+        if (arr) {
+            arr = hour.split('"');
+            hourFormatted = arr[3]
+
+        }
+
+        const appointmentDate = date + " " + hourFormatted
 
         const billPromises = cart.map(async (item) => {
             const name = item.name;
             const price = item.price;
             const code = item.code;
+
 
             let userData;
             let client_address;
@@ -47,14 +59,15 @@ router.post("/", async (req, res) => {
                 service_name: name,
                 service_code: price,
                 price: code,
-                client_type: client_type
+                client_type: client_type,
+                appointment_date: appointmentDate,
             });
         });
 
         const billData = await Promise.all(billPromises);
 
         console.log("Billing records created:", billData);
-        
+
         res.status(200).json({ message: 'Billing records created successfully' });
     } catch (err) {
         console.error(err);
