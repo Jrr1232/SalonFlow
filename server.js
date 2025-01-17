@@ -29,6 +29,11 @@ app.use(cors({
     credentials: true, // Allow cookies with requests
 }));
 
+app.use((req, res, next) => {
+    res.setHeader('Content-Security-Policy', "default-src 'none'; font-src 'self' http://localhost:3001;");
+    next();
+});
+
 
 
 app.use(express.json());
