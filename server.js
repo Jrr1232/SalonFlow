@@ -6,6 +6,7 @@ const helmet = require('helmet'); // Import helmet
 const routes = require('./controllers');
 const sequelize = require('./client/config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const favicon = require('express-favicon');
 
 const app = express();
 const PORT = process.env.PORT || 3001;

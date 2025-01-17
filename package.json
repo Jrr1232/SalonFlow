@@ -20,6 +20,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "express-favicon": "^2.0.4",
     "express-router": "^0.0.1",
     "express-session": "^1.18.1",
     "helmet": "^8.0.0",
@@ -29,7 +30,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.28.0",
-    "sequelize": "^6.37.5"
+    "sequelize": "^6.37.5",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
