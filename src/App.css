@@ -124,7 +124,7 @@
   margin-top: 20%;
   margin-bottom: 10%;
   font-size: 50px;
-  font-family: 'Libre Caslon Display';
+
   text-align: center;
   padding-right: 2%;
   color: rgb(0, 0, 0);
@@ -133,7 +133,6 @@
 /* Booking Button */
 
 #booking-button {
-  font-family: 'Libre Caslon Display';
   margin-top: 3%;
   margin-left: 42%;
   text-decoration: none;
@@ -196,7 +195,7 @@
   margin-bottom: 1%;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-family: honk;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 10px;
 }
 
@@ -224,7 +223,7 @@
 /* Login Card */
 
 #login-card {
-  font-family: Montserrat;
+  font-family: 'Times New Roman', Times, serif;
   background-color: rgb(248, 246, 246);
   text-align: center;
   margin-top: 20%;
@@ -236,7 +235,7 @@
 }
 
 #signin-header {
-  font-family: Montserrat;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 30px;
   margin-top: 30px;
   font-weight: 700;
@@ -245,7 +244,7 @@
 }
 
 .btn-login {
-  font-family: Montserrat;
+  font-family: 'Times New Roman', Times, serif;
   color: white;
   width: 200px;
   height: 40px;
@@ -275,7 +274,7 @@
 
 #signup-card {
   background-color: rgb(248, 246, 246);
-  font-family: Montserrat;
+  font-family: 'Times New Roman', Times, serif;
   text-align: center;
   margin-top: 30%;
   display: flex;
@@ -286,7 +285,7 @@
 }
 
 .btn-signup {
-  font-family: Montserrat;
+  font-family: 'Times New Roman', Times, serif;
   color: white;
   width: 200px;
   height: 40px;
@@ -362,7 +361,7 @@ hr {
 
 #signup-header {
   color: rgb(107, 121, 251);
-  font-family: Montserrat;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 30px;
   font-weight: 700;
   margin-bottom: 30px;
@@ -469,7 +468,6 @@ hr {
 #scroll-text {
   white-space: nowrap;
   width: fit-content;
-  font-family: 'Libre Caslon Display';
   padding-top: 40px;
   font-size: 140px;
   font-weight: lighter;
@@ -543,7 +541,6 @@ hr {
   margin-top: 100px;
   margin-bottom: 50px;
   font-size: 40px;
-  font-family: 'Libre Caslon Display';
 }
 
 #services {
@@ -597,7 +594,6 @@ hr {
 
 
 #services-title {
-  font-family: 'Libre Caslon Display';
   font-size: xx-large;
   margin-left: 45%;
   margin-top: 1%;
@@ -797,7 +793,6 @@ hr {
 #hour-header {
   margin-left: 83%;
   margin-bottom: -30px;
-  font-family: 'Libre Caslon Display';
   font-size: x-large;
 }
 
@@ -815,6 +810,6 @@ hr {
   background-color: grey;
 }
 
-#phone{
+#phone {
   text-decoration: none;
 }
