@@ -2,11 +2,9 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const cors = require('cors');
-const helmet = require('helmet'); // Import helmet
 const routes = require('./controllers');
 const sequelize = require('./client/config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const favicon = require('express-favicon');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -31,19 +29,7 @@ app.use(cors({
     credentials: true, // Allow cookies with requests
 }));
 
-// Add helmet and configure CSP
-app.use(
-    helmet({
-        contentSecurityPolicy: {
-            directives: {
-                defaultSrc: ["'self'"],
-                fontSrc: ["'self'", "https://johannysunisex-cdc945aa3db4.herokuapp.com"],
-                styleSrc: ["'self'", "'unsafe-inline'"],
-                scriptSrc: ["'self'"],
-            },
-        },
-    })
-);
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
