@@ -3,11 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "postinstall": "npm run build",
     "develop": "npm run start & cd client",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "start-all": "npm-run-all --parallel build develop",
-    "heroku-postbuild": "npm run build"
+    "start-all": "npm-run-all --parallel build develop"
   },
   "dependencies": {
     "@mui/x-data-grid": "^7.23.5",
