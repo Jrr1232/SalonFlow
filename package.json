@@ -6,7 +6,7 @@
     "postinstall": "npm run build",
     "dev": "vite",
     "build": "vite build",
-    "develop": "npm run start & cd client && npm run dev",
+    "develop": "npm run start & cd client",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start-all": "npm-run-all --parallel build develop",
