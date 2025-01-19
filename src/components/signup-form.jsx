@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Google from './googlesigninbutton';
-import WigsignupFormHandler from './js/wigSignupFormHandler';
-import HairsignupFormHandler from './js/hairSignupFormHandler'
+import signupFormHandler from '../js/signupFormHandler';
 
 
 function SignUpForm() {
@@ -24,24 +23,15 @@ function SignUpForm() {
 
     const handleSubmit = (event, type) => {
         event.preventDefault();
-
-        const path = window.location.pathname; // "/signup/wig"
-        const segments = path.split('-');
-        const page = segments[0];
-        console.log(page)
-
-        if (page === '/wig') {
-            WigsignupFormHandler(event, formState)
-
+        if (type === 'login') {
+            loginFormHandler(event, formState);
+        } else {
+            signupFormHandler(event, formState);
         }
-        else {
-            HairsignupFormHandler(event, formState)
-        }
-
     };
     return (
         <div className="card" id="signup-card">
-            <form className="form form-signup" onSubmit={(event) => handleSubmit(event, formState)}>
+            <form className="form form-signup" onSubmit={(event) => handleSubmit(event, 'signup')}>
                 <fieldset>
                     <legend id="signup-header">Sign up</legend>
                     <div className="input-block">

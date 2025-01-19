@@ -50,8 +50,7 @@ CREATE TABLE Billing   (
     date_of_service DATE,
     price INTEGER,
     service_name varchar(30),
-    client_id INTEGER,
-    appointment_date varchar(30)
+    client_id INTEGER
 
 );
 

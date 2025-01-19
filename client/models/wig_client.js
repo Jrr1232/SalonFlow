@@ -14,7 +14,7 @@ Wig_client.init(
         },
         client_id: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             unique: true,
 
         },
