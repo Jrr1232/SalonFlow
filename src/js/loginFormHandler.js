@@ -25,7 +25,7 @@ const loginFormHandler = async (event, formState) => {
 
         if (response.ok) {
             alert('Logged In');
-            document.location.replace('/');
+            document.location.replace('/calendar');
         } else {
             alert('User not found.');
             console.log(response.status);

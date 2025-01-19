@@ -54,6 +54,10 @@ Billing.init(
         client_id: {
             type: DataTypes.INTEGER,
             allowNull: true,
+        },
+        appointment_date: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
 
     },

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Google from './googlesigninbutton';
+import loginFormHandler from './js/loginFormHandler';
 
 function LoginForm() {
     const [formState, setFormState] = useState({
@@ -16,9 +17,8 @@ function LoginForm() {
     };
 
     const handleSubmit = (event) => {
-        event.preventDefault();
         console.log('Form submitted:', formState);
-
+        loginFormHandler(formState);
     };
 
     // If the switcher functionality is necessary

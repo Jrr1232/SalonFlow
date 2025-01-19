@@ -9,7 +9,7 @@ function Scrolltext3() {
                     Your browser does not support the video tag.
                 </video>
                 <p id="scroll-text">
-                    HAIRCUTS HAIRCUTS HAIRCUTS HAIRCUTS
+                    <a href="https://example.com" target="_blank">HAIRCUTS HAIRCUTS HAIRCUTS </a>
                 </p>
             </div>
         </>

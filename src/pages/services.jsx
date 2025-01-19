@@ -6,6 +6,27 @@ function HairCheckout() {
     const [cart, setCart] = useState([]);
     const navigateTo = useNavigate();
 
+
+    const email = Cookies.get('email');
+    const firstName = Cookies.get('first_name');
+    const date = Cookies.get('appoitmentDate');
+    const hour = Cookies.get('hour');
+    let hours
+    let hourFormatted
+
+    if (hours) {
+        hours = hour.split('"')
+        hours = hours[3]
+
+    }
+
+    if (hour) {
+        const arr = hour.split('"');
+        hourFormatted = arr[3]
+    }
+
+
+
     const services = [
         {
             name: 'Color/Highlights',
@@ -34,13 +55,14 @@ function HairCheckout() {
         },
     ];
 
-    const email = Cookies.get('email');
-    const firstName = Cookies.get('first_name');
 
     const body = {
         cart: cart,
         email: email,
-        first_name: firstName
+        first_name: firstName,
+        date: date,
+        hour: hour
+
     };
 
     const addServiceToCart = (service) => {
@@ -77,16 +99,17 @@ function HairCheckout() {
 
     return (
         <>
-            <a id ="home-button" href="/">
+            <a id="home-button" href="/">
                 <p id="home-button"> Home </p>
             </a>
             <p id="services-title">Hair Services</p>
+            <p id="appointment_services">Appointment Date : {date} at {hourFormatted}</p>
             <hr id="services-hr" />
-            <div>
-                <div>
+            <div id="service-page">
+                <div id="services">
                     <ul id="services-list">
                         {services.map(service => (
-                            <li id ="cart" key={service.name}>
+                            <li id="cart" key={service.name}>
                                 <label>
                                     <input
                                         type="checkbox"
@@ -104,12 +127,12 @@ function HairCheckout() {
                         ))}
                     </ul>
                 </div>
-                <div>
+                <div id="active-cart">
                     {cart.length > 0 && (
                         <ul id="shopping-cart">
                             <p>Total Price: ${totalPrice}</p>
                             {cart.map((item, index) => (
-                                <li key={index}>{item.name}: ${item.price}</li>
+                                <li id="cart-item" key={index}>{item.name}: ${item.price}</li>
                             ))}
                         </ul>
                     )}

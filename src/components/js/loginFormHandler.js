@@ -1,19 +1,17 @@
 import Cookies from 'js-cookie';
 
 
-const loginFormHandler = async (event, formState) => {
+const loginFormHandler = async (formState) => {
     try {
-        event.preventDefault();
 
         const expirationDate = new Date();
         expirationDate.setTime(expirationDate.getTime() + (10 * 60 * 1000));
 
-        const { email, first_name, username } = formState;
+        const { email, username } = formState;
 
         Cookies.set('email', email, { expires: expirationDate });
-        Cookies.set('first_name', first_name, { expires: expirationDate });
 
-        const response = await fetch('http://localhost:3001/hair', {
+        const response = await fetch('http://localhost:3001/login-hair', {
             method: 'POST',
             body: JSON.stringify({
                 email: email,
@@ -23,16 +21,34 @@ const loginFormHandler = async (event, formState) => {
         });
 
         if (response.ok) {
-            alert('Logged In');
-          
+            alert('Hair Customer Logged In');
+            document.location.replace('/calendar');
+
         } else {
-            alert('User not found.');
-            console.log(response.status);
+
+            const secondResponse = await fetch('http://localhost:3001/login-wigs', {
+                method: 'POST',
+                body: JSON.stringify({
+                    email: email,
+                    username: username,
+                }),
+                headers: { 'Content-Type': 'application/json' },
+            });
+            if (secondResponse.ok) {
+                alert('Wigs Customer Logged In')
+                document.location.replace('/services');
+
+            }
         }
+
     } catch (error) {
         console.error('Error occurred:', error);
         alert('An error occurred while logging in');
     }
+
+
+
+
 };
 
 
