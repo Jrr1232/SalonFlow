@@ -14,7 +14,7 @@ function Home() {
             <Header />
             <Carousel />
             <Body />
-            <Scrolltext1 text="Your Scrollable Text" />
+            <Scrolltext1 />
             <Scrolltext2 />
             <Scrolltext3 />
             <hr id="hours-divider"></hr>

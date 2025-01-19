@@ -22,10 +22,10 @@ function Offcanvas() {
                             Create Account
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a href="/wig-signup-page" className="dropdown-item text-decoration-none ">
+                            <a href="/signup-page" className="dropdown-item text-decoration-none ">
                                 <li>Wigs</li>
                             </a>
-                            <a href="/hair-signup-page" className="dropdown-item text-decoration-none">
+                            <a href="/signup-page" className="dropdown-item text-decoration-none">
                                 <li>Regular</li>
                             </a>
                         </ul>
@@ -34,11 +34,11 @@ function Offcanvas() {
                         </a>
                         <h5 id="menu-title">Menu</h5>
                         <ul id="services">
-                            <li> <a href="/services">Color/Highlights</a> <span className="price">$50</span></li>
-                            <li><a href="/services">Blow dry</a> <span className="price">$80</span></li>
-                            <li><a href="/services">Hair Cut</a> <span className="price">$70</span></li>
-                            <li><a href="/services">Wash</a> <span className="price">$50</span></li>
-                            <li><a href="/services">Extensions</a> <span className="price">$100</span></li>
+                            <li> <a href="#">Color/Highlights</a> <span className="price">$50</span></li>
+                            <li><a href="#">Blow dry</a> <span className="price">$80</span></li>
+                            <li><a href="#">Hair Cut</a> <span className="price">$70</span></li>
+                            <li><a href="#">Wash</a> <span className="price">$50</span></li>
+                            <li><a href="#">Extensions</a> <span className="price">$100</span></li>
                         </ul>
                         <hr />
                     </div>
