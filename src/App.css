@@ -135,10 +135,10 @@
 #booking-button {
   font-family: 'Libre Caslon Display';
   margin-top: 3%;
-  margin-left: 42%;
+  margin-left: 40%;
   text-decoration: none;
   color: rgb(41, 189, 189);
-  font-size: 25px;
+  font-size: 40px;
 }
 
 #booking-button:hover {
@@ -227,12 +227,13 @@
   font-family: 'Montserrat';
   background-color: rgb(248, 246, 246);
   text-align: center;
-  margin-top: 20%;
+  margin-top: 25%;
   display: flex;
   flex-wrap: wrap;
   height: 400px;
   width: 450px;
   color: white;
+  margin-bottom: 400px;
 }
 
 #signin-header {
@@ -274,21 +275,20 @@
 
 
 #signup-card {
-
   background-color: rgb(248, 246, 246);
-  font-family: 'Montserrat';
-
   font-family: Montserrat;
 
   background-color: rgb(248, 246, 246);
   font-family: 'Montserrat';
   text-align: center;
-  margin-top: 30%;
+  margin-left: 20%;
+  margin-top: 25%;
   display: flex;
   flex-wrap: wrap;
   height: 600px;
-  width: 400px;
-  border: #000000 solid 1px;
+  width: 600px;
+  color: white;
+  border: 0;
 }
 
 .btn-signup {
@@ -517,9 +517,10 @@ hr {
 
 
 #loginPage {
+  background: linear-gradient(#59b66bc0, #bbd3ca);
   display: flex;
   justify-content: center;
-
+  height: 75vw;
 }
 
 
@@ -528,11 +529,15 @@ hr {
 
 
 #signup-page {
+  background: linear-gradient(#59b66bc0, #76caab);
   display: flex;
   justify-content: center;
+  height: 75vw;
 }
 
-
+#signup-form {
+  margin-right: 5%;
+}
 
 
 
@@ -822,7 +827,6 @@ hr {
   background-color: grey;
 }
 
-#phone {
+#phone{
   text-decoration: none;
-
 }
