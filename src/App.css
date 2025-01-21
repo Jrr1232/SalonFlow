@@ -275,8 +275,6 @@
 
 
 #signup-card {
-  font-family: Montserrat;
-
   background-color: rgb(248, 246, 246);
   font-family: 'Montserrat';
   text-align: center;
@@ -516,10 +514,8 @@ hr {
 
 
 #loginPage {
-  background: linear-gradient(#59b66bc0, #bbd3ca);
   display: flex;
   justify-content: center;
-  height: 75vw;
 }
 
 
@@ -528,10 +524,9 @@ hr {
 
 
 #signup-page {
-  background: linear-gradient(#59b66bc0, #76caab);
   display: flex;
   justify-content: center;
-  height: 75vw;
+
 }
 
 #signup-form {
