@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "develop": "concurrently \"npm run start\" \"cd client && npm run dev\"",
+    "start": "node server.js",
+    "develop": "npm run build && concurrently \"npm run start\" \"cd client && npm run dev\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "start-all": "npm-run-all --parallel build develop"
+    "start-all": "npm-run-all --parallel build develop",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@mui/x-data-grid": "^7.23.5",
@@ -27,6 +29,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.28.0",
     "sequelize": "^6.37.5",
+    "serve": "^14.2.4",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
