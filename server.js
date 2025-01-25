@@ -51,5 +51,9 @@ app.use((err, req, res, next) => {
 
 // Start the server
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}/`));
+    const PORT = process.env.PORT || 3001;
+
+    sequelize.sync({ force: false }).then(() => {
+        app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    });
 });

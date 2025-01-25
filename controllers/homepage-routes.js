@@ -2,14 +2,17 @@ const router = require("express").Router();
 const Hair_client = require('../client/models/wig_client');
 const Wig_client = require('../client/models/wig_client');
 
+
 router.post('/hair', async (req, res) => {
     try {
+        // Find all users with the provided username
         const userDatas = await Hair_client.findAll({
             where: {
                 username: req.body.username,
             }
         });
 
+        // Check if a user with the provided email and username already exists
         const userData = await Hair_client.findOne({
             where: {
                 email: req.body.email,
@@ -18,8 +21,10 @@ router.post('/hair', async (req, res) => {
         });
 
         if (userData) {
-            res.json({ redirectTo: 'http://localhost:5173/services', userDatas });
+            // If the user exists, redirect to the services page
+            res.json({ redirectTo: '/services', userDatas });
         } else {
+            // If the user does not exist, create a new user
             const newHairClient = await Hair_client.create({
                 username: req.body.username,
                 first_name: req.body.first_name,
@@ -29,11 +34,13 @@ router.post('/hair', async (req, res) => {
                 client_type: 'hair'
             });
 
+            // Set session variables
             req.session.logged_in = true;
             req.session.email = req.body.email;
             req.session.first_name = req.body.first_name;
-            req.session.save();
+            await req.session.save(); // Ensure the session is saved
 
+            // Send the response with the new user data
             res.json({ newHairClient, userDatas });
         }
     } catch (err) {
@@ -43,10 +50,9 @@ router.post('/hair', async (req, res) => {
 });
 
 
-
-
 router.post('/wigs', async (req, res) => {
     try {
+        // Check if a user with the provided email and username already exists
         const userData = await Wig_client.findOne({
             where: {
                 email: req.body.email,
@@ -55,8 +61,10 @@ router.post('/wigs', async (req, res) => {
         });
 
         if (userData) {
-            res.redirect('http://localhost:5173/services01');
+            // If the user exists, redirect to the services01 page
+            res.json({ redirectTo: '/services01' });
         } else {
+            // If the user does not exist, create a new user
             const newWigClient = await Wig_client.create({
                 username: req.body.username,
                 first_name: req.body.first_name,
@@ -66,11 +74,13 @@ router.post('/wigs', async (req, res) => {
                 client_type: 'wig'
             });
 
+            // Set session variables
             req.session.logged_in = true;
             req.session.email = req.body.email;
             req.session.first_name = req.body.first_name;
-            req.session.save();
+            await req.session.save(); // Ensure the session is saved
 
+            // Send the response with the new user data
             res.json(newWigClient);
         }
     } catch (err) {
