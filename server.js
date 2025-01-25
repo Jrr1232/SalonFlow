@@ -29,13 +29,19 @@ app.use(cors({
     credentials: true, // Allow cookies with requests
 }));
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve static files from the frontend build directory
+app.use(express.static(path.join(__dirname, 'client/dist')));
 
 // Add routes
 app.use(routes);
+
+// Handle client-side routing
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/dist/index.html'));
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {

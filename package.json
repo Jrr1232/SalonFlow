@@ -9,7 +9,7 @@
     "develop": "npm run build && concurrently \"npm run start\" \"cd client && npm run dev\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "start-all": "npm-run-all --parallel build develop",
-    "heroku-postbuild": "npm install && npm run build && cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "@mui/x-data-grid": "^7.23.5",
