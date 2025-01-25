@@ -1,1 +1,1 @@
-web: npx vite 
+web: npm run develop
