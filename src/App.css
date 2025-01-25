@@ -81,7 +81,7 @@
   width: 300px;
   height: 200px;
   background-size: 100%;
-  background-image: url('public/dr-flag-sms.png');
+  background-image: url('/dr-flag-sms.png');
   background-repeat: no-repeat;
   overflow: hidden;
 
