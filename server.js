@@ -33,14 +33,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static files from the frontend build directory
-app.use(express.static(path.join(__dirname, 'client/dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Add routes
 app.use(routes);
 
 // Handle client-side routing
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/dist/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 // Error handling middleware
