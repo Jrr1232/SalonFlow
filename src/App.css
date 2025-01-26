@@ -612,6 +612,18 @@ hr {
   #hourcard {
     margin-left: 27%;
   }
+
+  #signup-card {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 0%;
+    width: 400px;
+    height: 600px;
+
+  }
+
+  
+
 }
 
 

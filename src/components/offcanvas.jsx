@@ -8,7 +8,7 @@ function Offcanvas() {
             <button id="booking-button" className="btn btn-link btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 Book an Appointment
             </button>
-            <img src="public\arrow_right_alt_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" id="arrow"></img>
+            <img src="/arrow_right_alt_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" id="arrow"></img>
             <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel"></h5>
