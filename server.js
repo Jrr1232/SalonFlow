@@ -24,8 +24,10 @@ const sess = {
 
 // Apply middleware
 app.use(session(sess));
+
+// Configure CORS
 app.use(cors({
-    origin: 'http://localhost:5173', // Adjust as needed
+    origin: ['https://johannysunisex-cdc945aa3db4.herokuapp.com', 'http://localhost:5173'], // Allow multiple origins
     credentials: true, // Allow cookies with requests
 }));
 
@@ -51,9 +53,5 @@ app.use((err, req, res, next) => {
 
 // Start the server
 sequelize.sync({ force: false }).then(() => {
-    const PORT = process.env.PORT || 3001;
-
-    sequelize.sync({ force: false }).then(() => {
-        app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-    });
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });
