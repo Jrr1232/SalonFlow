@@ -37,7 +37,7 @@ function Google() {
   return (
     <div>
 
-      <button id="google-signin-button"><img src="public\icons8-google-48.png" id="google-img"></img>Sign in with Google</button>
+      <button id="google-signin-button"><img src="/icons8-google-48.png" id="google-img"></img>Sign in with Google</button>
     </div>
   );
 }
