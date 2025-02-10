@@ -4,7 +4,7 @@ function Scrolltext3() {
     return (
         <>
             <div className="video-container" id="scroll-container3">
-                <video autoPlay muted loop className="background-video">
+                <video autoPlay muted loop playsInline className="background-video">
                     <source src="/Untitled.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
