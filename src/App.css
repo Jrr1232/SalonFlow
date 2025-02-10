@@ -598,7 +598,7 @@ video::-webkit-media-controls {
     width: 300px;
     margin-bottom: 5%;
     margin-top: 5%;
-    margin-left: 2%;
+    margin-left: 10%;
   }
 
 
@@ -609,6 +609,10 @@ video::-webkit-media-controls {
 
   #hourcard {
     margin-left: 25%;
+  }
+
+  #hourcard ul {
+    font-size: 12px;
   }
 
 
