@@ -14,7 +14,10 @@ const loginFormHandler = async (event, formState) => {
         Cookies.set('email', email, { expires: expirationDate });
         Cookies.set('first_name', first_name, { expires: expirationDate });
 
-        const response = await fetch('http://localhost:3001/hair', {
+        const backendUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+
+
+        const response = await fetch(`${backendUrl}/hair`, {
             method: 'POST',
             body: JSON.stringify({
                 email: email,
