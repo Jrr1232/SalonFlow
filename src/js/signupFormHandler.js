@@ -10,11 +10,11 @@ const signupFormHandler = async (event, formState) => {
 
     Cookies.set('email', email, { expires: expirationDate });
     Cookies.set('first_name', first_name, { expires: expirationDate });
-    const backendUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+    const backendUrl = process.env.REACT_APP_API_URL;
 
     if (formState.first_name && formState.last_name) {
         try {
-            const response = await fetch(`${backendUrl}/hair`, {
+            const response = await fetch(`https://johannysunisex-cdc945aa3db4.herokuapp.com/hair`, {
                 method: 'POST',
                 body: JSON.stringify({
                     username: formState.username,
