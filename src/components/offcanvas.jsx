@@ -22,10 +22,10 @@ function Offcanvas() {
                             Create Account
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a href="/signup-page" className="dropdown-item text-decoration-none ">
+                            <a href="/wig-signup-page" className="dropdown-item text-decoration-none ">
                                 <li>Wigs</li>
                             </a>
-                            <a href="/signup-page" className="dropdown-item text-decoration-none">
+                            <a href="/hair-signup" className="dropdown-item text-decoration-none">
                                 <li>Regular</li>
                             </a>
                         </ul>

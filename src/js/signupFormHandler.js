@@ -10,11 +10,13 @@ const signupFormHandler = async (event, formState) => {
 
     Cookies.set('email', email, { expires: expirationDate });
     Cookies.set('first_name', first_name, { expires: expirationDate });
-    const backendUrl = process.env.REACT_APP_API_URL;
-
+    const clientType = Cookies.get('client_type');
+    console.log(clientType)
+    const backendUrl = 'http://localhost:3001';
+    console.log('Backend URL:', backendUrl)
     if (formState.first_name && formState.last_name) {
         try {
-            const response = await fetch(`https://johannysunisex-cdc945aa3db4.herokuapp.com/hair`, {
+            const response = await fetch(`${backendUrl}/${clientType}`, {
                 method: 'POST',
                 body: JSON.stringify({
                     username: formState.username,
@@ -33,7 +35,7 @@ const signupFormHandler = async (event, formState) => {
             console.log('Response from server:', response); // Log the response
 
             if (response.ok) {
-                document.location.replace('/Services');
+                document.location.replace('/Calendar');
             }
 
             alert(response.ok ? 'Signed Up' : 'Failed to sign up');

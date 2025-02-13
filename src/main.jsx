@@ -7,8 +7,9 @@ import Home from './pages/home.jsx'
 import './index.css'
 import LoginPage from './pages/login-page.jsx';
 import SignupPage from './pages/signup-page.jsx';
+import HairSignupPage from './pages/hair-signup-page.jsx';
 import HairCheckout from './pages/services.jsx';
-
+import Calendar from './pages/calendar.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -31,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <HairCheckout />
+      },
+      {
+        path: '/calendar',
+        element: <Calendar />
+      },
+      {
+        path: '/hair-signup',
+        element: <HairSignupPage />
       },
 
     ]

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Google from './googlesigninbutton';
 import signupFormHandler from '../js/signupFormHandler';
+import Cookies from 'js-cookie';
 
-
-function SignUpForm() {
+function SignUpForm({ clientType }) {
 
     const [formState, setFormState] = useState({
         username: '',
@@ -11,7 +11,12 @@ function SignUpForm() {
         last_name: '',
         address: '',
         email: '',
+        client_type: clientType
     });
+    console.log(clientType)
+    const expirationDate = new Date();
+    expirationDate.setTime(expirationDate.getTime() + (10 * 60 * 1000));
+    Cookies.set('client_type', clientType, { expires: expirationDate });
 
     const handleChange = (event) => {
         const { name, value } = event.target;
