@@ -18,7 +18,7 @@ const signupFormHandler = async (event, formState) => {
     console.log('Backend URL:', backendUrl)
     if (formState.first_name && formState.last_name) {
         try {
-            const response = await fetch(`${backendUrl}/hair`, {
+            const response = await fetch(`/hair`, {
                 method: 'POST',
                 body: JSON.stringify({
                     username: formState.username,
