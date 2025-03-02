@@ -12,7 +12,9 @@ const signupFormHandler = async (event, formState) => {
     Cookies.set('first_name', first_name, { expires: expirationDate });
     const clientType = Cookies.get('client_type');
     console.log(clientType)
-    const backendUrl = 'http://localhost:3001';
+    const developmentUrl = 'http://localhost:3001';
+    const backendUrl = process.env.REACT_APP_API_URL;
+
     console.log('Backend URL:', backendUrl)
     if (formState.first_name && formState.last_name) {
         try {
