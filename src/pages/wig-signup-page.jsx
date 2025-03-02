@@ -5,7 +5,7 @@ function WigSignupPage() {
     return (
         <div id="signup-page">
             <div id="signup-form">
-                <SignUpForm clientType="wig" />
+                <SignUpForm clientType="wigs" />
             </div>
 
         </div>

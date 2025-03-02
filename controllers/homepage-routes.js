@@ -2,7 +2,6 @@ const router = require("express").Router();
 const Hair_client = require('../client/models/wig_client');
 const Wig_client = require('../client/models/wig_client');
 
-
 router.post('/hair', async (req, res) => {
     try {
         // Find all users with the provided username
@@ -62,7 +61,7 @@ router.post('/wigs', async (req, res) => {
 
         if (userData) {
             // If the user exists, redirect to the services01 page
-            res.json({ redirectTo: '/services01' });
+            res.json({ redirectTo: '/services' });
         } else {
             // If the user does not exist, create a new user
             const newWigClient = await Wig_client.create({
