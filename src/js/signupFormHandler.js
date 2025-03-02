@@ -11,7 +11,7 @@ const signupFormHandler = async (event, formState) => {
     Cookies.set('email', email, { expires: expirationDate });
     Cookies.set('first_name', first_name, { expires: expirationDate });
     const clientType = Cookies.get('client_type');
-    console.log(clientType)
+    console.log("this client type is" + clientType)
     const developmentUrl = 'http://localhost:3001';
     const backendUrl = process.env.REACT_APP_API_URL;
 
