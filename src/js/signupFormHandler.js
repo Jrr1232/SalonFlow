@@ -18,7 +18,7 @@ const signupFormHandler = async (event, formState) => {
     console.log('Backend URL:', backendUrl)
     if (formState.first_name && formState.last_name) {
         try {
-            const response = await fetch(process.env.REACT_APP_API_URL / clientType, {
+            const response = await fetch(`${backendUrl}/hair`, {
                 method: 'POST',
                 body: JSON.stringify({
                     username: formState.username,
