@@ -53,13 +53,13 @@ function HairCheckout() {
     };
 
     const handleCheckout = async () => {
-
-
+        
+        
         const developmentUrl = 'http://localhost:3001';
         const backendUrl = process.env.REACT_APP_API_URL;
 
         try {
-            const response = await fetch(`${/api/checkout}`, {
+            const response = await fetch(`/api/checkout`, {
                 method: "POST",
                 body: JSON.stringify(body),
                 headers: { "Content-Type": "application/json" }
@@ -82,7 +82,7 @@ function HairCheckout() {
 
     return (
         <>
-            <a id="home-button" href="/">
+            <a id ="home-button" href="/">
                 <p id="home-button"> Home </p>
             </a>
             <p id="services-title">Hair Services</p>
@@ -91,7 +91,7 @@ function HairCheckout() {
                 <div>
                     <ul id="services-list">
                         {services.map(service => (
-                            <li id="cart" key={service.name}>
+                            <li id ="cart" key={service.name}>
                                 <label>
                                     <input
                                         type="checkbox"
