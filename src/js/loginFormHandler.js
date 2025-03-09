@@ -30,7 +30,7 @@ const loginFormHandler = async (event, formState) => {
         const backendUrl = process.env.REACT_APP_API_URL;
 
         // Try logging in via the /hair endpoint
-        let response = await fetch(`/hair`, {
+        let response = await fetch(`${backendUrl}/hair`, {
             method: 'POST',
             body: JSON.stringify({ email, username }),
             headers: { 'Content-Type': 'application/json' },
@@ -38,7 +38,7 @@ const loginFormHandler = async (event, formState) => {
 
         // If /hair fails, try the /wigs endpoint
         if (!response.ok) {
-            response = await fetch(`/wigs`, {
+            response = await fetch(`${backendUrl}/wigs`, {
                 method: 'POST',
                 body: JSON.stringify({ email, username }),
                 headers: { 'Content-Type': 'application/json' },
