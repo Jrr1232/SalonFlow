@@ -746,12 +746,16 @@ video::-webkit-media-controls {
 
 }
 
+#calendar {
+  background-color: white;
+}
+
 #table-caption {
   text-align: center;
 }
 
 #hours {
-  margin-top: 1%;
+  margin-top: 0%;
   margin-left: 80%;
   list-style: none;
   overflow-y: scroll;
@@ -773,27 +777,83 @@ video::-webkit-media-controls {
   margin-left: 5%;
 }
 
-#next {
-  margin-top: 3%;
-  margin-left: 47%;
-  border: black solid 1px;
+
+#weekdays {
+  font-weight: 200;
 }
 
-#next a {
-  text-decoration: none;
-  font-size: large;
-  color: black;
-}
+
 
 #calendar button {
   border: black solid 1px;
-  margin-right: 2%;
-  margin-left: 2%;
-
-
+  margin-right: 4%;
+  margin-left: 4%;
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 14px;
+  width: 90px;
+  height: 65px;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
 }
 
 #calendar td a {
   color: #000000;
   text-decoration: none;
+}
+
+.addtocalendar-button {
+  margin-top: 2%;
+  margin-left: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  gap: 8px;
+  height: 40px;
+  width: 201px;
+  border: none;
+  background: lightcoral;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+.addtocalendar-button a {
+  text-decoration: none;
+
+}
+
+.lable {
+  line-height: 22px;
+  font-size: 17px;
+  color: #fff;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+
+
+td:hover {
+  background-color: gainsboro;
+}
+
+.button:hover .svg-icon {
+  animation: slope 1s linear infinite;
+}
+
+
+
+
+@keyframes slope {
+  0% {}
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {}
 }
