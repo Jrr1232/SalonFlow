@@ -81,7 +81,6 @@ function Calendar() {
         const rows = [];
         let currentDay = 0;
         let week = Array(firstDay - 1).fill(null);
-
         while (currentDay <= daysInMonth) {
             week.push(currentDay);
             if (week.length === 7) {
@@ -108,7 +107,7 @@ function Calendar() {
         const appointmentDate = month + " " + day + " " + year;
         Cookies.set('appoitmentDate', appointmentDate, { expires: expirationDate });
         setDays(appointmentDate); // Update state with the selected date
-
+        console.log(appointmentDate)
         return appointmentDate
 
     }

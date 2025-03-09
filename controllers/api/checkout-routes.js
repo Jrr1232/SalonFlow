@@ -2,10 +2,11 @@ const router = require("express").Router();
 const Hair_client = require("../../client/models/hair_client")
 const Wig_client = require("../../client/models/wig_client");
 const Billing = require("../../client/models/billing");
+const Cookies = require('js-cookie');
 
 router.post("/", async (req, res) => {
     try {
-        
+
         const cart = req.body.cart;
         const hour = req.body.hour;
         const date = req.body.date;
@@ -17,7 +18,8 @@ router.post("/", async (req, res) => {
 
         }
 
-        const appointmentDate = date + " " + hourFormatted
+        const appointmentDate = appointmentCookie + " " + hourFormatted
+        const appointmentCookie = Cookies.get(appointmentDate);
         console.log(appointmentDate)
         const billPromises = cart.map(async (item) => {
             const name = item.name;

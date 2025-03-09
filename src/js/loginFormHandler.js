@@ -1,43 +1,62 @@
 import Cookies from 'js-cookie';
 
-
-
 const loginFormHandler = async (event, formState) => {
     try {
         event.preventDefault();
 
-        const expirationDate = new Date();
-        expirationDate.setTime(expirationDate.getTime() + (10 * 60 * 1000));
-
+        // Validate form state
         const { email, first_name, username } = formState;
+        if (!email || !username) {
+            alert('Please fill in all required fields.');
+            return;
+        }
 
-        Cookies.set('email', email, { expires: expirationDate });
-        Cookies.set('first_name', first_name, { expires: expirationDate });
+        // Set cookies with security attributes
+        const expirationDate = new Date();
+        expirationDate.setTime(expirationDate.getTime() + 10 * 60 * 1000); // 10 minutes
 
+        Cookies.set('email', email, {
+            expires: expirationDate,
+            secure: true,
+            sameSite: 'strict',
+        });
+        Cookies.set('first_name', first_name, {
+            expires: expirationDate,
+            secure: true,
+            sameSite: 'strict',
+        });
+
+        // Define backend URL (if needed)
         const backendUrl = process.env.REACT_APP_API_URL;
 
-
-        const response = await fetch(`${backendUrl}/hair`, {
+        // Try logging in via the /hair endpoint
+        let response = await fetch(`/hair`, {
             method: 'POST',
-            body: JSON.stringify({
-                email: email,
-                username: username,
-            }),
+            body: JSON.stringify({ email, username }),
             headers: { 'Content-Type': 'application/json' },
         });
 
+        // If /hair fails, try the /wigs endpoint
+        if (!response.ok) {
+            response = await fetch(`/wigs`, {
+                method: 'POST',
+                body: JSON.stringify({ email, username }),
+                headers: { 'Content-Type': 'application/json' },
+            });
+        }
+
+        // Handle the final response
         if (response.ok) {
-            alert('Logged In');
+            alert('Logged in successfully!');
             document.location.replace('/');
         } else {
-            alert('User not found.');
-            console.log(response.status);
+            const errorData = await response.json();
+            alert(`Login failed: ${errorData.message || 'Invalid credentials'}`);
         }
     } catch (error) {
         console.error('Error occurred:', error);
-        alert('An error occurred while logging in');
+        alert('An error occurred while logging in. Please try again.');
     }
 };
-
 
 export default loginFormHandler;

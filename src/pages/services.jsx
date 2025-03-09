@@ -87,29 +87,27 @@ function HairCheckout() {
             </a>
             <p id="services-title">Hair Services</p>
             <hr id="services-hr" />
-            <div>
-                <div>
-                    <ul id="services-list">
-                        {services.map(service => (
-                            <li id="cart" key={service.name}>
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        onChange={(e) => {
-                                            if (e.target.checked) {
-                                                addServiceToCart(service);
-                                            } else {
-                                                removeServiceFromCart(service);
-                                            }
-                                        }}
-                                    />
-                                    {service.name}
-                                </label>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div>
+            <div id="services-div">
+                <ul id="services-list">
+                    {services.map(service => (
+                        <li id="cart" key={service.name}>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    onChange={(e) => {
+                                        if (e.target.checked) {
+                                            addServiceToCart(service);
+                                        } else {
+                                            removeServiceFromCart(service);
+                                        }
+                                    }}
+                                />
+                                {service.name}
+                            </label>
+                        </li>
+                    ))}
+                </ul>
+                <div id="cart-card">
                     {cart.length > 0 && (
                         <ul id="shopping-cart">
                             <p>Total Price: ${totalPrice}</p>
@@ -120,7 +118,9 @@ function HairCheckout() {
                     )}
                 </div>
             </div>
-            <button id="checkout-button" onClick={handleCheckout}>Checkout</button>
+
+
+            <button id="checkout-button" onClick={handleCheckout}>Proceed to Checkout</button>
 
 
         </>

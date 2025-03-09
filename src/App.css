@@ -280,8 +280,8 @@
 
 #signup-card {
   background-color: rgb(248, 246, 246);
-  margin-left: 25%;
-  margin-top: 2%;
+  margin-left: 35%;
+  margin-top: 5%;
   font-family: 'Montserrat';
   text-align: center;
   display: flex;
@@ -640,7 +640,6 @@ video::-webkit-media-controls {
   font-family: 'Libre Caslon Display';
   font-size: xx-large;
   margin-left: 45%;
-  margin-top: 1%;
   margin-bottom: 5%;
 }
 
@@ -661,6 +660,14 @@ video::-webkit-media-controls {
 
 }
 
+
+#services-list li {
+  margin-bottom: 50px;
+}
+
+
+
+
 #cart {
   margin-bottom: 5%;
 
@@ -676,12 +683,14 @@ video::-webkit-media-controls {
 }
 
 #checkout-button {
-  background-color: rgba(0, 255, 115, 0.628);
+  background-color: rgba(7, 218, 137, 0.616);
   margin-left: 45%;
   border: 0;
-  font-size: xx-large;
+  font-weight: 300;
+  font-size: large;
   margin-bottom: 10%;
-  width: 200px;
+  width: 300px;
+  height: 50px;
 }
 
 #checkout-button:hover {
@@ -693,26 +702,30 @@ video::-webkit-media-controls {
   font-size: xx-large;
 }
 
+
+#services-div {
+  display: flex;
+  justify-content: space-between;
+
+}
+
 #shopping-cart {
-  margin-left: 80%;
+  margin-right: 200px;
   font-size: x-large;
   color: #000000;
-  margin-right: 5%;
 }
 
 #shopping-cart p {
-  color: turquoise;
+  color: black;
   font-size: xx-large;
-  -webkit-animation: glow .5s ease-in-out infinite alternate;
-  -moz-animation: glow .5s ease-in-out infinite alternate;
-  animation: glow .5s ease-in-out infinite alternate;
-  margin-bottom: 20%;
+  font-weight: 300;
+  margin-bottom: 10%;
 }
 
 #shopping-cart li {
-  margin-bottom: 10%;
+  margin-bottom: 7%;
   list-style: none;
-  margin-left: 5%;
+  font-weight: 200;
 
 }
 
