@@ -62,6 +62,7 @@ router.post("/", async (req, res) => {
                 service_code: price,
                 price: code,
                 client_type: client_type,
+                appointment_date: '10-2-23',
             });
         });
 
