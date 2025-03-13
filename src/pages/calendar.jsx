@@ -118,10 +118,11 @@ function Calendar() {
     return (
         <>
             <Homebutton />
+            <p id="calendar-title">Book a Date</p>
             <table id="calendar" bgcolor="lightgrey" align="center"
                 cellSpacing="21" cellPadding="21">
                 <caption id="table-caption" align="top">
-                    
+
                     <button onClick={onClickDecreaseMonth} disabled={isDisabled} >previous month</button>
                     {monthNames[Month] + " " + currentYear}
                     <button onClick={onClickIncrementMonth} >next month</button>

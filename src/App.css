@@ -857,3 +857,11 @@ td:hover {
 
   100% {}
 }
+
+#calendar-title {
+  font-family: 'Libre Caslon Display';
+  font-size: xx-large;
+  margin-left: 46%;
+  margin-bottom: 3%;
+
+}

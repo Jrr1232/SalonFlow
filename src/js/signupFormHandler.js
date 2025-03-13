@@ -8,8 +8,16 @@ const signupFormHandler = async (event, formState) => {
 
     const { email, first_name } = formState;
 
-    Cookies.set('email', email, { expires: expirationDate });
-    Cookies.set('first_name', first_name, { expires: expirationDate });
+    Cookies.set('email', email, {
+        expires: expirationDate,
+        secure: true,
+        sameSite: 'strict',
+    });
+    Cookies.set('first_name', first_name, {
+        expires: expirationDate,
+        secure: true,
+        sameSite: 'strict',
+    });
     const clientType = Cookies.get('client_type');
     console.log("this client type is" + clientType)
     const developmentUrl = 'http://localhost:3001';
