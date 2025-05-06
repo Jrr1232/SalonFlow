@@ -23,11 +23,11 @@ const signupFormHandler = async (event, formState) => {
         ? process.env.REACT_APP_API_URL
         : 'http://localhost:3001';
 
-    console.log('Backend URL:', backendUrl / clientType)
+    console.log('Backend URL:', backendUrl + "" + clientType)
 
     if (formState.first_name && formState.last_name) {
         try {
-            const response = await fetch(`${backendUrl / clientType}`, {
+            const response = await fetch(`${backendUrl}/${clientType}`, {
                 method: 'POST',
                 body: JSON.stringify({
                     username: formState.username,
