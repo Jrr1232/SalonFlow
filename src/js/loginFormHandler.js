@@ -28,7 +28,7 @@ const loginFormHandler = async (event, formState) => {
 
         // Define backend URL (if needed)
         const backendUrl = process.env.NODE_ENV === 'production'
-            ? process.env.REACT_APP_API_URL
+            ? 'https://johannysunisex-cdc945aa3db4.herokuapp.com'
             : 'http://localhost:3001';
 
         // Try logging in via the /hair endpoint

@@ -20,7 +20,7 @@ const signupFormHandler = async (event, formState) => {
     });
     const clientType = Cookies.get('client_type');
     const backendUrl = process.env.NODE_ENV === 'production'
-        ? process.env.REACT_APP_API_URL
+        ? 'https://johannysunisex-cdc945aa3db4.herokuapp.com'
         : 'http://localhost:3001';
 
     console.log('Backend URL:', backendUrl + "" + clientType)
