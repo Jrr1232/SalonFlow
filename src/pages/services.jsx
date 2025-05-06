@@ -36,11 +36,20 @@ function HairCheckout() {
 
     const email = Cookies.get('email');
     const firstName = Cookies.get('first_name');
-
+    let appointmentDate = Cookies.get('appoitmentDate');
+    let hour = Cookies.get('hour');
+    console.log("Appointment Date:", appointmentDate);
+    console.log("Hour:", hour);
+    hour = hour.split('"');
+    console.log(hour[3])
+    hour = hour[3]; // Extract the hour from the cookie
+    appointmentDate = appointmentDate + " " + "@" + " " + hour; // Combine date and hour
+    console.log("Combined Appointment Date:", appointmentDate);
     const body = {
         cart: cart,
         email: email,
-        first_name: firstName
+        first_name: firstName,
+        appointmentDate: appointmentDate
     };
 
     const addServiceToCart = (service) => {
@@ -55,11 +64,12 @@ function HairCheckout() {
     const handleCheckout = async () => {
 
 
-        const developmentUrl = 'http://localhost:3001';
-        const backendUrl = process.env.REACT_APP_API_URL;
+        const backendUrl = process.env.NODE_ENV === 'production'
+            ? process.env.REACT_APP_API_URL
+            : 'http://localhost:3001';
 
         try {
-            const response = await fetch(`/api/checkout`, {
+            const response = await fetch(`${backendUrl}/api/checkout`, {
                 method: "POST",
                 body: JSON.stringify(body),
                 headers: { "Content-Type": "application/json" }

@@ -8,8 +8,7 @@ router.post("/", async (req, res) => {
     try {
         const cart = req.body.cart;
         const hour = req.body.hour;
-        const date = req.body.date;
-
+        const appointmentDate = req.body.appointmentDate;
         // Ensure hour is defined and split correctly
         let hourFormatted = "";
         if (hour) {
@@ -17,13 +16,7 @@ router.post("/", async (req, res) => {
             hourFormatted = arr[3];
         }
 
-        // Ensure appointmentCookie is defined and retrieved correctly
-        const appointmentCookie = Cookies.get('appointmentDate');
-        const appointmentDate = appointmentCookie ? `${appointmentCookie} ${hourFormatted}` : null;
 
-        if (!appointmentDate) {
-            throw new Error('Appointment date is not defined');
-        }
 
         console.log("Appointment Date:", appointmentDate);
 

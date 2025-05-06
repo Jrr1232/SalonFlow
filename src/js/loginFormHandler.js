@@ -27,10 +27,12 @@ const loginFormHandler = async (event, formState) => {
         });
 
         // Define backend URL (if needed)
-        const backendUrl = process.env.REACT_APP_API_URL;
+        const backendUrl = process.env.NODE_ENV === 'production'
+            ? process.env.REACT_APP_API_URL
+            : 'http://localhost:3001';
 
         // Try logging in via the /hair endpoint
-        let response = await fetch(`/wigs`, {
+        let response = await fetch(`${backendUrl}/wigs`, {
             method: 'POST',
             body: JSON.stringify({ email, username }),
             headers: { 'Content-Type': 'application/json' },

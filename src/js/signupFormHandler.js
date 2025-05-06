@@ -20,13 +20,13 @@ const signupFormHandler = async (event, formState) => {
     });
     const clientType = Cookies.get('client_type');
     console.log("this client type is" + clientType)
-    const developmentUrl = 'http://localhost:3001';
-    const backendUrl = process.env.REACT_APP_API_URL;
-
-    console.log('Backend URL:', backendUrl)
+    const backendUrl = process.env.NODE_ENV === 'production'
+        ? process.env.REACT_APP_API_URL
+        : 'http://localhost:3001';
+    // console.log('Backend URL:', backendUrl)
     if (formState.first_name && formState.last_name) {
         try {
-            const response = await fetch(`/${clientType}`, {
+            const response = await fetch(`${backendUrl}/wigs`, {
                 method: 'POST',
                 body: JSON.stringify({
                     username: formState.username,

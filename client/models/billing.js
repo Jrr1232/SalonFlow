@@ -37,11 +37,9 @@ Billing.init(
             allowNull: true,
 
         },
-        date_of_service: {
-            type: DataTypes.DATE, // Use DataTypes.DATE for date and time values
+        appointment_date: {
+            type: DataTypes.STRING,
             allowNull: true,
-            defaultValue: DataTypes.NOW, // Set the default value to the current timestamp
-
         },
         price: {
             type: DataTypes.INTEGER,
