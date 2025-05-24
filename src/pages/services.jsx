@@ -38,6 +38,7 @@ function HairCheckout() {
     console.log(client_type);
     const email = Cookies.get('email');
     const firstName = Cookies.get('first_name');
+    console.log(firstName);
     let appointmentDate = Cookies.get('appoitmentDate');
     let hour = Cookies.get('hour');
     hour = hour.split('"');
