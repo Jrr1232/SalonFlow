@@ -10,7 +10,6 @@ router.post("/", async (req, res) => {
         const cart = req.body.cart;
         const hour = req.body.hour;
         const appointmentDate = req.body.appointmentDate;
-        const client_type = cookie.get('client_type');
         // Ensure hour is defined and split correctly
         let hourFormatted = "";
         if (hour) {

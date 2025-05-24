@@ -34,6 +34,8 @@ function HairCheckout() {
         },
     ];
 
+    const client_type = Cookies.get('client_type');
+    console.log(client_type);
     const email = Cookies.get('email');
     const firstName = Cookies.get('first_name');
     let appointmentDate = Cookies.get('appoitmentDate');
@@ -45,7 +47,8 @@ function HairCheckout() {
         cart: cart,
         email: email,
         first_name: firstName,
-        appointmentDate: appointmentDate
+        appointmentDate: appointmentDate,
+        client_type: client_type
     };
 
     const addServiceToCart = (service) => {

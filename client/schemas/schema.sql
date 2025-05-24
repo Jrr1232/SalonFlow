@@ -49,6 +49,7 @@ CREATE TABLE Billing   (
     service_code varchar(30),
     appointment_date varchar(30),
     price INTEGER,
+    client_type varchar(30),
     service_name varchar(30),
     client_id INTEGER
 

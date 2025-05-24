@@ -9,7 +9,7 @@ function Calendar() {
     const currentYear = today.getFullYear();
     let appointmentDate
     let cookie = Cookies.get(appointmentDate)
-    let cookieData = Cookies.get('hour');
+    const cookieData = Cookies.get('hour');
     console.log(cookieData)
     let hour = '';
     let day = Cookies.get('appoitmentDate')
