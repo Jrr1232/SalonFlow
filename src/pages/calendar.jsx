@@ -7,30 +7,8 @@ function Calendar() {
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-11 indexed
     const currentYear = today.getFullYear();
-    let appointmentDate
-    let cookie = Cookies.get(appointmentDate)
-    let cookieData = Cookies.get('hour');
-    console.log(cookieData)
     let hour = '';
-    let day = Cookies.get('appoitmentDate')
-    cookieData = Cookies.get('hour');
-    if (typeof cookieData === "string") {
-        const parts = cookieData.split('"');
-        if (parts.length > 3) {
-            hour = parts[3]; // Safely extract the 3rd index if it exists
-        } else {
-            hour = 'Invalid hour format'; // Handle the case where the split did not return expected data
-        }
-    } else {
-        hour = 'No hour data found'; // Handle if cookieData is not a string or is missing
-    }
-    console.log(hour)
-    if (hour === "" || hour === "undefined" || hour === undefined) {
-        hour = 'and available hour.';
-    } else if (hour && typeof hour === "string") {
 
-        hour = "@" + " " + Cookies.get('hour').split('"')[3]
-    }
 
     const monthNames = [
         'January', 'February', 'March', 'April', 'May', 'June',
