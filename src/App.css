@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:100");
+
+
 #root {
   background-color: rgba(247, 247, 247, 0);
   background-repeat: no-repeat;
@@ -223,24 +226,49 @@
 
 /* Login Card */
 
+/* Keyframes */
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+#loginPage {
+  min-height: 100vh;
+  width: 100vw;
+  font: 400 16px/1.5 "Exo", ubuntu, "Segoe UI", helvetica, arial, sans-serif;
+  text-align: center;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  animation: bg-scrolling-reverse 5.0s infinite linear;
+
+  /* Prevent margin collapse */
+  padding-top: 1px;
+  /* invisible but effective */
+  overflow: hidden;
+  /* or this instead */
+}
+
 #login-card {
   font-family: 'Montserrat';
   background-color: rgb(248, 246, 246);
-  text-align: center;
-  margin-top: 10%;
-  margin-left: 40%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 40%;
   height: 400px;
   width: 450px;
-  color: white;
+  color: black;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 #signin-header {
   font-family: 'Montserrat';
   font-size: 30px;
   margin-top: 30px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 20px;
   color: rgb(142, 127, 255);
 }
@@ -277,6 +305,16 @@
 
 /* Sign up Card */
 
+#signup-page {
+  min-height: 100vh;
+  width: 100vw;
+  font: 400 16px/1.5 "Exo", ubuntu, "Segoe UI", helvetica, arial, sans-serif;
+  text-align: center;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  animation: bg-scrolling-reverse 5.0s infinite linear;
+  padding-top: 1px;
+  overflow: hidden;
+}
 
 #signup-card {
   background-color: rgb(248, 246, 246);
@@ -379,7 +417,7 @@ hr {
   color: rgb(107, 121, 251);
   font-family: 'Montserrat';
   margin-top: 30px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 30px;
   font-size: 30px;
 }
@@ -746,8 +784,13 @@ video::-webkit-media-controls {
 
 }
 
+#calendar-container {
+  display: flex;
+}
+
 #calendar {
   background-color: white;
+  margin-left: 30%;
 }
 
 #table-caption {
@@ -755,11 +798,12 @@ video::-webkit-media-controls {
 }
 
 #hours {
-  margin-top: 0%;
-  margin-left: 80%;
+  margin-left: 120%;
+  margin-top: 15%;
   list-style: none;
   overflow-y: scroll;
-  height: 200px;
+  padding-top: 0%;
+  height: 150px;
   width: 200px;
 
 }
@@ -770,10 +814,12 @@ video::-webkit-media-controls {
 }
 
 #hour-header {
-  margin-left: 83%;
+  margin-top: 100%;
+  margin-left: 150%;
 }
 
 #scheduled-day {
+  margin-top: 5%;
   margin-left: 5%;
 }
 

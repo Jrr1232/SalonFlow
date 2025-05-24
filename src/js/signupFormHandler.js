@@ -18,12 +18,12 @@ const signupFormHandler = async (event, formState) => {
         secure: true,
         sameSite: 'strict',
     });
+    
     const clientType = Cookies.get('client_type');
     const backendUrl = process.env.NODE_ENV === 'production'
         ? 'https://johannysunisex-cdc945aa3db4.herokuapp.com'
         : 'http://localhost:3001';
 
-    console.log('Backend URL:', backendUrl + "" + clientType)
 
     if (formState.first_name && formState.last_name) {
         try {

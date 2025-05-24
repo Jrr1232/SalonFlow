@@ -4,22 +4,22 @@ import Cookies from 'js-cookie';
 import Homebutton from '../components/homebutton';
 
 function Calendar() {
-
-
-
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-11 indexed
     const currentYear = today.getFullYear();
     let appointmentDate
     let cookie = Cookies.get(appointmentDate)
+    const cookieData = Cookies.get('hour');
+    console.log(cookieData)
+    let hour = '';
+    let day = Cookies.get('appoitmentDate')
+    hour = cookieData.split('"')[3]
+    console.log(hour)
+    if (hour === "" || hour === "undefined" || hour === undefined) {
+        hour = 'and available hour.';
+    } else if (hour && typeof hour === "string") {
 
-    let hour
-
-    let day
-
-    if (hour) {
-        hour = cookie.hour.split('"')
-        day = cookie.appoitmentDate + " " + hour[3]
+        hour = "@" + " " + Cookies.get('hour').split('"')[3]
     }
 
     const monthNames = [
@@ -106,7 +106,6 @@ function Calendar() {
         const appointmentDate = month + " " + day + " " + year;
         Cookies.set('appoitmentDate', appointmentDate, { expires: expirationDate });
         setDays(appointmentDate); // Update state with the selected date
-        console.log(appointmentDate)
         return appointmentDate
 
     }
@@ -118,44 +117,53 @@ function Calendar() {
         <>
             <Homebutton />
             <p id="calendar-title">Book a Date</p>
-            <table id="calendar" bgcolor="lightgrey" align="center"
-                cellSpacing="21" cellPadding="21">
-                <caption id="table-caption" align="top">
+            <div id="calendar-container">
+                <table id="calendar" bgcolor="lightgrey"
+                    cellSpacing="21" cellPadding="21">
+                    <caption id="table-caption" align="top">
 
-                    <button onClick={onClickDecreaseMonth} disabled={isDisabled} >previous month</button>
-                    {monthNames[Month] + " " + currentYear}
-                    <button onClick={onClickIncrementMonth} >next month</button>
-                </caption>
-                <thead>
-                    <tr>
-                        <th id="weekdays">Sun</th>
-                        <th id="weekdays">Mon</th>
-                        <th id="weekdays">Tue</th>
-                        <th id="weekdays">Wed</th>
-                        <th id="weekdays">Thu</th>
-                        <th id="weekdays">Fri</th>
-                        <th id="weekdays">Sat</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr></tr>
-                    {rows.map((week, index) => (
-                        <tr key={index}>
-                            {week.map((day, idx) => (
-                                <td key={idx} id={day} onClick={() => generateAppointment(day, monthNames[Month], currentYear)} ><a href="#" id="days">
-                                    {day || '\u00A0'}</a>
-                                </td>
-                            ))}
+                        <button onClick={onClickDecreaseMonth} disabled={isDisabled} >previous month</button>
+                        {monthNames[Month] + " " + currentYear}
+                        <button onClick={onClickIncrementMonth} >next month</button>
+                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'}, {hour}.</p>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th id="weekdays">Sun</th>
+                            <th id="weekdays">Mon</th>
+                            <th id="weekdays">Tue</th>
+                            <th id="weekdays">Wed</th>
+                            <th id="weekdays">Thu</th>
+                            <th id="weekdays">Fri</th>
+                            <th id="weekdays">Sat</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-            <button className="addtocalendar-button"><a href="/Services">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none" className="svg-icon"><g strokeWidth="2" strokeLinecap="round" stroke="#fff"><rect y="5" x="4" width="16" rx="2" height="16"></rect><path d="m8 3v4"></path><path d="m16 3v4"></path><path d="m4 11h16"></path></g></svg>
-                <span className="lable">Add to Calendar</span></a>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                        {rows.map((week, index) => (
+                            <tr key={index}>
+                                {week.map((day, idx) => (
+                                    <td key={idx} id={day} onClick={() => generateAppointment(day, monthNames[Month], currentYear)} ><a href="#" id="days">
+                                        {day || '\u00A0'}</a>
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                <Hourslider id="hourslider" />
+
+
+            </div>
+            <button className="addtocalendar-button" onClick={() => {
+                alert({ days } + { hour } + 'added to calendar');
+                window.location.href = '/Services';
+            }}>
+                <a id="addtocalendar" href="/Services">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none" className="svg-icon"><g strokeWidth="2" strokeLinecap="round" stroke="#fff"><rect y="5" x="4" width="16" rx="2" height="16"></rect><path d="m8 3v4"></path><path d="m16 3v4"></path><path d="m4 11h16"></path></g></svg>
+                    <span className="lable">Add to Calendar</span></a>
             </button>
-            <Hourslider id="hourslider" />
-            <p id="scheduled-day">Appointment Date: {days || 'No date selected'}</p>        </>
+        </>
 
     )
 }

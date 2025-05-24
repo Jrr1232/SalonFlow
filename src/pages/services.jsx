@@ -38,13 +38,9 @@ function HairCheckout() {
     const firstName = Cookies.get('first_name');
     let appointmentDate = Cookies.get('appoitmentDate');
     let hour = Cookies.get('hour');
-    console.log("Appointment Date:", appointmentDate);
-    console.log("Hour:", hour);
     hour = hour.split('"');
-    console.log(hour[3])
     hour = hour[3]; // Extract the hour from the cookie
     appointmentDate = appointmentDate + " " + "@" + " " + hour; // Combine date and hour
-    console.log("Combined Appointment Date:", appointmentDate);
     const body = {
         cart: cart,
         email: email,

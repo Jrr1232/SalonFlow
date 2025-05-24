@@ -3,12 +3,14 @@ const Hair_client = require("../../client/models/hair_client");
 const Wig_client = require("../../client/models/wig_client");
 const Billing = require("../../client/models/billing");
 const Cookies = require('js-cookie');
+const cookie = require("express-session/session/cookie");
 
 router.post("/", async (req, res) => {
     try {
         const cart = req.body.cart;
         const hour = req.body.hour;
         const appointmentDate = req.body.appointmentDate;
+        const client_type = cookie.get('client_type');
         // Ensure hour is defined and split correctly
         let hourFormatted = "";
         if (hour) {
@@ -18,7 +20,6 @@ router.post("/", async (req, res) => {
 
 
 
-        console.log("Appointment Date:", appointmentDate);
 
         const billPromises = cart.map(async (item) => {
             const { name, price, code } = item;
@@ -45,7 +46,7 @@ router.post("/", async (req, res) => {
                     service_name: name,
                     service_code: code,
                     price,
-                    client_type,
+                    client_type: client_type,
                     appointment_date: appointmentDate
                 });
             } else {

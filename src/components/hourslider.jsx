@@ -9,8 +9,9 @@ function Hourslider() {
         const expirationDate = new Date();
         expirationDate.setTime(expirationDate.getTime() + (10 * 60 * 1000));
         console.log(hour)
-        Cookies.set('hour', hour, { expires: expirationDate });
+        Cookies.set('hour', JSON.stringify(hour), { expires: expirationDate });
         setTime(hour)
+
 
     }
 
@@ -29,12 +30,14 @@ function Hourslider() {
 
     return (
         <>
+            <div>
             <p id="hour-header">Select Hour</p>
             <ul id="hours">
                 {hours.map((hour) => (
                     <li id="hours-list" key={hour}><a href="#" id="hour-link" onClick={() => onClickSaveHour({ hour })}>{hour}</a></li>
                 ))}
             </ul>
+            </div>
 
 
 
