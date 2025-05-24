@@ -125,7 +125,7 @@ function Calendar() {
                         <button onClick={onClickDecreaseMonth} disabled={isDisabled} >previous month</button>
                         {monthNames[Month] + " " + currentYear}
                         <button onClick={onClickIncrementMonth} >next month</button>
-                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'}, {hour}.</p>
+                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'}, { }.</p>
                     </caption>
                     <thead>
                         <tr>
