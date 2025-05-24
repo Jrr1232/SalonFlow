@@ -13,7 +13,6 @@ function Calendar() {
     console.log(cookieData)
     let hour = '';
     let day = Cookies.get('appoitmentDate')
-    hour = cookieData.split('"')[3]
     console.log(hour)
     if (hour === "" || hour === "undefined" || hour === undefined) {
         hour = 'and available hour.';
@@ -125,7 +124,7 @@ function Calendar() {
                         <button onClick={onClickDecreaseMonth} disabled={isDisabled} >previous month</button>
                         {monthNames[Month] + " " + currentYear}
                         <button onClick={onClickIncrementMonth} >next month</button>
-                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'}, { }.</p>
+                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'}, {hour}.</p>
                     </caption>
                     <thead>
                         <tr>
