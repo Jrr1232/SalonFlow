@@ -156,7 +156,7 @@ function Calendar() {
 
             </div>
             <button className="addtocalendar-button" onClick={() => {
-                alert({ days } + { hour } + 'added to calendar');
+                alert(`${days} ${hour} added to calendar`);
                 window.location.href = '/Services';
             }}>
                 <a id="addtocalendar" href="/Services">
