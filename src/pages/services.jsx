@@ -95,7 +95,7 @@ function HairCheckout() {
             <a id="home-button" href="/">
                 <p id="home-button"> Home </p>
             </a>
-            <p id="services-title">Hair Services</p>
+            <div id="services-title">Hair Services</div>
             <hr id="services-hr" />
             <div id="services-div">
                 <ul id="services-list">
@@ -120,7 +120,7 @@ function HairCheckout() {
                 <div id="cart-card">
                     {cart.length > 0 && (
                         <ul id="shopping-cart">
-                            <p>Total Price: ${totalPrice}</p>
+                            <div id = "total-price">Total Price: ${totalPrice}</div>
                             {cart.map((item, index) => (
                                 <li key={index}>{item.name}: ${item.price}</li>
                             ))}

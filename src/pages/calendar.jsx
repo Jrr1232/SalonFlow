@@ -7,7 +7,7 @@ function Calendar() {
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-11 indexed
     const currentYear = today.getFullYear();
-    let hour = ''; 
+    let hour = '';
     let hourCookie = Cookies.get('hour');
     console.log(hourCookie);
 
@@ -105,7 +105,7 @@ function Calendar() {
     return (
         <>
             <Homebutton />
-            <p id="calendar-title">Book a Date</p>
+            <div id="calendar-title">Book a Date</div>
             <div id="calendar-container">
                 <table id="calendar" bgcolor="lightgrey"
                     cellSpacing="21" cellPadding="21">
@@ -114,7 +114,7 @@ function Calendar() {
                         <button onClick={onClickDecreaseMonth} disabled={isDisabled} >previous month</button>
                         {monthNames[Month] + " " + currentYear}
                         <button onClick={onClickIncrementMonth} >next month</button>
-                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'}, {hour}.</p>
+                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'} {hour}</p>
                     </caption>
                     <thead>
                         <tr>
