@@ -7,8 +7,9 @@ function Calendar() {
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-11 indexed
     const currentYear = today.getFullYear();
-    let hour = '';
-
+    let hour = ''; 
+    let hourCookie = Cookies.get('hour');
+    console.log(hourCookie);
 
     const monthNames = [
         'January', 'February', 'March', 'April', 'May', 'June',
