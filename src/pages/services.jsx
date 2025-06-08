@@ -41,8 +41,10 @@ function HairCheckout() {
     console.log(firstName);
     let appointmentDate = Cookies.get('appoitmentDate');
     let hour = Cookies.get('hour');
-    hour = hour.split('"');
-    hour = hour[3]; // Extract the hour from the cookie
+    if (hour) {
+        hour = hour.split('"');
+        hour = hour[3]; // Extract the hour from the cookie
+    }
     appointmentDate = appointmentDate + " " + "@" + " " + hour; // Combine date and hour
     const body = {
         cart: cart,
@@ -120,7 +122,7 @@ function HairCheckout() {
                 <div id="cart-card">
                     {cart.length > 0 && (
                         <ul id="shopping-cart">
-                            <div id = "total-price">Total Price: ${totalPrice}</div>
+                            <div id="total-price">Total Price: ${totalPrice}</div>
                             {cart.map((item, index) => (
                                 <li key={index}>{item.name}: ${item.price}</li>
                             ))}

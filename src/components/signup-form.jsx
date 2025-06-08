@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Google from './googlesigninbutton';
 import signupFormHandler from '../js/signupFormHandler';
 import Cookies from 'js-cookie';
+import Logo from './logo';
 
 function SignUpForm({ clientType }) {
 
@@ -37,6 +38,7 @@ function SignUpForm({ clientType }) {
     return (
         <form className="form form-signup" onSubmit={(event) => handleSubmit(event, 'signup')}>
             <fieldset>
+                <Logo />
                 <legend id="signup-header">Sign up</legend>
                 <div className="input-block-1">
                     <input

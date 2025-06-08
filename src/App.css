@@ -159,6 +159,10 @@
   border: 0cap;
 }
 
+.dropdown-menu li {
+  font-family: 'Montserrat';
+}
+
 #login-div {
   border: 0cap;
   margin-left: -150px;
@@ -181,8 +185,44 @@
 }
 
 #dropdownMenuButton {
-  border-radius: 5px;
-  border: 0px;
+  border: 0;
+  background-color: transparent;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  color: black;
+}
+
+#dropdownMenuButton:hover {
+  background-color: rgba(124, 123, 123, 0.212);
+}
+
+/* Remove background color on focus or active for <a> and <li> */
+.dropdown-menu a:focus,
+.dropdown-menu a:active,
+.dropdown-menu li:focus,
+.dropdown-menu li:active {
+  background-color: transparent !important;
+  outline: none;
+  /* Remove the outline if necessary */
+}
+
+/* Optional: you can also style the link's active/focus state */
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  /* Light gray background when hovered (example) */
+}
+
+#loginButton {
+  border: 0;
+  background-color: rgba(153, 153, 153, 0.372);
+  font-family: 'Montserrat';
+  font-weight: 300;
+  color: black;
+}
+
+#loginButton:hover {
+
+  background-color: rgba(105, 105, 105, 0.553);
 }
 
 #login-link {
@@ -230,10 +270,10 @@
 
 #signin-header {
   font-family: 'Libre Caslon Display';
-  font-size: 65px;
+  font-size: 35px;
   margin-left: 1%;
   margin-top: 2.5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .btn-login {
@@ -315,7 +355,7 @@
 
 #signup-header {
   font-family: 'Libre Caslon Display';
-  font-size: 65px;
+  font-size: 35px;
   margin-left: 1%;
   margin-top: 2.5%;
   margin-bottom: 5%;
@@ -325,6 +365,7 @@
   margin-left: 1%;
   border: 0;
   font-family: 'Montserrat';
+  background-color: whitesmoke;
 }
 
 .btn-signup:hover {
@@ -337,8 +378,10 @@
     overflow-x: hidden;
   }
 
+  .form-signup {}
+
   #signup-header {
-    font-size: 65px;
+    font-size: 35px;
     margin-left: 5%;
     margin-bottom: 10%;
   }
@@ -374,6 +417,46 @@
 
   }
 
+  input:focus {
+    outline: none;
+    background-color: transparent;
+  }
+
+  /* Optionally, customize the focus effect */
+  input:focus {
+    outline: none;
+    background-color: transparent;
+    /* Optional: soft glowing effect */
+  }
+
+  input:-webkit-autofill {
+    background-color: transparent !important;
+    /* Removes background color */
+    border: 1px solid #ccc;
+    /* Optionally, set a neutral border */
+    box-shadow: none;
+    /* Removes the blue shadow effect */
+  }
+
+}
+
+
+
+
+/* Scroll Text Animation */
+
+#under-construction {
+  background-color: rgba(255, 247, 0, 0.886);
+  font-family: 'Libre Caslon Display', serif;
+  font-size: 140px;
+  text-align: center;
+  margin-top: 20%;
+  white-space: nowrap;
+  width: fit-content;
+  padding-left: 5%;
+  padding-right: 5%;
+  word-spacing: 50px;
+  animation: my-animation 150s linear infinite;
 }
 
 
@@ -381,7 +464,8 @@
 
 
 
-/* SCROLL Text 1*/
+
+
 
 #scroll-container1 {
   display: flex;
@@ -592,11 +676,11 @@ video::-webkit-media-controls {
 
   #booking-button {
     font-size: 20px;
-    margin-left: 30%;
+    margin-left: 40%;
   }
 
   #hourcard {
-    margin-left: 25%;
+    margin-left: 35%;
   }
 
   #hourcard ul {

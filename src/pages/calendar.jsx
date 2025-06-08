@@ -146,7 +146,7 @@ function Calendar() {
                     </tbody>
                 </table>
                 <button className="addtocalendar-button" onClick={() => {
-                    alert(`${days} ${hour} added to calendar`);
+                    
                     window.location.href = '/services/hair';
                 }}>
                     <a id="addtocalendar" href="/services/hair">
