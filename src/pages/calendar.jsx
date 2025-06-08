@@ -10,6 +10,11 @@ function Calendar() {
     let hour = '';
     let hourCookie = Cookies.get('hour');
     console.log(hourCookie);
+    if (hourCookie == undefined) {
+        hourCookie = JSON.stringify({ hour: '7:00 AM' })
+    }; // Default value if cookie is not set
+    let parsedHour = JSON.parse(hourCookie);  // Parse it into an object
+    console.log(parsedHour.hour);  // '7:00 AM'
 
     const monthNames = [
         'January', 'February', 'March', 'April', 'May', 'June',
@@ -105,7 +110,7 @@ function Calendar() {
     return (
         <>
             <Homebutton />
-            <div id="calendar-title">Book a Date</div>
+            <div id="calendar-title">Book an Appointment</div>
             <div id="calendar-container">
                 <table id="calendar" bgcolor="lightgrey"
                     cellSpacing="21" cellPadding="21">
@@ -114,7 +119,7 @@ function Calendar() {
                         <button onClick={onClickDecreaseMonth} disabled={isDisabled} >previous month</button>
                         {monthNames[Month] + " " + currentYear}
                         <button onClick={onClickIncrementMonth} >next month</button>
-                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'} {hour}</p>
+                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'} @ {parsedHour.hour}</p>
                     </caption>
                     <thead>
                         <tr>
@@ -140,18 +145,18 @@ function Calendar() {
                         ))}
                     </tbody>
                 </table>
+                <button className="addtocalendar-button" onClick={() => {
+                    alert(`${days} ${hour} added to calendar`);
+                    window.location.href = '/services/hair';
+                }}>
+                    <a id="addtocalendar" href="/services/hair">
+                        <span className="label">Book Appointment</span></a>
+                </button>
                 <Hourslider id="hourslider" />
 
 
             </div>
-            <button className="addtocalendar-button" onClick={() => {
-                alert(`${days} ${hour} added to calendar`);
-                window.location.href = '/Services';
-            }}>
-                <a id="addtocalendar" href="/Services">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none" className="svg-icon"><g strokeWidth="2" strokeLinecap="round" stroke="#fff"><rect y="5" x="4" width="16" rx="2" height="16"></rect><path d="m8 3v4"></path><path d="m16 3v4"></path><path d="m4 11h16"></path></g></svg>
-                    <span className="lable">Add to Calendar</span></a>
-            </button>
+
         </>
 
     )

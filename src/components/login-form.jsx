@@ -44,10 +44,9 @@ function LoginForm() {
     }, []);
 
     return (
-        <div className="card" id="login-card">
             <form className="form form-login" onSubmit={handleSubmit}>
                 <fieldset>
-                    <legend id="signin-header">Sign in</legend>
+                    <legend id="signin-header">Log In</legend>
                     <div className="input-block">
                         <input
                             id="login-email"
@@ -77,9 +76,8 @@ function LoginForm() {
                     Log in
                 </button>
                 <hr />
-                <Google />
             </form>
-        </div>
+        
     );
 }
 

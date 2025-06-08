@@ -6,7 +6,6 @@ import App from './App.jsx'
 import Home from './pages/home.jsx'
 import './index.css'
 import LoginPage from './pages/login-page.jsx';
-import SignupPage from './pages/signup-page.jsx';
 import HairSignupPage from './pages/hair-signup-page.jsx';
 import WigSignupPage from './pages/wig-signup-page.jsx';
 import HairCheckout from './pages/services.jsx';
@@ -23,11 +22,11 @@ const router = createBrowserRouter([
 
       },
       {
-        path: '/loginpage',
+        path: '/login',
         element: <LoginPage />
       },
       {
-        path: '/services',
+        path: '/services/hair',
         element: <HairCheckout />
       },
       {
@@ -35,11 +34,11 @@ const router = createBrowserRouter([
         element: <Calendar />
       },
       {
-        path: '/hair-signup',
+        path: '/signup/hair',
         element: <HairSignupPage />
       },
       {
-        path: '/wig-signup',
+        path: '/signup/wig',
         element: <WigSignupPage />
       },
 

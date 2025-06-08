@@ -21,7 +21,7 @@ router.post('/hair', async (req, res) => {
 
         if (userData) {
             // If the user exists, redirect to the services page
-            res.json({ redirectTo: '/services', userDatas });
+            res.json({ redirectTo: '/services/hair', userDatas });
         } else {
             // If the user does not exist, create a new user
             const newHairClient = await Hair_client.create({
@@ -61,7 +61,7 @@ router.post('/wigs', async (req, res) => {
 
         if (userData) {
             // If the user exists, redirect to the services01 page
-            res.json({ redirectTo: '/services' });
+            res.json({ redirectTo: '/services/hair' });
         } else {
             // If the user does not exist, create a new user
             const newWigClient = await Wig_client.create({

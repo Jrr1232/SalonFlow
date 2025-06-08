@@ -2,7 +2,7 @@
 
 
 #root {
-  background-color: rgba(247, 247, 247, 0);
+  background-color: rgba(12, 15, 11, 0);
   background-repeat: no-repeat;
 }
 
@@ -12,7 +12,7 @@
 #navbar-header {
   height: 100px;
   background: transparent;
-  background-color: rgba(255, 0, 0, 0)
+  background-color: rgba(118, 50, 50, 0)
 }
 
 .navbar-brand {
@@ -62,7 +62,7 @@
 }
 
 #logo {
-  font-family: Corinthia;
+  font-family: "Corinthia";
   font-weight: bold;
   font-size: x-large;
   text-align: center;
@@ -226,201 +226,158 @@
 
 /* Login Card */
 
-/* Keyframes */
-@keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
 
-#loginPage {
-  min-height: 100vh;
-  width: 100vw;
-  font: 400 16px/1.5 "Exo", ubuntu, "Segoe UI", helvetica, arial, sans-serif;
-  text-align: center;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  animation: bg-scrolling-reverse 5.0s infinite linear;
-
-  /* Prevent margin collapse */
-  padding-top: 1px;
-  /* invisible but effective */
-  overflow: hidden;
-  /* or this instead */
-}
-
-#login-card {
-  font-family: 'Montserrat';
-  background-color: rgb(248, 246, 246);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  margin-left: 40%;
-  height: 400px;
-  width: 450px;
-  color: black;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
 
 #signin-header {
-  font-family: 'Montserrat';
-  font-size: 30px;
-  margin-top: 30px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  color: rgb(142, 127, 255);
+  font-family: 'Libre Caslon Display';
+  font-size: 65px;
+  margin-left: 1%;
+  margin-top: 2.5%;
+  margin-bottom: 10%;
 }
 
 .btn-login {
+  background-color: white;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  margin-left: 1%;
+  border: 0;
   font-family: 'Montserrat';
-  color: white;
-  width: 200px;
-  height: 40px;
-  background-color: rgb(46, 85, 192);
-  border-radius: 5px;
-  border: 0px;
-  box-shadow: 2px 2px 2px 2px rgba(59, 59, 59, 0.706);
-
 }
 
 .btn-login:hover {
-  color: black;
+  background-color: rgba(59, 59, 59, 0.706);
 }
 
-#login-email {
-  margin-bottom: 20px;
-  height: 50px;
-
-}
-
-#login-username {
-  margin-bottom: 20px;
-  height: 50px;
-
-}
+/* Sign up Page */
 
 
 
-/* Sign up Card */
-
-#signup-page {
-  min-height: 100vh;
-  width: 100vw;
-  font: 400 16px/1.5 "Exo", ubuntu, "Segoe UI", helvetica, arial, sans-serif;
-  text-align: center;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  animation: bg-scrolling-reverse 5.0s infinite linear;
-  padding-top: 1px;
-  overflow: hidden;
-}
-
-#signup-card {
-  background-color: rgb(248, 246, 246);
-  margin-left: 35%;
-  margin-top: 5%;
-  font-family: 'Montserrat';
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  height: 600px;
-  width: 600px;
-  color: white;
+.input-block-1 {
+  margin-top: 8.5%;
+  margin-left: 1%;
+  margin-bottom: 3.5%;
   border: 0;
-}
-
-.btn-signup {
-  font-family: 'Montserrat';
-  color: white;
-  width: 200px;
-  height: 40px;
-  background-color: rgb(46, 85, 192);
-  border-radius: 5px;
-  border: 0px;
-  box-shadow: 2px 2px 2px 2px rgba(59, 59, 59, 0.706);
-
-}
-
-.btn-signup:hover {
-  color: black
-}
-
-#google-signin-button:hover {
-  color: black;
-}
-
-hr {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#google-signin-button {
-  font-size: small;
-  color: white;
-  width: 200px;
-  height: 35px;
-  border-radius: 5px;
-  border: 0px;
-  background-color: rgba(206, 65, 37, 0.98);
-  box-shadow: 2px 2px 2px 2px rgba(33, 33, 33, 0.706);
-}
-
-#google-img {
-  height: 13px;
-  margin-right: 10px;
-
-}
-
-#signup-first_name {
-  height: 50px;
-
-  width: 150px;
-  margin-bottom: 20px;
-
-}
-
-#signup-last_name {
-  height: 50px;
-
-  width: 150px;
-  margin-bottom: 20px;
-}
-
-#signup-address {
-  height: 50px;
-
-  margin-top: 20px;
-  width: 300px;
-}
-
-#signup-username {
-  height: 50px;
-  width: 300px;
-
+  border-bottom: solid 1.5px #ccc;
 }
 
 #signup-email {
-  height: 50px;
-
-  margin-top: 20px;
-  width: 300px;
-
+  border: 0;
+  width: 100%;
 }
 
 
-.btn-signup {
-  margin-top: 20px;
+.input-block-3 {
+  margin-top: 1.5%;
+  margin-left: 1%;
+  margin-bottom: 3.5%;
+  border: 0;
+  border-bottom: solid 1.5px #ccc;
+}
+
+/* Wrap both fields in a container */
+.form-container {
+  display: flex;
+  gap: 10px;
+  /* Space between fields */
+}
+
+#signup-first_name,
+#signup-last_name {
+  width: 48%;
+  border: 0;
+
+}
+
+.input-block {
+  margin-bottom: 3.5%;
+  border: 0;
+  margin-left: 1%;
+}
+
+.input-block-1:hover,
+.input-block:hover {
+  border-bottom: solid 1.5px black;
+  /* Only change border on hover */
+}
+
+#signup-first_name:hover,
+#signup-last_name:hover {
+  border-bottom: solid 1.5px black;
+}
+
+
+.input-block input {
+  border: 0;
+  border-bottom: solid 1.5px #ccc;
+  width: 100%;
 }
 
 #signup-header {
-  color: rgb(107, 121, 251);
-  font-family: 'Montserrat';
-  margin-top: 30px;
-  font-weight: 400;
-  margin-bottom: 30px;
-  font-size: 30px;
+  font-family: 'Libre Caslon Display';
+  font-size: 65px;
+  margin-left: 1%;
+  margin-top: 2.5%;
+  margin-bottom: 5%;
 }
+
+.btn-signup {
+  margin-left: 1%;
+  border: 0;
+  font-family: 'Montserrat';
+}
+
+.btn-signup:hover {
+  background-color: rgba(59, 59, 59, 0.706);
+}
+
+@media screen and (max-width: 768px) {
+
+  #root {
+    overflow-x: hidden;
+  }
+
+  #signup-header {
+    font-size: 65px;
+    margin-left: 5%;
+    margin-bottom: 10%;
+  }
+
+  #home-button {
+    margin-left: 50%;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .input-block-1,
+  .input-block-3,
+  .input-block {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 8.5%;
+  }
+
+  #signup-first_name,
+  #signup-last_name {
+    width: 35%;
+    /* Adjust both fields to take up 100% width together */
+    border: 0;
+  }
+
+  .btn-signup,
+  .btn-login {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  #signin-header {
+    margin-left: 4.5%;
+
+  }
+
+}
+
+
+
 
 
 
@@ -632,13 +589,6 @@ video::-webkit-media-controls {
 }
 
 @media only screen and (max-width: 768px) {
-  #login-card {
-    width: 300px;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    margin-left: 10%;
-  }
-
 
   #booking-button {
     font-size: 20px;
@@ -651,44 +601,6 @@ video::-webkit-media-controls {
 
   #hourcard ul {
     font-size: 12px;
-  }
-
-
-
-  #signup-card {
-    margin-bottom: 5%;
-    margin-top: 5%;
-    margin-left: 2%;
-    width: 400px;
-    height: 600px;
-
-  }
-
-  #calendar-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    margin-right: 400px;
-  }
-
-  #calendar {
-    margin-left: 0%;
-    margin-right: 100px;
-    width: 100%;
-    font-size: 11px;
-    /* Make text smaller for mobile */
-    border-spacing: 10px;
-    /* Reduce space between cells */
-  }
-
-  #calendar-title {
-    font-size: 30px;
-    margin-left: 50%;
-  }
-
-  #hours {
-    font-size: 12px;
-
   }
 
   #services-title {
@@ -711,18 +623,25 @@ video::-webkit-media-controls {
     font-size: 12px;
   }
 
-  #checkout-button {}
 
-  #shopping-cart li {
-    font-size: 12px;
-    color: teal;
+  /* Calendar */
+
+  #calendar-title {
+    padding-top: 5%;
+    margin-top: 10%;
   }
 
-  #total-price {
-    font-size: 12px;
+  #calendar-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-right: 20%;
   }
 
-
+  #hour-container {
+    margin-right: 40%;
+    margin-bottom: 5%;
+  }
 }
 
 
@@ -739,14 +658,16 @@ video::-webkit-media-controls {
 }
 
 #home-button {
-  margin-left: 2%;
+  margin-left: 1%;
   margin-top: 1px;
   color: black;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  text-decoration: none;
+
 }
 
-#home-button {
-  text-decoration: none;
-}
+
 
 #services-list {
   margin-left: 20%;
@@ -806,9 +727,7 @@ video::-webkit-media-controls {
 
 }
 
-#cart label:hover {
-  font-size: xx-large;
-}
+
 
 
 #services-div {
@@ -873,7 +792,7 @@ video::-webkit-media-controls {
   text-align: center;
 }
 
-#hours {
+#hours-list-container {
   margin-left: 120%;
   margin-top: 15%;
   list-style: none;
@@ -884,14 +803,21 @@ video::-webkit-media-controls {
 
 }
 
-#hours a {
+#hours-list-container a {
   color: black;
   text-decoration: none;
 }
 
+#hours-list-container a:hover {
+  background-color: gainsboro;
+}
+
 #hour-header {
-  margin-top: 100%;
-  margin-left: 150%;
+  font-family: 'Libre Caslon Display';
+  font-size: large;
+  padding-left: 145%;
+  margin-top: 25%;
+  margin-bottom: 2%;
 }
 
 #scheduled-day {
@@ -913,11 +839,12 @@ video::-webkit-media-controls {
   background-color: #eee;
   border: none;
   padding: 1rem;
+  font-family: 'Montserrat';
   font-size: 14px;
   width: 90px;
   height: 65px;
   border-radius: 1rem;
-  color: lightcoral;
+  color: rgba(32, 111, 248, 0.941);
   box-shadow: 0 0.4rem #dfd9d9;
   cursor: pointer;
 }
@@ -929,43 +856,31 @@ video::-webkit-media-controls {
 
 .addtocalendar-button {
   margin-top: 2%;
-  margin-left: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 9px 12px;
-  gap: 8px;
-  height: 40px;
-  width: 201px;
-  border: none;
-  background: lightcoral;
-  border-radius: 20px;
-  cursor: pointer;
+  margin-left: 35%;
+  border: 0;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: x-large;
+  color: #000000;
+
 }
 
+label {
+  font-family: 'Montserrat';
+  color: #000000;
+}
 
 .addtocalendar-button a {
   text-decoration: none;
 
 }
 
-.lable {
-  line-height: 22px;
-  font-size: 17px;
-  color: #fff;
-  font-family: sans-serif;
-  letter-spacing: 1px;
-}
-
-
 
 td:hover {
   background-color: gainsboro;
 }
 
-.button:hover .svg-icon {
-  animation: slope 1s linear infinite;
-}
+
 
 
 
@@ -983,7 +898,7 @@ td:hover {
 #calendar-title {
   font-family: 'Libre Caslon Display';
   font-size: xx-large;
-  margin-left: 46%;
-  margin-bottom: 3%;
-
+  margin-left: 3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }

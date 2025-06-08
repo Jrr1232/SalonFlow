@@ -22,23 +22,23 @@ function Offcanvas() {
                             Create Account
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a href="/wig-signup" className="dropdown-item text-decoration-none ">
+                            <a href="/signup/wig" className="dropdown-item text-decoration-none ">
                                 <li>Wigs</li>
                             </a>
-                            <a href="/hair-signup" className="dropdown-item text-decoration-none">
+                            <a href="/signup/hair" className="dropdown-item text-decoration-none">
                                 <li>Regular</li>
                             </a>
                         </ul>
-                        <a href="/loginpage" className="btn btn-info" id="loginButton">
+                        <a href="/login" className="btn btn-info" id="loginButton">
                             Log in
                         </a>
                         <h5 id="menu-title">Menu</h5>
                         <ul id="services">
-                            <li> <a href="/calendar">Color/Highlights</a> <span className="price">$50</span></li>
-                            <li><a href="/calendar">Blow dry</a> <span className="price">$80</span></li>
-                            <li><a href="/calendar">Hair Cut</a> <span className="price">$70</span></li>
-                            <li><a href="/calendar">Wash</a> <span className="price">$50</span></li>
-                            <li><a href="/calendar">Extensions</a> <span className="price">$100</span></li>
+                            <li><a href="/login">Color/Highlights</a> <span className="price">$50</span></li>
+                            <li><a href="/login">Blow dry</a> <span className="price">$80</span></li>
+                            <li><a href="/login">Hair Cut</a> <span className="price">$70</span></li>
+                            <li><a href="/login">Wash</a> <span className="price">$50</span></li>
+                            <li><a href="/login">Extensions</a> <span className="price">$100</span></li>
                         </ul>
                         <hr />
                     </div>

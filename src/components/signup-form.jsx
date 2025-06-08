@@ -35,78 +35,76 @@ function SignUpForm({ clientType }) {
         }
     };
     return (
-        <div className="card" id="signup-card">
-            <form className="form form-signup" onSubmit={(event) => handleSubmit(event, 'signup')}>
-                <fieldset>
-                    <legend id="signup-header">Sign up</legend>
-                    <div className="input-block">
-                        <input
-                            id="signup-first_name"
-                            type="text"
-                            name="first_name"
-                            placeholder="First Name"
-                            value={formState.first_name}
-                            onChange={handleChange}
-                            required
-                            aria-label="First Name"
-                        />
-                    </div>
-                    <div className="input-block">
-                        <input
-                            id="signup-last_name"
-                            type="text"
-                            name="last_name"
-                            placeholder="Last Name"
-                            value={formState.last_name}
-                            onChange={handleChange}
-                            required
-                            aria-label="Last Name"
-                        />
-                    </div>
-                    <div className="input-block">
-                        <input
-                            id="signup-username"
-                            type="text"
-                            name="username"
-                            placeholder="Username"
-                            value={formState.username}
-                            onChange={handleChange}
-                            required
-                            aria-label="Username"
-                        />
-                    </div>
-                    <div className="input-block">
-                        <input
-                            id="signup-email"
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            value={formState.email}
-                            onChange={handleChange}
-                            required
-                            aria-label="Email"
-                        />
-                    </div>
-                    <div className="input-block">
-                        <input
-                            id="signup-address"
-                            type="text"
-                            name="address"
-                            placeholder="Address"
-                            value={formState.address}
-                            onChange={handleChange}
-                            required
-                            aria-label="Address"
-                        />
-                    </div>
-                </fieldset>
-                <button type="submit" className="btn-signup">
-                    Sign Up
-                </button>
-                <hr />
-                <Google />
-            </form>
-        </div>
+        <form className="form form-signup" onSubmit={(event) => handleSubmit(event, 'signup')}>
+            <fieldset>
+                <legend id="signup-header">Sign up</legend>
+                <div className="input-block-1">
+                    <input
+                        id="signup-email"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={formState.email}
+                        onChange={handleChange}
+                        required
+                        aria-label="Email"
+                    />
+
+                </div>
+                <div className="input-block">
+                    <input
+                        id="signup-username"
+                        type="text"
+                        name="username"
+                        placeholder="Username"
+                        value={formState.username}
+                        onChange={handleChange}
+                        required
+                        aria-label="Username"
+                    />
+
+                </div>
+                <div className="input-block-3">
+                    <input
+                        id="signup-first_name"
+                        type="text"
+                        name="first_name"
+                        placeholder="First Name"
+                        value={formState.first_name}
+                        onChange={handleChange}
+                        required
+                        aria-label="First Name"
+                    />
+                     <input
+                        id="signup-last_name"
+                        type="text"
+                        name="last_name"
+                        placeholder="Last Name"
+                        value={formState.last_name}
+                        onChange={handleChange}
+                        required
+                        aria-label="Last Name"
+                    />
+                </div>
+                <div className="input-block">
+                    <input
+                        id="signup-address"
+                        type="text"
+                        name="address"
+                        placeholder="Address"
+                        value={formState.address}
+                        onChange={handleChange}
+                        required
+                        aria-label="Address"
+                    />
+                </div>
+            </fieldset>
+            <button type="submit" className="btn-signup">
+                CREATE ACCOUNT
+            </button>
+            <hr />
+
+        </form>
     );
 }
 
