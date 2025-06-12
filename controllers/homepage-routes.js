@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const Hair_client = require('../client/models/hair_client');
-const Wig_client = require('../client/models/wig_client');
 
 router.post('/hair', async (req, res) => {
     try {
@@ -20,8 +19,11 @@ router.post('/hair', async (req, res) => {
         });
 
         if (userData) {
-            // If the user exists, redirect to the services page
-            res.json({ redirectTo: '/services/hair', userDatas });
+            // Send clear signal to frontend that the user exists
+            return res.json({
+                message: 'User already exists. Please log in.',
+                userData
+            });
         } else {
             // If the user does not exist, create a new user
             const newHairClient = await Hair_client.create({
@@ -40,7 +42,7 @@ router.post('/hair', async (req, res) => {
             await req.session.save(); // Ensure the session is saved
 
             // Send the response with the new user data
-            res.json({ newHairClient, userDatas });
+            return res.json({ newHairClient, userDatas });
         }
     } catch (err) {
         console.error(err);

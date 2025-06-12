@@ -31,6 +31,13 @@ function Header() {
                     </div>
                 </div>
                 <button
+                    id="cart-button-header"
+                    className="btn btn-lg"
+                    type="button"
+                > <a href="/services/hair" id="cart"><img src="public\shopping_cart_checkout_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20 (1).png" alt="Cart Icon" id="cart-icon-header"></img>
+                        <p id="menu-header">Cart</p></a>
+                </button>
+                <button
                     id="booking-button-header"
                     className="btn btn-lg"
                     type="button"
@@ -41,6 +48,7 @@ function Header() {
                     <span className="navbar-toggler-icon" id="header-menu-btn"></span>
                     <p id="menu-header">More info</p>
                 </button>
+
             </div>
         </nav>
     );

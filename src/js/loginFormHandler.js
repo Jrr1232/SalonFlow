@@ -32,7 +32,7 @@ const loginFormHandler = async (event, formState) => {
             : 'http://localhost:3001';
 
         // Try logging in via the /hair endpoint
-        let response = await fetch(`${backendUrl}/wigs`, {
+        let response = await fetch(`${backendUrl}/hair`, {
             method: 'POST',
             body: JSON.stringify({ email, username }),
             headers: { 'Content-Type': 'application/json' },
@@ -40,7 +40,7 @@ const loginFormHandler = async (event, formState) => {
 
         // If /hair fails, try the /wigs endpoint
         if (!response.ok) {
-            response = await fetch(`/hair`, {
+            response = await fetch(`/wigs`, {
                 method: 'POST',
                 body: JSON.stringify({ email, username }),
                 headers: { 'Content-Type': 'application/json' },

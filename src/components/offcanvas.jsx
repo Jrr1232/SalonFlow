@@ -34,11 +34,11 @@ function Offcanvas() {
                         </a>
                         <h5 id="menu-title">Menu</h5>
                         <ul id="services">
-                            <li><a href="/login">Color/Highlights</a> <span className="price">$50</span></li>
-                            <li><a href="/login">Blow dry</a> <span className="price">$80</span></li>
-                            <li><a href="/login">Hair Cut</a> <span className="price">$70</span></li>
-                            <li><a href="/login">Wash</a> <span className="price">$50</span></li>
-                            <li><a href="/login">Extensions</a> <span className="price">$100</span></li>
+                            <li><a href="/services/hair">Color/Highlights</a> <span className="price">$50</span></li>
+                            <li><a href="/services/hair">Blow dry</a> <span className="price">$80</span></li>
+                            <li><a href="/services/hair">Hair Cut</a> <span className="price">$70</span></li>
+                            <li><a href="/services/hair">Wash</a> <span className="price">$50</span></li>
+                            <li><a href="/services/hair">Extensions</a> <span className="price">$100</span></li>
                         </ul>
                         <hr />
                     </div>

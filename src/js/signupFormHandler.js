@@ -24,7 +24,6 @@ const signupFormHandler = async (event, formState) => {
         ? 'https://johannysunisex-cdc945aa3db4.herokuapp.com'
         : 'http://localhost:3001';
 
-
     if (formState.first_name && formState.last_name) {
         try {
             const response = await fetch(`${backendUrl}/${clientType}`, {
@@ -37,26 +36,16 @@ const signupFormHandler = async (event, formState) => {
                     email: formState.email,
                 }),
                 headers: { 'Content-Type': 'application/json' },
-            }).catch(error => {
-                console.error('Error during fetch:', error);
-                throw error; // Re-throw the error to ensure it propagates
             });
 
-
-            console.log('Response from server:', response); // Log the response
-
-            if (response.ok) {
-                document.location.replace('/Calendar');
-            }
-
-            alert(response.ok ? 'Signed Up' : 'Failed to sign up');
-            console.log(response.ok ? 'signed up' : 'failed to sign up');
+            const data = await response.json(); // ✅ Return this to the React component
+            return data;
         } catch (error) {
-            console.error('Error during fetch:', error.message);
-            alert('An error occurred while signing up');
+            console.error('Fetch error:', error.message);
+            return { error: true, message: 'An error occurred during signup.' };
         }
     } else {
-        alert('Please fill in all required fields');
+        return { error: true, message: 'Please fill in all required fields.' };
     }
 };
 
