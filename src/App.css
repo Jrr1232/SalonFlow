@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 110px;
   background: transparent;
   background-color: rgba(118, 50, 50, 0);
   width: 100%;
@@ -77,7 +77,6 @@
   font-weight: bold;
   font-size: x-large;
   text-align: center;
-  margin-left: 3%;
   margin-top: 10px;
 }
 
@@ -156,20 +155,12 @@
 }
 
 #booking-button-header {
-
+  font-family: 'Montserrat';
   padding-right: none;
-  color: red;
 }
 
-#cart-button-header {
-  margin-top: 1.7%;
-  margin-left: auto;
-  padding-left: none;
-  padding-right: none;
-  color: red;
-}
 
-#booking-button:hover {
+#booking-button #booking-button:hover {
   opacity: 50%;
 }
 
@@ -679,6 +670,10 @@
   color: black;
 }
 
+#nav-links-header {
+  display: inline;
+  margin-left: 0%;
+}
 
 #services :hover {
   color: grey;
@@ -714,21 +709,40 @@ video::-webkit-media-controls {
   display: none;
 }
 
+#cart-button-header {
+  margin-top: 6%;
+  margin-left: 70%;
+  font-family: 'Montserrat';
+
+}
+
+
 @media only screen and (max-width: 768px) {
 
-  #cart-button-header {
-    margin-top: 6%;
-    margin-left: auto;
-    padding-left: none;
-    padding-right: none;
-    color: red;
-    outline: none;
-    border: none;
+
+
+
+  #logo {
+    font-family: "Corinthia";
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 10px;
   }
 
   #booking-button {
     font-size: 20px;
     margin-left: 40%;
+  }
+
+  #nav-links-header {}
+
+  #cart-button-header {
+    margin-top: 20%;
+    margin-left: 0%;
+    outline: none;
+    border: none;
   }
 
   #hourcard {
