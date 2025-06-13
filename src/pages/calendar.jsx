@@ -4,6 +4,9 @@ import Cookies from 'js-cookie';
 import Homebutton from '../components/homebutton';
 
 function Calendar() {
+
+
+     
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-11 indexed
     const currentYear = today.getFullYear();
@@ -98,7 +101,7 @@ function Calendar() {
         const expirationDate = new Date();
         expirationDate.setTime(expirationDate.getTime() + (10 * 60 * 1000));
         const appointmentDate = month + " " + day + " " + year;
-        Cookies.set('appoitmentDate', appointmentDate, { expires: expirationDate });
+        Cookies.set('appointmentDate', appointmentDate, { expires: expirationDate });
         setDays(appointmentDate); // Update state with the selected date
         return appointmentDate
 

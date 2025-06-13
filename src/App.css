@@ -150,7 +150,7 @@
   margin-top: 3%;
   margin-left: 40%;
   text-decoration: none;
-  color: rgb(41, 189, 189);
+  color: rgb(0, 0, 0);
   font-size: 40px;
 }
 
@@ -538,6 +538,13 @@
 }
 
 
+#services-title {
+  font-family: 'Libre Caslon Display';
+  font-size: xx-large;
+  margin-left: 45%;
+  margin-bottom: 5%;
+}
+
 /* SCROLL Text 2*/
 
 #scroll-container2 {
@@ -717,82 +724,6 @@ video::-webkit-media-controls {
 }
 
 
-@media only screen and (max-width: 768px) {
-
-
-
-
-  #logo {
-    font-family: "Corinthia";
-    font-weight: bold;
-    font-size: x-large;
-    text-align: center;
-    margin-left: 3%;
-    margin-top: 10px;
-  }
-
-  #booking-button {
-    font-size: 20px;
-    margin-left: 40%;
-  }
-
-  #nav-links-header {}
-
-  #cart-button-header {
-    margin-top: 20%;
-    margin-left: 0%;
-    outline: none;
-    border: none;
-  }
-
-  #hourcard {
-    margin-left: 35%;
-  }
-
-  #hourcard ul {
-    font-size: 12px;
-  }
-
-  #services-title {
-    font-size: 14px
-  }
-
-  #services-list li {
-    font-size: 12px;
-  }
-
-  #services-hr {
-    width: 40%;
-    /* Allow it to take up 90% of the container */
-    max-width: none;
-    /* Remove the max-width limitation */
-    margin-left: 0%;
-  }
-
-  #services-div {
-    font-size: 12px;
-  }
-
-
-  /* Calendar */
-
-  #calendar-title {
-    padding-top: 5%;
-    margin-top: 10%;
-  }
-
-  #calendar-container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10%;
-    margin-right: 20%;
-  }
-
-  #hour-container {
-    margin-right: 40%;
-    margin-bottom: 5%;
-  }
-}
 
 
 #menu-header {
@@ -800,12 +731,7 @@ video::-webkit-media-controls {
 }
 
 
-#services-title {
-  font-family: 'Libre Caslon Display';
-  font-size: xx-large;
-  margin-left: 45%;
-  margin-bottom: 5%;
-}
+
 
 #home-button {
   margin-left: 1%;
@@ -853,9 +779,8 @@ video::-webkit-media-controls {
   border: 0;
   font-weight: 300;
   font-size: 1.2rem;
-  /* Relative font size */
   margin-bottom: 10%;
-  width: 80%;
+  width: fit-content;
   /* Button width is a percentage of its container */
   max-width: 300px;
   /* Limit the max width */
@@ -1051,4 +976,155 @@ td:hover {
   margin-left: 3%;
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+
+@media only screen and (max-width: 390px) {
+
+
+  #services-title {
+    font-family: 'Libre Caslon Display';
+    font-size: xx-large;
+    margin-left: 30%;
+
+  }
+
+
+  #navbar-header {
+    flex: auto;
+    flex-wrap: nowrap;
+
+  }
+
+  #nav-links-header {
+    display: flex;
+
+    align-items: center;
+  }
+
+
+
+  #hourcard {
+    margin-left: 10%;
+  }
+
+  #cart-button-header {
+    display: none;
+  }
+
+  #booking-button {
+    font-size: 20px;
+    margin-left: 25%;
+  }
+
+  #booking-button-header {
+    margin-left: 50%;
+    margin-top: 0%;
+    outline: none;
+    border: none;
+  }
+
+}
+
+@media only screen and (max-width: 768px),
+only screen and (max-height: 768px) {
+
+
+  #services-title {
+    font-family: 'Libre Caslon Display';
+    font-size: xx-large;
+    margin-left: 32%;
+
+  }
+
+  #calendar button {
+    font-size: 13px;
+    margin-bottom: 10%;
+  }
+
+
+
+  #logo {
+    font-family: "Corinthia";
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 10px;
+  }
+
+  #booking-button {
+    font-size: 20px;
+    margin-left: 28%;
+  }
+
+
+  #cart-button-header {
+    margin-top: 20%;
+    margin-left: 0%;
+    outline: none;
+    border: none;
+  }
+
+  #hourcard {
+    margin-left: 20%;
+  }
+
+  #hourcard ul {
+    font-size: 12px;
+  }
+
+
+
+  #services-list li {
+    font-size: 12px;
+  }
+
+  #services-hr {
+    width: 40%;
+    max-width: none;
+    margin-left: 0%;
+  }
+
+  #services-div {
+    font-size: 12px;
+  }
+
+
+  /* Calendar */
+
+  #calendar-title {
+    padding-top: 5%;
+    margin-top: 15%;
+  }
+
+  #calendar-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-right: 23%;
+
+
+  }
+
+  #calendar {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+  #calendar td,
+  #calendar th {
+    padding: 6px;
+  }
+
+  .addtocalendar-button {
+    font-size: 15px;
+  }
+
+  #hour-container {
+    margin-right: 100%;
+    margin-bottom: 5%;
+  }
 }

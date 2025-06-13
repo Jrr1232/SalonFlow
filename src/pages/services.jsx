@@ -1,8 +1,22 @@
-import React, { useState } from 'react';
 import Cookies from 'js-cookie';
 import { Navigate, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 function HairCheckout() {
+
+
+    const [hasAppointment, sethasAppointment] = useState(false);
+
+    useEffect(() => {
+        const appointmentDate = Cookies.get('appointmentDate'); // Make sure this matches your actual cookie key
+        if (appointmentDate) {
+            sethasAppointment(true);
+        }
+    }, []);
+
+
+
+
     const [cart, setCart] = useState([]);
     const navigateTo = useNavigate();
 
@@ -39,7 +53,7 @@ function HairCheckout() {
     const email = Cookies.get('email');
     const firstName = Cookies.get('first_name');
     console.log(firstName);
-    let appointmentDate = Cookies.get('appoitmentDate');
+    let appointmentDate = Cookies.get('appointmentDate');
     let hour = Cookies.get('hour');
     if (hour) {
         hour = hour.split('"');
@@ -63,33 +77,42 @@ function HairCheckout() {
         setCart(updatedCart);
     };
 
-    const handleCheckout = async () => {
+    const handleCheckout = async (e) => {
 
-
-        const backendUrl = process.env.NODE_ENV === 'production'
-            ? 'https://johannysunisex-cdc945aa3db4.herokuapp.com'
-            : 'http://localhost:3001';
-
-        try {
-            const response = await fetch(`${backendUrl}/api/checkout`, {
-                method: "POST",
-                body: JSON.stringify(body),
-                headers: { "Content-Type": "application/json" }
-            });
-
-            if (response.ok) {
-                alert("Successfully added to Checkout");
-                setCart([]);
-
-            } else {
-                alert("Failed to add to checkout");
-            }
-        } catch (error) {
-            console.error("Error during fetch", error);
+        if (!hasAppointment) {
+            e.preventDefault(); // prevent navigation
+            alert("Please use calendar to book an appointment.");
+            navigateTo('/calendar');
         }
-    };
-    const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
 
+        else {
+
+
+            const backendUrl = process.env.NODE_ENV === 'production'
+                ? 'https://johannysunisex-cdc945aa3db4.herokuapp.com'
+                : 'http://localhost:3001';
+
+            try {
+                const response = await fetch(`${backendUrl}/api/checkout`, {
+                    method: "POST",
+                    body: JSON.stringify(body),
+                    headers: { "Content-Type": "application/json" }
+                });
+
+                if (response.ok) {
+                    alert("Successfully added to Checkout");
+                    setCart([]);
+
+                } else {
+                    alert("Failed to add to checkout");
+                }
+            } catch (error) {
+                console.error("Error during fetch", error);
+            }
+        };
+        const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
+
+    }
 
 
     return (

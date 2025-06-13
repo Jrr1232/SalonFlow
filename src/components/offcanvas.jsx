@@ -1,8 +1,27 @@
+import Cookies from 'js-cookie';
 import React, { useState, useEffect } from 'react';
-import LoginForm from './login-form';
-import SignUpForm from './signup-form';
+
+
+
+
 
 function Offcanvas() {
+
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const userEmail = Cookies.get('email'); // Make sure this matches your actual cookie key
+        if (userEmail) {
+            setIsLoggedIn(true);
+        }
+    }, []);
+
+    const handleBookingClick = (e) => {
+        if (!isLoggedIn) {
+            e.preventDefault(); // prevent navigation
+            alert("Please log in to book an appointment.");
+        }
+    };
     return (
         <>
             <button id="booking-button" className="btn btn-link btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -34,11 +53,11 @@ function Offcanvas() {
                         </a>
                         <h5 id="menu-title">Menu</h5>
                         <ul id="services">
-                            <li><a href="/services/hair">Color/Highlights</a> <span className="price">$50</span></li>
-                            <li><a href="/services/hair">Blow dry</a> <span className="price">$80</span></li>
-                            <li><a href="/services/hair">Hair Cut</a> <span className="price">$70</span></li>
-                            <li><a href="/services/hair">Wash</a> <span className="price">$50</span></li>
-                            <li><a href="/services/hair">Extensions</a> <span className="price">$100</span></li>
+                            <li><a href="/services/hair" onClick={handleBookingClick}>Color/Highlights</a> <span className="price">$50</span></li>
+                            <li><a href="/services/hair" onClick={handleBookingClick}>Blow dry</a> <span className="price">$80</span></li>
+                            <li><a href="/services/hair" onClick={handleBookingClick}>Hair Cut</a> <span className="price">$70</span></li>
+                            <li><a href="/services/hair" onClick={handleBookingClick}>Wash</a> <span className="price">$50</span></li>
+                            <li><a href="/services/hair" onClick={handleBookingClick}>Extensions</a> <span className="price">$100</span></li>
                         </ul>
                         <hr />
                     </div>
