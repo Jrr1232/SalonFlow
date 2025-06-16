@@ -55,7 +55,6 @@ router.post("/", async (req, res) => {
 
         const billData = await Promise.all(billPromises);
 
-        console.log("Billing records created:", billData);
 
         res.status(200).json({ message: 'Billing records created successfully' });
     } catch (err) {

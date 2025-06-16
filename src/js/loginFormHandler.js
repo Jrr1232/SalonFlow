@@ -56,7 +56,6 @@ const loginFormHandler = async (event, formState) => {
             alert(`Login failed: ${errorData.message || 'Invalid credentials'}`);
         }
     } catch (error) {
-        console.error('Error occurred:', error);
         alert('An error occurred while logging in. Please try again.');
     }
 };

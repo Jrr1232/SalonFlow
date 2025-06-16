@@ -1,20 +1,25 @@
-// main.jsx
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-import Home from './pages/home.jsx';
 import './index.css';
-import LoginPage from './pages/login-page.jsx';
-import HairSignupPage from './pages/hair-signup-page.jsx';
-import WigSignupPage from './pages/wig-signup-page.jsx';
-import HairCheckout from './pages/services.jsx';
-import Calendar from './pages/calendar.jsx';
 import { register } from '../serviceWorkerRegistration.js';
-// Register service worker
-register();  // Call the register function to enable PWA
 
+// Register service worker
+register(); // Enable PWA
+
+// Lazy load route components
+const App = lazy(() => import('./App.jsx'));
+const Home = lazy(() => import('./pages/home.jsx'));
+const LoginPage = lazy(() => import('./pages/login-page.jsx'));
+const HairSignupPage = lazy(() => import('./pages/hair-signup-page.jsx'));
+const WigSignupPage = lazy(() => import('./pages/wig-signup-page.jsx'));
+const HairCheckout = lazy(() => import('./pages/services.jsx'));
+const Calendar = lazy(() => import('./pages/calendar.jsx'));
+
+// Error component to handle unexpected errors
+const Error = () => <div>Error loading the page!</div>;
+
+// Create Router with lazy-loaded components
 const router = createBrowserRouter([
   {
     path: '/',
@@ -31,10 +36,11 @@ const router = createBrowserRouter([
   },
 ]);
 
+// Render the app with a Suspense fallback
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+    <Suspense fallback={<div>Loading...</div>}>
+      <RouterProvider router={router} />
+    </Suspense>
   </React.StrictMode>
 );

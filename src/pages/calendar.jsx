@@ -12,12 +12,10 @@ function Calendar() {
     const currentYear = today.getFullYear();
     let hour = '';
     let hourCookie = Cookies.get('hour');
-    console.log(hourCookie);
     if (hourCookie == undefined) {
         hourCookie = JSON.stringify({ hour: '7:00 AM' })
     }; // Default value if cookie is not set
     let parsedHour = JSON.parse(hourCookie);  // Parse it into an object
-    console.log(parsedHour.hour);  // '7:00 AM'
 
     const monthNames = [
         'January', 'February', 'March', 'April', 'May', 'June',

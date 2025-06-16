@@ -41,7 +41,6 @@ const signupFormHandler = async (event, formState) => {
             const data = await response.json(); // ✅ Return this to the React component
             return data;
         } catch (error) {
-            console.error('Fetch error:', error.message);
             return { error: true, message: 'An error occurred during signup.' };
         }
     } else {

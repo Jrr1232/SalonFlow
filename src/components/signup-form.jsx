@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Google from './googlesigninbutton';
 import signupFormHandler from '../js/signupFormHandler';
 import Cookies from 'js-cookie';
 import Logo from './logo';

@@ -18,7 +18,6 @@ function LoginForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Form submitted:', formState);
         loginFormHandler(event, formState);
 
     };
