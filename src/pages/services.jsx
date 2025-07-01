@@ -101,7 +101,7 @@ function HairCheckout() {
                 });
 
                 if (response.ok) {
-                    alert("Successfully added to Checkout");
+                    alert("Appointment booked at " + " " + appointmentDate);
                     setCart([]);
 
                 } else {

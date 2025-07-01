@@ -27,7 +27,7 @@ function Offcanvas() {
             <button id="booking-button" className="btn btn-link btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 Book an Appointment
             </button>
-            <img src="/arrow_right_alt_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" id="arrow"  width="40" height="40"></img>
+            <img src="/arrow_right_alt_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" id="arrow" width="40" height="40"></img>
             <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel"></h5>
@@ -53,11 +53,11 @@ function Offcanvas() {
                         </a>
                         <h5 id="menu-title">Menu</h5>
                         <ul id="services">
-                            <li><a href="/services/hair" onClick={handleBookingClick}>Color/Highlights</a> <span className="price">$50</span></li>
-                            <li><a href="/services/hair" onClick={handleBookingClick}>Blow dry</a> <span className="price">$80</span></li>
-                            <li><a href="/services/hair" onClick={handleBookingClick}>Hair Cut</a> <span className="price">$70</span></li>
-                            <li><a href="/services/hair" onClick={handleBookingClick}>Wash</a> <span className="price">$50</span></li>
-                            <li><a href="/services/hair" onClick={handleBookingClick}>Extensions</a> <span className="price">$100</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Color/Highlights</a> <span className="price">$50</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Blow dry</a> <span className="price">$80</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Hair Cut</a> <span className="price">$70</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Wash</a> <span className="price">$50</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Extensions</a> <span className="price">$100</span></li>
                         </ul>
                         <hr />
                     </div>
