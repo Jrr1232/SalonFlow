@@ -292,7 +292,7 @@
 }
 
 .btn-login {
-  background-color: white;
+  background-color: gainsboro;
   margin-top: 10%;
   margin-bottom: 5%;
   margin-left: 1%;
@@ -306,20 +306,7 @@
 
 /* Sign up Page */
 
-#signup-first_name {
-  border: 0;
-  border-bottom: solid 1.5px #ccc;
-  width: 35%;
-  outline: none;
-  margin-right: 20px;
-}
 
-#signup-last_name {
-  border: 0;
-  border-bottom: solid 1.5px #ccc;
-  width: 60%;
-  outline: none;
-}
 
 .input-block-1 {
   margin-top: 8.5%;
@@ -340,21 +327,45 @@
 .input-block {
   border: 0;
   outline: none;
-
+  border-bottom: solid 1.5px #ccc;
 }
 
 #signup-username {
-  border: 0;
-  border-bottom: solid 1.5px #ccc;
+
   outline: none;
+  width: 100%;
 }
 
+#signup-address {
+  width: 100%;
+  outline: none;
+}
 
 .input-block-3 {
   margin-top: 1.5%;
   margin-left: 1%;
   margin-bottom: 3.5%;
+  border: 0;
+  outline: none;
 }
+
+#signup-first_name {
+  border: 0;
+  width: 35%;
+  outline: none;
+  margin-right: 20px;
+  border-bottom: solid 1.5px #ccc;
+}
+
+#signup-last_name {
+  border: 0;
+  width: 60%;
+  outline: none;
+  border-bottom: solid 1.5px #ccc;
+
+}
+
+
 
 
 
@@ -366,12 +377,7 @@
 }
 
 
-#signup-address {
-  border: 0;
-  border-bottom: solid 1.5px #ccc;
-  width: 100%;
-  outline: none;
-}
+
 
 
 
@@ -423,6 +429,15 @@
 
   #root {
     overflow-x: hidden;
+  }
+
+  #services-hr {
+    /* Ensure it doesn't grow beyond 1100px */
+    margin-left: auto;
+    /* Center it horizontally */
+    margin-right: auto;
+    /* Center it horizontally */
+    margin-bottom: 5%;
   }
 
   #signup-first_name {
@@ -881,7 +896,7 @@ video::-webkit-media-controls {
 }
 
 #services-hr {
-  width: 100%;
+  width: 65%;
   /* Make it take up the full width of the container */
   max-width: 1100px;
   /* Ensure it doesn't grow beyond 1100px */
@@ -1159,11 +1174,7 @@ only screen and (max-height: 768px) {
     font-size: 12px;
   }
 
-  #services-hr {
-    width: 40%;
-    max-width: none;
-    margin-left: 0%;
-  }
+
 
   #services-div {
     font-size: 12px;

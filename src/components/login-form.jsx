@@ -19,6 +19,8 @@ function LoginForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         loginFormHandler(event, formState);
+        setMessage("Account created successfully!");
+        setTimeout(() => window.location.href = '/Calendar', 2000);
 
     };
 

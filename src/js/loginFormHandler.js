@@ -50,7 +50,7 @@ const loginFormHandler = async (event, formState) => {
         // Handle the final response
         if (response.ok) {
             alert('Logged in successfully!');
-            document.location.replace('/');
+            
         } else {
             const errorData = await response.json();
             alert(`Login failed: ${errorData.message || 'Invalid credentials'}`);
