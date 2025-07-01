@@ -9,13 +9,13 @@
     "theme_color": "#000000",
     "icons": [
         {
-            "src": "dr-flag-sm.png",
-            "sizes": "192x192",
+            "src": "/dr-flag-sm.png",
+            "sizes": "150x100",
             "type": "image/png"
         },
         {
-            "src": "dr-flag-sm.png",
-            "sizes": "512x512",
+            "src": "/dr-flag-sm.png",
+            "sizes": "150x100",
             "type": "image/png"
         }
     ]

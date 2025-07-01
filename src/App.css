@@ -306,7 +306,20 @@
 
 /* Sign up Page */
 
+#signup-first_name {
+  border: 0;
+  border-bottom: solid 1.5px #ccc;
+  width: 35%;
+  outline: none;
+  margin-right: 20px;
+}
 
+#signup-last_name {
+  border: 0;
+  border-bottom: solid 1.5px #ccc;
+  width: 60%;
+  outline: none;
+}
 
 .input-block-1 {
   margin-top: 8.5%;
@@ -321,6 +334,7 @@
 #signup-email {
   border: 0;
   width: 100%;
+  outline: none;
 }
 
 .input-block {
@@ -329,16 +343,20 @@
 
 }
 
+#signup-username {
+  border: 0;
+  border-bottom: solid 1.5px #ccc;
+  outline: none;
+}
+
 
 .input-block-3 {
   margin-top: 1.5%;
   margin-left: 1%;
   margin-bottom: 3.5%;
-  border: 0;
-  border-bottom: solid 1.5px #ccc;
-  outline: none;
-
 }
+
+
 
 /* Wrap both fields in a container */
 .form-container {
@@ -347,12 +365,16 @@
   /* Space between fields */
 }
 
-#signup-first_name,
-#signup-last_name {
-  width: 48%;
-  border: 0;
 
+#signup-address {
+  border: 0;
+  border-bottom: solid 1.5px #ccc;
+  width: 100%;
+  outline: none;
 }
+
+
+
 
 .input-block {
   margin-bottom: 3.5%;
@@ -403,7 +425,20 @@
     overflow-x: hidden;
   }
 
-  .form-signup {}
+  #signup-first_name {
+    border: 0;
+    border-bottom: solid 1.5px #ccc;
+    width: 35%;
+    outline: none;
+    margin-right: 10px;
+  }
+
+  #signup-last_name {
+    border: 0;
+    border-bottom: solid 1.5px #ccc;
+    width: 55%;
+    outline: none;
+  }
 
   #signup-header {
     font-size: 35px;
@@ -424,12 +459,7 @@
     margin-bottom: 8.5%;
   }
 
-  #signup-first_name,
-  #signup-last_name {
-    width: 35%;
-    /* Adjust both fields to take up 100% width together */
-    border: 0;
-  }
+
 
   .btn-signup,
   .btn-login {
@@ -968,6 +998,7 @@ label {
   text-decoration: none;
 
 }
+
 td:hover {
   background-color: gainsboro;
 }
@@ -998,6 +1029,21 @@ td:hover {
 
 @media only screen and (max-width: 390px) {
 
+  #total-price {
+    margin-bottom: 50%;
+    list-style: none;
+    font-weight: 200;
+    font-size: 20px;
+
+  }
+
+  #shopping-cart li {
+    margin-bottom: 20%;
+    list-style: none;
+    font-weight: 200;
+    font-size: 14px;
+
+  }
 
   #services-title {
     font-family: 'Libre Caslon Display';
@@ -1046,6 +1092,22 @@ td:hover {
 @media only screen and (max-width: 768px),
 only screen and (max-height: 768px) {
 
+
+  #total-price {
+    margin-bottom: 50%;
+    list-style: none;
+    font-weight: 200;
+    font-size: 20px;
+
+  }
+
+  #shopping-cart li {
+    margin-bottom: 20%;
+    list-style: none;
+    font-weight: 200;
+    font-size: 14px;
+
+  }
 
   #services-title {
     font-family: 'Libre Caslon Display';

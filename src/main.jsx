@@ -3,6 +3,7 @@ import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { register } from '../serviceWorkerRegistration.js';
+import { ClipLoader } from 'react-spinners';
 
 // Register service worker
 register(); // Enable PWA
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
 // Render the app with a Suspense fallback
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<ClipLoader color="#3498db" size={40} />}>
       <RouterProvider router={router} />
     </Suspense>
   </React.StrictMode>

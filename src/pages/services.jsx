@@ -75,6 +75,9 @@ function HairCheckout() {
         setCart(updatedCart);
     };
 
+    const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
+
+
     const handleCheckout = async (e) => {
 
         if (!hasAppointment) {
@@ -108,7 +111,6 @@ function HairCheckout() {
                 console.error("Error during fetch", error);
             }
         };
-        const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
 
     }
 

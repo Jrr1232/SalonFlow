@@ -39,9 +39,6 @@ function SignUpForm({ clientType }) {
 
             if (data.userData) {
                 setMessage(data.message || "User exists. Please log in.");
-                setTimeout(() => {
-                    window.location.reload();
-                }, 3000);
             } else if (data.newHairClient) {
                 setMessage("Account created successfully!");
                 // Optionally redirect after a short delay:

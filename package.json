@@ -29,6 +29,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.28.0",
+    "react-spinners": "^0.17.0",
     "sequelize": "^6.37.5",
     "serve": "^14.2.4",
     "serve-favicon": "^2.5.0",
