@@ -12,6 +12,10 @@
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^7.0.0",
+    "@fortawesome/free-regular-svg-icons": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/react-fontawesome": "^0.2.3",
     "@mui/x-data-grid": "^7.23.5",
     "bootstrap": "^5.3.3",
     "concurrently": "^8.2.2",
@@ -28,6 +32,7 @@
     "npm-run-all": "^4.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^6.28.0",
     "react-spinners": "^0.17.0",
     "sequelize": "^6.37.5",

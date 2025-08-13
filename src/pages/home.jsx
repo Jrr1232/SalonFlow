@@ -14,8 +14,6 @@ function Home() {
             <Header />
             <Carousel />
             <Scrolltext1 />
-            <Scrolltext2 />
-            <Scrolltext3 />
              <Body />
             <hr id="hours-divider"></hr>
 
