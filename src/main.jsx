@@ -2,11 +2,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { register } from '../serviceWorkerRegistration.js';
 import { ClipLoader } from 'react-spinners';
+import About from './pages/about.jsx';
 
 // Register service worker
-register(); // Enable PWA
 
 // Lazy load route components
 const App = lazy(() => import('./App.jsx'));
@@ -16,7 +15,8 @@ const HairSignupPage = lazy(() => import('./pages/hair-signup-page.jsx'));
 const WigSignupPage = lazy(() => import('./pages/wig-signup-page.jsx'));
 const HairCheckout = lazy(() => import('./pages/services.jsx'));
 const Calendar = lazy(() => import('./pages/calendar.jsx'));
-
+const Services = lazy(() => import('./pages/services.jsx'));
+const AboutPage = lazy(() => import('./pages/about.jsx'));
 // Error component to handle unexpected errors
 const Error = () => <div>Error loading the page!</div>;
 
@@ -30,6 +30,8 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: '/login', element: <LoginPage /> },
       { path: '/services/hair', element: <HairCheckout /> },
+      { path: '/services', element: <Services /> },
+      { path: '/about', element: <AboutPage /> },
       { path: '/calendar', element: <Calendar /> },
       { path: '/signup/hair', element: <HairSignupPage /> },
       { path: '/signup/wig', element: <WigSignupPage /> },

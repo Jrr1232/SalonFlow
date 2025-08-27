@@ -52,7 +52,6 @@ function SignUpForm({ clientType }) {
     return (
         <form className="form form-signup" onSubmit={(event) => handleSubmit(event, 'signup')}>
             <fieldset>
-                <Logo />
                 <legend id="signup-header">Sign up</legend>
                 <div className="input-block-1">
                     <input

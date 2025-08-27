@@ -6,7 +6,7 @@ import Homebutton from '../components/homebutton';
 function Calendar() {
 
 
-     
+
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-11 indexed
     const currentYear = today.getFullYear();
@@ -112,50 +112,52 @@ function Calendar() {
         <>
             <Homebutton />
             <div id="calendar-title">Book an Appointment</div>
-            <div id="calendar-container">
-                <table id="calendar" bgcolor="lightgrey"
-                    cellSpacing="21" cellPadding="21">
-                    <caption id="table-caption" align="top">
+            <div id="calendar-body">
+                <div id="calendar-container">
+                    <table id="calendar" bgcolor="lightgrey"
+                        cellSpacing="21" cellPadding="21">
+                        <caption id="table-caption" align="top">
 
-                        <button onClick={onClickDecreaseMonth} disabled={isDisabled} >previous month</button>
-                        {monthNames[Month] + " " + currentYear}
-                        <button onClick={onClickIncrementMonth} >next month</button>
-                        <p id="scheduled-day">Appointment Date: {days || 'Select an available date'} @ {parsedHour.hour}</p>
-                    </caption>
-                    <thead>
-                        <tr>
-                            <th id="weekdays">Sun</th>
-                            <th id="weekdays">Mon</th>
-                            <th id="weekdays">Tue</th>
-                            <th id="weekdays">Wed</th>
-                            <th id="weekdays">Thu</th>
-                            <th id="weekdays">Fri</th>
-                            <th id="weekdays">Sat</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr></tr>
-                        {rows.map((week, index) => (
-                            <tr key={index}>
-                                {week.map((day, idx) => (
-                                    <td key={idx} id={day} onClick={() => generateAppointment(day, monthNames[Month], currentYear)} ><a href="#" id="days">
-                                        {day || '\u00A0'}</a>
-                                    </td>
-                                ))}
+                            <button onClick={onClickDecreaseMonth} disabled={isDisabled} >previous month</button>
+                            {monthNames[Month] + " " + currentYear}
+                            <button onClick={onClickIncrementMonth} >next month</button>
+                            <p id="scheduled-day">Appointment Date: {days || 'Select an available date'} @ {parsedHour.hour}</p>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th id="weekdays">Sun</th>
+                                <th id="weekdays">Mon</th>
+                                <th id="weekdays">Tue</th>
+                                <th id="weekdays">Wed</th>
+                                <th id="weekdays">Thu</th>
+                                <th id="weekdays">Fri</th>
+                                <th id="weekdays">Sat</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
-                <button className="addtocalendar-button" onClick={() => {
-                    
-                    window.location.href = '/services/hair';
-                }}>
-                    <a id="addtocalendar" href="/services/hair">
-                        <span className="label">Book Appointment</span></a>
-                </button>
+                        </thead>
+                        <tbody>
+                            <tr></tr>
+                            {rows.map((week, index) => (
+                                <tr key={index}>
+                                    {week.map((day, idx) => (
+                                        <td key={idx} id={day} onClick={() => generateAppointment(day, monthNames[Month], currentYear)} ><a href="#" id="days">
+                                            {day || '\u00A0'}</a>
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    <button className="addtocalendar-button" onClick={() => {
+
+                        window.location.href = '/services/hair';
+                    }}>
+                        <a id="addtocalendar" href="/services/hair">
+                            <span className="label">Book Appointment</span></a>
+                    </button>
+
+
+                </div>
                 <Hourslider id="hourslider" />
-
-
             </div>
 
         </>

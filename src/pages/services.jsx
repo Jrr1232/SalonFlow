@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
 import { Navigate, useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-
+import Header from '../components/header';
 function HairCheckout() {
 
 
@@ -117,47 +117,90 @@ function HairCheckout() {
 
     return (
         <>
-            <a id="home-button" href="/">
-                <p id="home-button"> Home </p>
-            </a>
-            <div id="services-title">Hair Services</div>
-            <hr id="services-hr" />
-            <div id="services-div">
-                <ul id="services-list">
-                    {services.map(service => (
-                        <li id="cart" key={service.name}>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    onChange={(e) => {
-                                        if (e.target.checked) {
-                                            addServiceToCart(service);
-                                        } else {
-                                            removeServiceFromCart(service);
-                                        }
-                                    }}
-                                />
-                                {service.name}
-                            </label>
-                        </li>
-                    ))}
-                </ul>
-                <div id="cart-card">
-                    {cart.length > 0 && (
-                        <ul id="shopping-cart">
-                            <div id="total-price">Total Price: ${totalPrice}</div>
-                            {cart.map((item, index) => (
-                                <li key={index}>{item.name}: ${item.price}</li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            </div>
+            <div className="hero-blur-wrapper">
 
+                <div className='hero'>
+                    <Header />
+                    <div className="services-container">
+                        <div className="hair-services">
+                            <div id="Cuts">
+                                <a href='/'>
 
-            <button id="checkout-button" onClick={handleCheckout}>Proceed to Checkout</button>
+                                    <h1>Cuts</h1>
+                                    <h2>Great haircuts with precision, style, and care—tailored just for you.</h2>
+                                </a>
+                            </div>
+                            <div id="Blowout">
+                                <a href='/'>
 
+                                    <h1>Blowout</h1>
+                                    <h2>Sleek, smooth, and full of volume—perfect for any occasion.</h2>
+                                </a>
+                            </div>
+                            <a href='/'>
+                                <div id="Color">
+                                    <h1>Color</h1>
+                                    <h2>From bold transformations to subtle highlights, let your hair shine.</h2>
+                                </div>
+                            </a>
+                            <div id="Extensions">
+                                <a href='/'>
 
+                                    <h1>Extensions</h1>
+                                    <h2>Get the length, fullness, and look you’ve always dreamed of.</h2>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="wig-services">
+                            <div id="Cleaning">
+                                <a href='/'>
+
+                                    <h1>Wig Washing & Deep Conditioning</h1>
+                                    <h2>Refresh your wig’s softness and sheen with a nourishing, pro-grade spa treatment.</h2>
+                                </a>
+                            </div>
+                            <div id="Coloring">
+                                <a href='/'>
+
+                                    <h1>Color Refresh & Highlights</h1>
+                                    <h2>Brighten, tone, or transform—expert color for a fresh, crisp look.</h2>
+                                </a>
+                            </div>
+                            <div id="Styling">
+                                <a href='/'>
+
+                                    <h1>Cut, Design & Styling</h1>
+                                    <h2>Custom trims, layers, and styling tailored to your face and vibe.</h2>
+                                </a>
+                            </div>
+                            <div id="Ventilation">
+                                <a href='/'>
+
+                                    <h1>Hand-Tied Ventilation</h1>
+                                    <h2>For an ultra-realistic hairline and natural parting that fools the eye.</h2>
+                                </a>
+                            </div>
+                            <div id="FitAdjust">
+                                <a href='/'>
+
+                                    <h1>Cap Modifications & Fit Adjustment</h1>
+                                    <h2>Perfect size, comfort, and security—your wig, reimagined to fit flawlessly.</h2>
+                                </a>
+                            </div>
+                            <div id="LaceRepair">
+                                <a href='/'>
+
+                                    <h1>Lace & Structural Repair</h1>
+                                    <h2>Mend, reinforce, and revitalize—let your wig feel and look brand new.</h2>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div >
+            </div >
         </>
     );
 }

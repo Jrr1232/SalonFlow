@@ -1,25 +1,123 @@
 @import url("https://fonts.googleapis.com/css?family=Exo:100");
 
 
-#root {
-  background-color: #F8F5F1;
-  background-repeat: no-repeat;
 
+html,
+body,
+#root {
+  background: linear-gradient(135deg, #FDFDFB 0%, #E9E3DA 100%);
+
+
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.hair-services div {
+  background-color: #eee;
+  border: solid 1px black;
+  margin-top: 3%;
+  margin-left: 55%;
+  box-shadow: 10px 10px;
+  width: 40%;
+
+}
+
+.wig-services div {
+  background-color: #eee;
+  border: solid 1px black;
+  width: 40%;
+  box-shadow: 10px 10px;
+  margin-bottom: 5%;
+}
+
+
+.hero-blur-wrapper .hero {
+  position: absolute;
+
+}
+
+.services-container {
+
+  /* keeps text and buttons clear */
+  padding-top: 40%;
+  height: 70%;
+  align-items: center;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  /* blurs background behind the box */
+
+
+
+}
+
+.services-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.services-container a:hover {
+  text-decoration: underline;
+  color: blue;
+  transition: 1s;
+}
+
+.services-container::-webkit-scrollbar {
+  /* Chrome, Safari, Opera */
+  display: none;
+}
+
+.services-container h1 {
+  font-size: 20px;
+  margin-left: 5%;
+  margin-top: 1%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.services-container h2 {
+  font-size: 17px;
+  margin-left: 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+
+
+
+
+.hero {
+
+  background-image: url("./jazmin-quaynor-e2sWuXQjOOI-unsplash.jpg");
+  background-size: 45%;
+  margin-top: 5%;
+  margin-left: 15%;
+  height: 80vh;
+  width: 70vw;
+}
+
+
+#booking-button {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-left: 40%;
+  margin-top: 20%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  border: solid 1px rgb(12, 12, 12);
+  border-radius: 0%;
+  font-weight: 300;
 }
 
 /* navbar */
 
 
-#navbar-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 110px;
-  background: transparent;
-  background-color: rgba(118, 50, 50, 0);
-  width: 100%;
-
+.navbar {
+  background-color: transparent;
 }
+
 
 .navbar-brand {
   margin-right: 10%;
@@ -27,15 +125,15 @@
 }
 
 .nav-link {
-  font-weight: 300;
-  margin-top: 35%;
-  margin-right: 4%;
-  margin-left: 13%;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 10%;
+  margin-left: 20%;
+  font-family: "Montserrat", sans-serif;
 }
 
-.nav-item {
-  margin-top: 20%;
-}
+
 
 .navbar-brand {
   margin-left: 2%;
@@ -49,7 +147,7 @@
   margin-left: 10%;
   margin-top: 10%;
   margin-bottom: 10%;
-  width: 150vh;
+  width: 75vw;
   height: 80vh;
   background-color: #EDE0D4;
   display: flex;
@@ -66,7 +164,7 @@
 }
 
 #about-text h1 {
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 600;
   margin-bottom: 4%;
   letter-spacing: 3px;
@@ -74,7 +172,6 @@
 
 #location-text {
   display: inline-block;
-  transform: translateY(-100%);
   font-size: 20px;
   color: #A68A79;
   margin-left: .7%;
@@ -82,14 +179,15 @@
 
 #about-text h3 {
   margin-top: 5%;
-  font-size: 25px;
-  font-weight: thin;
+  font-size: 20px;
   color: #33333394;
 }
 
 #cesar-pic-div {
-  margin-left: 7%;
-  height: 80vh;
+  margin-left: 10%;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
 }
 
 #cesar-pic {
@@ -153,37 +251,51 @@
 }
 
 /* Hours */
-
+#aboutpage {
+  margin-top: 10%;
+  margin-left: 5%;
+}
 
 
 #hourcard {
-  margin-top: 10%;
-  margin-left: 42%;
-  width: 400px;
-  height: 300px;
-  background-size: 120%;
-  background-repeat: no-repeat;
-  overflow: hidden;
-
+  text-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: solid 1px black;
+  margin-left: 40%;
+  height: 450px;
+  width: 500px;
+  box-shadow: 10px 10px;
+  border-radius: 0%;
 }
 
-#hourcard:hover .hours ul {
-
-  background-image: none;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 2.0s ease, transform 0.3s ease;
-}
 
 .hours ul {
-  margin-right: 10px;
-  margin-top: 20%;
+  
+  margin-top: 15%;
   display: inline;
   list-style-type: none;
-  font-size: 14px;
+  font-size: 16px;
   color: black;
   font-weight: 400;
 }
+
+.hours ul li {
+  
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+#days-list li {
+  margin-bottom: 40px;
+}
+
+#hours-list li {
+  margin-bottom: 40px;
+}
+
+
+
 
 /* Divider */
 
@@ -191,7 +303,6 @@
   color: red;
   margin-top: 150px;
   border: 1.5px solid gray;
-  width: 90%;
   margin-left: 5%;
 }
 
@@ -210,24 +321,8 @@
 
 /* Booking Button */
 
-#booking-button {
-  font-family: 'Libre Caslon Display';
-  margin-top: 3%;
-  margin-left: 40%;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 40px;
-}
-
-#booking-button-header {
-  font-family: 'Montserrat';
-  padding-right: none;
-}
 
 
-#booking-button #booking-button:hover {
-  opacity: 50%;
-}
 
 #arrow {
   margin-top: 3%;
@@ -357,7 +452,7 @@
 }
 
 .btn-login {
-  background-color: gainsboro;
+  background-color: transparent;
   margin-top: 10%;
   margin-bottom: 5%;
   margin-left: 1%;
@@ -467,8 +562,9 @@
 
 .input-block input {
   border: 0;
-  border-bottom: solid 1.5px #ccc;
   width: 100%;
+  background-color: transparent;
+
 }
 
 #signup-header {
@@ -529,6 +625,7 @@
   #home-button {
     margin-left: 50%;
     font-family: 'Courier New', Courier, monospace;
+    background-color: #ccc;
   }
 
   .input-block-1,
@@ -587,6 +684,10 @@
 
 /* Scroll Text Animation */
 
+#signup-page {
+  background-color: #ffffff;
+}
+
 #under-construction {
   background-color: rgba(255, 247, 0, 0.886);
   font-family: 'Libre Caslon Display', serif;
@@ -604,7 +705,7 @@
 #scroll-container1 {
   width: 100%;
   overflow: hidden;
-  background-color: #EDE0D4;
+  background-color: #FFF700;
   border-top: 1px solid #D6CCC2;
   border-bottom: 1px solid #D6CCC2;
   padding: 0.8rem 0;
@@ -622,7 +723,12 @@
 
 .scroll-item {
   white-space: nowrap;
+  font-family: "Orbitron";
+  margin-right: 5%;
+
   display: flex;
+  font-size: x-large;
+  font-weight: 300;
   align-items: center;
   gap: 1rem;
 }
@@ -765,12 +871,18 @@ video::-webkit-media-controls {
 }
 
 #cart-button-header {
-  margin-top: 6%;
-  margin-left: 70%;
+  margin-top: 15%;
   font-family: 'Montserrat';
 
 }
 
+/* service page */
+
+#cuts {
+  display: flex;
+  flex-wrap: wrap;
+
+}
 
 
 
@@ -783,15 +895,19 @@ video::-webkit-media-controls {
 
 #home-button {
   margin-left: 1%;
-  margin-top: 1px;
-  color: black;
+  margin-top: 5px;
   font-family: 'Montserrat';
   font-weight: 300;
+  background-color: transparent;
+  border: none;
   text-decoration: none;
 
 }
 
-
+#home-button a {
+  text-decoration: none;
+  color: black;
+}
 
 #services-list {
   margin-left: 20%;
@@ -904,6 +1020,12 @@ video::-webkit-media-controls {
 
 #calendar-container {
   display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+#calendar-title {
+  background-color: white;
 }
 
 #calendar {
@@ -925,6 +1047,8 @@ video::-webkit-media-controls {
   width: 200px;
 
 }
+
+#navbar-about {}
 
 #hours-list-container a {
   color: black;
@@ -977,9 +1101,18 @@ video::-webkit-media-controls {
   text-decoration: none;
 }
 
-.addtocalendar-button {
+#calendar-body {
+  display: flex;
+  flex-direction: wrap;
+  align-items: center;
   margin-top: 2%;
-  margin-left: 35%;
+  margin-left: 20%;
+}
+
+.addtocalendar-button {
+  height: fit-content;
+  margin-top: 2%;
+  margin-left: 47%;
   border: 0;
   font-family: 'Montserrat';
   font-weight: 300;
@@ -1026,71 +1159,81 @@ td:hover {
 }
 
 
-@media only screen and (max-width: 390px) {
 
-  #total-price {
-    margin-bottom: 50%;
-    list-style: none;
-    font-weight: 200;
-    font-size: 20px;
-
-  }
-
-  #shopping-cart li {
-    margin-bottom: 20%;
-    list-style: none;
-    font-weight: 200;
-    font-size: 14px;
-
-  }
-
-  #services-title {
-    font-family: 'Libre Caslon Display';
-    font-size: xx-large;
-    margin-left: 30%;
-
-  }
-
-
-  #navbar-header {
-    flex: auto;
-    flex-wrap: nowrap;
-
-  }
-
-  #nav-links-header {
-    display: flex;
-
-    align-items: center;
-  }
-
-
-
-  #hourcard {
-    margin-left: 10%;
-  }
-
-  #cart-button-header {
-    display: none;
-  }
-
-  #booking-button {
-    font-size: 20px;
-    margin-left: 25%;
-  }
-
-  #booking-button-header {
-    margin-left: 50%;
-    margin-top: 0%;
-    outline: none;
-    border: none;
-  }
-
-}
 
 @media only screen and (max-width: 768px),
 only screen and (max-height: 768px) {
 
+
+  .root {
+    overflow-y: hidden;
+  }
+
+  .hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+
+
+
+  #booking-button {
+    margin-top: 30%;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-size: medium;
+  }
+
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* This centers child flex items */
+    gap: 2rem;
+    width: 400px;
+  }
+
+  .hair-services {
+    flex-direction: column;
+    margin-left: 0%;
+    padding-left: 0%;
+  }
+
+  .hair-services h1,
+  .wig-services h1 {
+    font-size: large;
+
+  }
+
+  .hair-services div {
+    margin-left: 15%;
+    margin-bottom: 5%;
+  }
+
+  .wig-services {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+
+    /* Centers content inside each group */
+    gap: 1.5rem;
+  }
+
+
+  #aboutpage {
+    margin-left: 0%;
+    margin-top: 30%;
+  }
+
+  #hours {
+    margin-right: 0%;
+    margin-left: 0%;
+  }
+
+  #hours-list li {
+    margin-top: 3%;
+    margin-bottom: 56%;
+  }
 
   #total-price {
     margin-bottom: 50%;
@@ -1131,10 +1274,6 @@ only screen and (max-height: 768px) {
     margin-top: 10px;
   }
 
-  #booking-button {
-    font-size: 20px;
-    margin-left: 28%;
-  }
 
 
   #cart-button-header {
@@ -1173,7 +1312,8 @@ only screen and (max-height: 768px) {
   }
 
   #calendar-container {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 10%;
     margin-right: 23%;
