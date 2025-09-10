@@ -1118,4 +1118,13 @@ only screen and (max-height: 768px) {
     /* Removes the blue shadow effect */
   }
 
+  #services-page-container {
+    margin-left: 20%;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    width: 100%;
+  }
+
+
+
 }

@@ -100,18 +100,22 @@ function HairCheckout() {
                         JS
                     </a>
                     <button
-                        className="navbar-toggler"
+                        className={`navbar-toggler`}
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup"
                         aria-controls="navbarNavAltMarkup"
-                        aria-expanded="false"
+                        aria-expanded={cartOpen ? "true" : "false"}
                         aria-label="Toggle navigation"
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div
+                        className={`collapse navbar-collapse ${cartOpen ? "show" : ""}`}
+                        id="navbarNavAltMarkup"
+                        
+                    >
                         {/* Left side links */}
                         <div className="navbar-nav" id="header-page">
                             <a className="nav-link" href="/">
