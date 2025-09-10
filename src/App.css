@@ -877,9 +877,13 @@ only screen and (max-height: 768px) {
 
   #booking-button {
     margin-top: 30%;
-    margin-right: 20%;
+    margin-right: 10%;
     margin-left: 20%;
     font-size: medium;
+  }
+
+  .addtocalendar-button {
+    margin-left: 60%;
   }
 
   .services-container {
@@ -999,6 +1003,7 @@ only screen and (max-height: 768px) {
     flex-wrap: wrap;
     align-items: center;
     margin-top: 10%;
+    margin-right: 40%;
 
 
   }
@@ -1021,13 +1026,28 @@ only screen and (max-height: 768px) {
 
   }
 
+  #scheduled-day {
+    margin-right: 10%;
+  }
+
   #hour-container {
     margin-right: 376px;
     margin-bottom: 5%;
   }
 
+  #table-caption {
+    width: 100vw;
+    margin-left: 0%;
+  }
+
   #table-caption button {
     font-size: smaller;
+
+  }
+
+  #hours-list-container {
+    margin-left: 115%;
+
   }
 }
 
