@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import signupFormHandler from '../js/signupFormHandler';
 import Cookies from 'js-cookie';
-import Logo from './logo';
 
 function SignUpForm({ clientType }) {
     const [message, setMessage] = useState(""); // ✅ for showing success/error messages
@@ -53,7 +52,7 @@ function SignUpForm({ clientType }) {
         <form className="form form-signup" onSubmit={(event) => handleSubmit(event, 'signup')}>
             <fieldset>
                 <legend id="signup-header">Sign up</legend>
-                <div className="input-block-1">
+                <div className="signup-form-input-block">
                     <input
                         id="signup-email"
                         type="email"

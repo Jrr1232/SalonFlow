@@ -32,10 +32,9 @@ function Hourslider() {
     return (
         <>
             <div id="hour-container">
-                <p id="hour-header">Select Hour</p>
                 <ul id="hours-list-container">
                     {hours.map((hour) => (
-                        <li id="hours-list" key={hour}><a href="#" id="hour-link" onClick={() => onClickSaveHour({ hour })}>{hour}</a></li>
+                        <li id="hours-list" key={hour}><a href="#" onClick={() => onClickSaveHour({ hour })}>{hour}</a></li>
                     ))}
                 </ul>
             </div>

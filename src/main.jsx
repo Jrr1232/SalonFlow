@@ -3,20 +3,20 @@ import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { ClipLoader } from 'react-spinners';
-import About from './pages/about.jsx';
 
 // Register service worker
 
 // Lazy load route components
 const App = lazy(() => import('./App.jsx'));
-const Home = lazy(() => import('./pages/home.jsx'));
+const Home = lazy(() => import('./pages/home-page.jsx'));
 const LoginPage = lazy(() => import('./pages/login-page.jsx'));
 const HairSignupPage = lazy(() => import('./pages/hair-signup-page.jsx'));
 const WigSignupPage = lazy(() => import('./pages/wig-signup-page.jsx'));
-const HairCheckout = lazy(() => import('./pages/services.jsx'));
-const Calendar = lazy(() => import('./pages/calendar.jsx'));
-const Services = lazy(() => import('./pages/services.jsx'));
-const AboutPage = lazy(() => import('./pages/about.jsx'));
+const HairCheckout = lazy(() => import('./pages/services-page.jsx'));
+const Calendar = lazy(() => import('./pages/calendar-page.jsx'));
+const Services = lazy(() => import('./pages/services-page.jsx'));
+const AboutPage = lazy(() => import('./pages/about-page.jsx'));
+const CheckoutPage = lazy(() => import('./pages/checkout-page.jsx'));
 // Error component to handle unexpected errors
 const Error = () => <div>Error loading the page!</div>;
 
@@ -35,6 +35,7 @@ const router = createBrowserRouter([
       { path: '/calendar', element: <Calendar /> },
       { path: '/signup/hair', element: <HairSignupPage /> },
       { path: '/signup/wig', element: <WigSignupPage /> },
+      { path: '/checkout', element: <CheckoutPage /> },
     ]
   },
 ]);

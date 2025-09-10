@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import loginFormHandler from '../js/loginFormHandler';
-import Logo from './logo';
 
 function LoginForm() {
     const [formState, setFormState] = useState({
@@ -47,8 +46,7 @@ function LoginForm() {
     return (
         <form className="form form-login" onSubmit={handleSubmit}>
             <fieldset>
-                <Logo />
-                <legend id="signin-header">Log In</legend>
+                <legend id="login-header">Log In</legend>
                 <div className="input-block">
                     <input
                         id="login-email"

@@ -6,9 +6,8 @@ function HairSignupPage() {
         <div id="signup-page">
             <Homebutton className="homebutton" />
             <div id="signup-form">
-                <SignUpForm clientType="hair" />
+            <SignUpForm clientType="hair" />
             </div>
-
         </div>
     );
 }

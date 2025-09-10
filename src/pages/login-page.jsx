@@ -5,9 +5,8 @@ function LoginPage() {
     return (
         <div id="loginPage">
             <Homebutton />
-
             <div id="loginForm">
-                <LoginForm />
+            <LoginForm />
             </div>
 
         </div>
