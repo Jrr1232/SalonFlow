@@ -3,6 +3,7 @@ import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { ClipLoader } from 'react-spinners';
+import ReactGA from 'react-ga';
 
 // Register service worker
 
@@ -19,6 +20,10 @@ const AboutPage = lazy(() => import('./pages/about-page.jsx'));
 const CheckoutPage = lazy(() => import('./pages/checkout-page.jsx'));
 // Error component to handle unexpected errors
 const Error = () => <div>Error loading the page!</div>;
+
+
+ReactGA.initialize('G-KCLZ7BB8CG');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 // Create Router with lazy-loaded components
 const router = createBrowserRouter([
