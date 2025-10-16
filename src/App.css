@@ -1149,12 +1149,10 @@ only screen and (max-height: 768px) {
 
 }
 
-@media only screen and (max-width: 1300px),
+@media only screen and (min-width: 768px) and (max-width: 1300px),
 only screen and (max-height: 1000px) {
 
   #booking-button {
     margin-left: 50%;
   }
-
-
 }
