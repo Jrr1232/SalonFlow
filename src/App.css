@@ -107,7 +107,7 @@ body,
 #booking-button {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  margin-left: 50%;
+  margin-left: 30%;
   margin-top: 20%;
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
@@ -877,8 +877,6 @@ only screen and (max-height: 768px) {
 
   #booking-button {
     margin-top: 30%;
-    margin-right: 10%;
-    margin-left: 33%;
     font-size: medium;
   }
 
@@ -1149,10 +1147,10 @@ only screen and (max-height: 768px) {
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1300px),
-only screen and (max-height: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1500px),
+only screen and (max-height: 1500px) {
 
   #booking-button {
-    margin-left: 50%;
+    margin-left: 40%;
   }
 }
