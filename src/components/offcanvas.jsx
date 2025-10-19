@@ -24,7 +24,7 @@ function Offcanvas() {
     };
     return (
         <>
-            <button id="booking-button" className="btn btn-link btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <button id="navbarToggleExternalContent" className="btn btn-link btn-lg d-none d-lg-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 Book an Appointment
             </button>
             <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">

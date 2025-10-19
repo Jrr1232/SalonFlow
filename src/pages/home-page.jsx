@@ -8,7 +8,7 @@ function Home() {
         <>
             <Scrolltext />
             <div className="hero">
-                <Header />
+                    <Header />
                 <Offcanvas />
             </div>
 

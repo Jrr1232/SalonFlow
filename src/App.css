@@ -7,6 +7,7 @@ body,
   background: linear-gradient(135deg, #FDFDFB 0%, #E9E3DA 100%);
   background-repeat: no-repeat;
   height: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -51,14 +52,27 @@ body,
   background-size: 45%;
   margin-top: 5%;
   margin-left: 15%;
-  height: 80vh;
+  height: 70vh;
   width: 70vw;
+  margin-bottom: 40%;
 }
 
 /* header */
+
+.home-header {
+  width: 100%;
+  display: flex;
+}
+
 /* navbar */
 .navbar {
   background-color: transparent;
+  display: flex;
+
+}
+
+.navbarNavAltMarkup {
+  display: flex;
 }
 
 .navbar-brand {
@@ -75,12 +89,17 @@ body,
 }
 
 .nav-link {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 400;
   margin-right: 10%;
   margin-left: 20%;
   font-family: "Montserrat", sans-serif;
 }
+
+
+
+.navbar-nav {}
+
 
 
 .navbar-brand {
@@ -104,16 +123,23 @@ body,
 
 /* booking-button */
 
-#booking-button {
+#navbarToggleExternalContent {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  margin-left: 30%;
+  margin-left: 35%;
   margin-top: 20%;
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
   border: solid 1px rgb(12, 12, 12);
   border-radius: 0%;
   font-weight: 300;
+}
+
+#booking-button:hover {
+  background-color: rgba(255, 255, 255, 0.616);
+  color: black;
+  transition: 1s;
+
 }
 
 /* Services-Page */
@@ -878,6 +904,8 @@ only screen and (max-height: 768px) {
   #booking-button {
     margin-top: 30%;
     font-size: medium;
+    display: none;
+    /* valid */
   }
 
   .addtocalendar-button {
@@ -1046,111 +1074,5 @@ only screen and (max-height: 768px) {
   #hours-list-container {
     margin-left: 115%;
 
-  }
-}
-
-@media screen and (max-width: 768px) {
-
-  #root {
-    overflow-x: hidden;
-  }
-
-  #services-hr {
-    /* Ensure it doesn't grow beyond 1100px */
-    margin-left: auto;
-    /* Center it horizontally */
-    margin-right: auto;
-    /* Center it horizontally */
-    margin-bottom: 5%;
-  }
-
-  #signup-first_name {
-    border: 0;
-    border-bottom: solid 1.5px #ccc;
-    width: 35%;
-    outline: none;
-    margin-right: 10px;
-  }
-
-  #signup-last_name {
-    border: 0;
-    border-bottom: solid 1.5px #ccc;
-    width: 55%;
-    outline: none;
-  }
-
-  #signup-header {
-    font-size: 35px;
-    margin-left: 5%;
-    margin-bottom: 10%;
-  }
-
-  #home-button {}
-
-  .signup-form-input-block,
-  .input-block-3,
-  .input-block {
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 8.5%;
-  }
-
-
-
-  .btn-signup,
-  .btn-login {
-    width: 90%;
-    margin-left: 5%;
-  }
-
-  .btn-signup {
-    margin-left: 5%;
-    border: 0;
-    font-family: 'Montserrat';
-    background-color: whitesmoke;
-  }
-
-  #signin-header {
-    margin-left: 4.5%;
-
-  }
-
-  input:focus {
-    outline: none;
-    background-color: transparent;
-  }
-
-  /* Optionally, customize the focus effect */
-  input:focus {
-    outline: none;
-    background-color: transparent;
-    /* Optional: soft glowing effect */
-  }
-
-  input:-webkit-autofill {
-    background-color: transparent !important;
-    /* Removes background color */
-    border: 1px solid #ccc;
-    /* Optionally, set a neutral border */
-    box-shadow: none;
-    /* Removes the blue shadow effect */
-  }
-
-  #services-page-container {
-    margin-left: 20%;
-    margin-top: 20%;
-    margin-bottom: 10%;
-    width: 100%;
-  }
-
-
-
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1500px),
-only screen and (max-height: 1500px) {
-
-  #booking-button {
-    margin-left: 40%;
   }
 }
