@@ -7,9 +7,11 @@ function Home() {
     return (
         <>
             <Scrolltext />
+            
             <div className="hero">
                     <Header />
                 <Offcanvas />
+                
             </div>
 
         </>

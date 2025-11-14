@@ -92,13 +92,11 @@ body,
   font-size: 23px;
   font-weight: 400;
   margin-right: 10%;
-  margin-left: 20%;
   font-family: "Montserrat", sans-serif;
 }
 
 
 
-.navbar-nav {}
 
 
 
@@ -371,6 +369,7 @@ body,
   font-family: 'Montserrat';
   font-weight: 300;
   color: black;
+  margin-left: 70%;
 }
 
 #loginButton:hover {
@@ -888,9 +887,7 @@ td:hover {
 /* Responsive Design */
 @media only screen and (max-width: 768px),
 only screen and (max-height: 768px) {
-  #root {
-    overflow-x: hidden;
-  }
+  #root {}
 
   .hero {
     background-repeat: no-repeat;
@@ -899,7 +896,12 @@ only screen and (max-height: 768px) {
   }
 
 
-
+  #navbarToggleExternalContent {
+    margin-left: 30%;
+    margin-right: 20%;
+    margin-top: 30%;
+    font-size: large;
+  }
 
   #booking-button {
     margin-top: 30%;
@@ -945,13 +947,8 @@ only screen and (max-height: 768px) {
   }
 
   #hourcard-container {
-    margin-left: 0%;
-    margin-top: 30%;
-  }
-
-  #hours {
-    margin-right: 0%;
-    margin-left: 0%;
+    margin-left: 15%;
+    margin-top: 10%;
   }
 
   #hours-list li {
