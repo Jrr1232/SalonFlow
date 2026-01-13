@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Hair_client = require('../client/models/hair_client');
-
+const Wig_client = require('../client/models/wig_client');
 router.post('/hair', async (req, res) => {
     try {
         // Find all users with the provided username

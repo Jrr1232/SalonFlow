@@ -38,7 +38,7 @@ function SignUpForm({ clientType }) {
 
             if (data.userData) {
                 setMessage(data.message || "User exists. Please log in.");
-            } else if (data.newHairClient) {
+            } else if (data.newHairClient || data.newWigClient) {
                 setMessage("Account created successfully!");
                 // Optionally redirect after a short delay:
                 setTimeout(() => window.location.href = '/Calendar', 2000);
