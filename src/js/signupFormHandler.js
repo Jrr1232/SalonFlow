@@ -3,6 +3,7 @@ import Cookies from 'js-cookie';
 const signupFormHandler = async (event, formState) => {
     const expirationDate = new Date();
     expirationDate.setTime(expirationDate.getTime() + (10 * 60 * 1000));
+    const { email, first_name } = formState; // ✅ THIS FIXES THE ERROR
 
 
     Cookies.set('email', email, {
