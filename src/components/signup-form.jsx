@@ -35,6 +35,7 @@ function SignUpForm({ clientType }) {
             loginFormHandler(event, formState); // You must define loginFormHandler elsewhere
         } else {
             const data = await signupFormHandler(event, formState);
+            console.log('Received data in component:', data);
             console.log(data.newHairClient || data.newWigClient);
             if (data.userData) {
                 setMessage(data.message || "User exists. Please log in.");
