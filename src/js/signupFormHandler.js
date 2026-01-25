@@ -35,8 +35,8 @@ const signupFormHandler = async (event, formState) => {
                 }),
                 headers: { 'Content-Type': 'application/json' },
             });
-
             const data = await response.json(); // ✅ Return this to the React component
+            console.log('Signup response data:', data); // For debugging
             return data;
         } catch (error) {
             return { error: true, message: 'An error occurred during signup.' };
