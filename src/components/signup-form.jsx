@@ -35,10 +35,11 @@ function SignUpForm({ clientType }) {
             loginFormHandler(event, formState); // You must define loginFormHandler elsewhere
         } else {
             const data = await signupFormHandler(event, formState);
-
+            console.log(data.newHairClient || data.newWigClient);
             if (data.userData) {
                 setMessage(data.message || "User exists. Please log in.");
             } else if (data.newHairClient || data.newWigClient) {
+                console.log('Signup successful:', data.newWigClient || data.newHairClient);
                 setMessage("Account created successfully!");
                 // Optionally redirect after a short delay:
                 setTimeout(() => window.location.href = '/Calendar', 2000);
