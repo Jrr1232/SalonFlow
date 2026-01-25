@@ -5,15 +5,10 @@ import Homebutton from "../components/homebutton";
 function WigSignupPage() {
     return (
         <div id="signup-page">
-            {
-                <>
-                    <Homebutton />
-                    <div id="signup-form">
-                        <SignUpForm clientType="wigs" />
-                    </div>
-                </>
-
-            }
+            <Homebutton />
+            <div id="signup-form">
+                <SignUpForm clientType="wigs" />
+            </div>
         </div>
     );
 }
