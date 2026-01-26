@@ -82,7 +82,7 @@ router.post('/wigs', async (req, res) => {
             await req.session.save(); // Ensure the session is saved
 
             // Send the response with the new user data
-            return res.json({ newWigClient, userDatas });
+            return res.json({ newWigClient, userData });
         }
     } catch (err) {
         console.error(err);
