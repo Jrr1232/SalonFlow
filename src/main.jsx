@@ -18,6 +18,7 @@ const Calendar = lazy(() => import('./pages/calendar-page.jsx'));
 const Services = lazy(() => import('./pages/services-page.jsx'));
 const AboutPage = lazy(() => import('./pages/about-page.jsx'));
 const CheckoutPage = lazy(() => import('./pages/checkout-page.jsx'));
+const AdminPage = lazy(() => import('./pages/admin-page.jsx'));
 // Error component to handle unexpected errors
 const Error = () => <div>Error loading the page!</div>;
 
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
       { path: '/signup/hair', element: <HairSignupPage /> },
       { path: '/signup/wig', element: <WigSignupPage /> },
       { path: '/checkout', element: <CheckoutPage /> },
+      { path: '/admin', element: <AdminPage /> }
     ]
   },
 ]);
