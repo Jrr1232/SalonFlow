@@ -16,7 +16,7 @@ function Header() {
         <>
             <div>
                 <div className="container-fluid" id="booking-button-div">
-                    <button id="booking-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" >BOOK</button>
+                    <button id="booking-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" >BOOK APPOINTMENT</button>
                 </div>
                 <nav className="navbar navbar-expand-lg bg-body-tertiary">
                     <div className="container-fluid">

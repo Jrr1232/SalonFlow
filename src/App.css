@@ -935,19 +935,19 @@ only screen and (max-height: 768px) {
 
   }
 
+  #hero-text-top {
+    font-size: 80px;
+  }
+  #hero-text-bottom {
+    font-size: 80px;
+  }
+  
 
   #navbarToggleExternalContent {
     margin-left: 30%;
     margin-right: 20%;
     margin-top: 30%;
     font-size: large;
-  }
-
-  #booking-button {
-    margin-top: 30%;
-    font-size: medium;
-    display: none;
-    /* valid */
   }
 
   .addtocalendar-button {
@@ -1112,6 +1112,8 @@ only screen and (max-height: 768px) {
     margin-left: 115%;
 
   }
+
+
 }
 
 
