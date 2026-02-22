@@ -6,13 +6,20 @@ import Offcanvas from "../components/offcanvas";
 function Home() {
     return (
         <>
-            <Scrolltext />
-            
-            <div className="hero">
-                    <Header />
-                <Offcanvas />
-                
+            <Header />
+
+            <div className="hero-image">
+                <div className="overlay"></div>
+
+                <div className="hero-text">
+                    <p id="hero-text-top">Johanny's</p>
+                    <p id="hero-text-bottom">Unisex</p>
+                </div>
             </div>
+
+            <Scrolltext />
+            <Offcanvas />
+
 
         </>
     );

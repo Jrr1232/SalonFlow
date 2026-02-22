@@ -113,7 +113,7 @@ function Calendar() {
             <nav id="navbar-services-page" className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">
-                        JS
+                        Johanny's Unisex
                     </a>
                     <button
                         className="navbar-toggler"

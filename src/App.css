@@ -4,7 +4,6 @@
 html,
 body,
 #root {
-  background: linear-gradient(135deg, #FDFDFB 0%, #E9E3DA 100%);
   background-repeat: no-repeat;
   height: 100%;
   overflow-x: hidden;
@@ -16,7 +15,7 @@ body,
 #scroll-container {
   width: 100%;
   overflow: hidden;
-  background-color: #FFF700;
+  background-color: rgb(255, 237, 199);
   border-top: 1px solid #D6CCC2;
   border-bottom: 1px solid #D6CCC2;
   padding: 0.8rem 0;
@@ -34,7 +33,7 @@ body,
 
 .scroll-item {
   white-space: nowrap;
-  font-family: "Orbitron";
+  font-family: "Roboto";
   margin-right: 5%;
 
   display: flex;
@@ -45,65 +44,62 @@ body,
 }
 
 /* hero */
-
-.hero {
-
-  background-image: url("/jazmin-quaynor-e2sWuXQjOOI-unsplash.jpg");
-  background-size: 45%;
-  margin-top: 5%;
-  margin-left: 15%;
-  height: 70vh;
-  width: 70vw;
-  margin-bottom: 40%;
+.overlay {
+  position: absolute;
+  inset: 0;
+  /* replaces top/left/width/height */
+  background: rgba(0, 0, 0, 0.648);
+  z-index: 1;
+  animation: fadeInOverlay 2s forwards;
 }
 
-/* header */
-
-.home-header {
+.hero-image {
+  position: relative;
+  height: 100vh;
   width: 100%;
-  display: flex;
+  background: url("public/c388e5d7-5407-4c3d-8900-002cc985c23e-wm.png") center;
+  overflow: hidden;
+}
+
+#hero-text-top {
+  padding-top: 10%;
+  font-weight: 300;
+  z-index: 2;
+
+}
+
+#hero-text-bottom {
+  font-weight: lighter;
+}
+
+#hero-text-top,
+#hero-text-bottom {
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 150px;
+  animation: fadeInText 10s forwards;
+  color: rgb(255, 166, 166);
+  z-index: 5;
+
 }
 
 /* navbar */
-.navbar {
-  background-color: transparent;
-  display: flex;
 
-}
-
-.navbarNavAltMarkup {
-  display: flex;
-}
-
-.navbar-brand {
-  margin-right: 10%;
-
-}
-
-#header-page .nav-link {
+.navbar-nav {
   font-size: 20px;
-  font-weight: 400;
-  margin-right: 10%;
-  margin-left: 20%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
+  gap: 120px;
+  margin-left: 25%;
+  margin-top: 2%;
 }
-
-.nav-link {
-  font-size: 23px;
-  font-weight: 400;
-  margin-right: 10%;
-  font-family: "Montserrat", sans-serif;
-}
-
-
-
 
 
 
 .navbar-brand {
   margin-left: 2%;
-  font-family: "Corinthia";
-  font-size: x-large;
+  font-family: "Roboto";
+  font-weight: lighter;
+  font-size: large;
 
 }
 
@@ -120,6 +116,16 @@ body,
 
 
 /* booking-button */
+
+
+
+#booking-button {
+  width: 100%;
+  margin-top: 2%;
+  height: 50px;
+  background-color: rgb(255, 166, 166);
+  font-family: 'Montserrat'
+}
 
 #navbarToggleExternalContent {
   text-decoration: none;
@@ -363,9 +369,7 @@ body,
   background-color: #f8f9fa;
 }
 
-#navbar-toggler
-
-#loginButton {
+#navbar-toggler #loginButton {
   border: 0;
   background-color: rgba(153, 153, 153, 0.372);
   font-family: 'Montserrat';
@@ -595,24 +599,25 @@ body,
   font-family: 'Libre Caslon Display';
 }
 
-#services {
-  list-style: none;
-  margin-right: 30px;
-  font-size: 29px;
-  font-weight: 150;
-
-}
-
-#services li a {
-  margin-bottom: 30px;
-  text-decoration: none;
-  color: black;
-}
-
 #services li {
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  /* pushes price right */
+  align-items: center;
+  padding: 10px ;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#services a {
   text-decoration: none;
-  color: black;
+  color: inherit;
+  font-size: large;
+}
+
+.price {
+  white-space: nowrap;
+  /* prevents price wrapping */
+  font-weight: 600;
 }
 
 #nav-links-header {
@@ -620,9 +625,7 @@ body,
   margin-left: 0%;
 }
 
-.price {
-  margin-left: 35px;
-}
+
 
 .dropdown-item a {
   text-decoration: none;
@@ -1073,5 +1076,31 @@ only screen and (max-height: 768px) {
   #hours-list-container {
     margin-left: 115%;
 
+  }
+}
+
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes fadeInOverlay {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
   }
 }

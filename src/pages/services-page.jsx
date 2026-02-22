@@ -16,11 +16,11 @@ function HairCheckout() {
 
     // ✅ Services list
     const services = [
-        { name: "Cuts", price: 60, code: 1 },
-        { name: "Color/Highlights", price: 120, code: 2 },
-        { name: "Blow dry", price: 50, code: 3 },
-        { name: "Hair Styling", price: 80, code: 4 },
-        { name: "Wash", price: 20, code: 5 },
+        { name: "Cuts", price: 30, subtitle: "Starting at $30", code: 1 },
+        { name: "Color", price: 120, subtitle: "Starting at $65", code: 2 },
+        { name: "Treaments", price: 50, subtitle: "Starting at $50", code: 3 },
+        { name: "Wash", price: 80, subtitle: "Starting at $50", code: 4 },
+        { name: "Extensions", price: 20, subtitle: "Starting at $100", code: 5 },
     ];
 
     // ✅ Cookie data
@@ -97,7 +97,7 @@ function HairCheckout() {
             <nav id="navbar-services-page" className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">
-                        JS
+                        Johanny's Unisex
                     </a>
                     <button
                         className={`navbar-toggler`}
@@ -114,21 +114,21 @@ function HairCheckout() {
                     <div
                         className={`collapse navbar-collapse ${cartOpen ? "show" : ""}`}
                         id="navbarNavAltMarkup"
-                        
+
                     >
                         {/* Left side links */}
                         <div className="navbar-nav" id="header-page">
                             <a className="nav-link" href="/">
-                                Appointments
+                                ABOUT
                             </a>
                             <a className="nav-link active" href="/Services">
-                                Services
+                                TREAMENTS
                             </a>
                             <a className="nav-link" href="/Gallery">
-                                Gallery
+                                SHOP PRODUCTS
                             </a>
                             <a className="nav-link" href="/About">
-                                Hours
+                                CONTACT
                             </a>
                         </div>
 
@@ -222,7 +222,7 @@ function HairCheckout() {
                             style={{ cursor: "pointer", marginBottom: "1rem" }}
                         >
                             <h2>{service.name}</h2>
-                            <p>${service.price}</p>
+                            <p>{service.subtitle}</p>
                         </div>
                     ))
                 }

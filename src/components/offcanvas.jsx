@@ -24,9 +24,7 @@ function Offcanvas() {
     };
     return (
         <>
-            <button id="navbarToggleExternalContent" className="btn btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                Book an Appointment
-            </button>
+          
             <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel"></h5>
@@ -52,11 +50,11 @@ function Offcanvas() {
                         </a>
                         <h5 id="menu-title">Menu</h5>
                         <ul id="services">
-                            <li><a href="/calendar" onClick={handleBookingClick}>Color/Highlights</a> <span className="price">$50</span></li>
-                            <li><a href="/calendar" onClick={handleBookingClick}>Blow dry</a> <span className="price">$80</span></li>
-                            <li><a href="/calendar" onClick={handleBookingClick}>Hair Cut</a> <span className="price">$70</span></li>
-                            <li><a href="/calendar" onClick={handleBookingClick}>Wash</a> <span className="price">$50</span></li>
-                            <li><a href="/calendar" onClick={handleBookingClick}>Extensions</a> <span className="price">$100</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Cuts</a> <span className="price">Starting at $30 - $60</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Color</a> <span className="price">Starting at $65</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Treaments (Keratin, Relaxers)</a> <span className="price">Starting at $50</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Wash</a> <span className="price">Starting at $50</span></li>
+                            <li><a href="/calendar" onClick={handleBookingClick}>Extensions</a> <span className="price">Starting at $100</span></li>
                         </ul>
                         <hr />
                     </div>
