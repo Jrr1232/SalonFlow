@@ -9,9 +9,96 @@ body,
   overflow-x: hidden;
 }
 
+/* navbar */
+
+.navbar-nav {
+  font-size: 20px;
+  font-family: "Montserrat";
+  gap: 120px;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+
+
+.navbar-brand {
+  margin-left: 2%;
+  font-family: "Roboto";
+  font-weight: lighter;
+  font-size: large;
+
+}
+
+
+
+.navbar .dropdown-menu {
+  right: 0;
+  /* align to right edge of parent */
+  left: auto;
+}
+
+/* hero-section*/
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  /* replaces top/left/width/height */
+  background: rgba(0, 0, 0, 0.648);
+  z-index: 1;
+  animation: fadeInOverlay 2s forwards;
+}
+
+.hero-image {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("/c388e5d7-5407-4c3d-8900-002cc985c23e-wm.png") center;
+  overflow: hidden;
+  margin-bottom: 5%;
+}
+
+#hero-text-top {
+  padding-top: 10%;
+  font-weight: 300;
+  z-index: 2;
+
+}
+
+#hero-text-bottom {
+  font-weight: lighter;
+}
+
+#hero-text-top,
+#hero-text-bottom {
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 150px;
+  animation: fadeInText 10s forwards;
+  color: rgb(255, 255, 255);
+  z-index: 5;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+
+
+}
+
+/* About section */
+.about {
+  text-align: center;
+  padding: 0px 20px;
+  padding-bottom: 5%;
+}
+
+.about p {
+  font-family: 'Corinthia', serif;
+  font-size: 40px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  word-spacing: 10px;
+}
 
 /* scroll text */
-
 #scroll-container {
   width: 100%;
   overflow: hidden;
@@ -43,107 +130,7 @@ body,
   gap: 1rem;
 }
 
-
-/* testimonials */
-.about {
-  text-align: center;
-  padding: 0px 20px;
-  padding-bottom: 5%;
-}
-
-
-
-.about p {
-  font-family: 'Corinthia', serif;
-  font-size: 40px;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-  word-spacing: 10px;
-}
-
-/* hero */
-.overlay {
-  position: absolute;
-  inset: 0;
-  /* replaces top/left/width/height */
-  background: rgba(0, 0, 0, 0.648);
-  z-index: 1;
-  animation: fadeInOverlay 2s forwards;
-}
-
-.hero-image {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background: url("/c388e5d7-5407-4c3d-8900-002cc985c23e-wm.png") center;
-  overflow: hidden;
-  margin-bottom: 5%;
-}
-
-#hero-text-top {
-  padding-top: 10%;
-  font-weight: 300;
-  z-index: 2;
-
-}
-
-#hero-text-bottom {
-  font-weight: lighter;
-}
-
-
-
-#hero-text-top,
-#hero-text-bottom {
-  text-align: center;
-  font-family: 'Roboto';
-  font-size: 150px;
-  animation: fadeInText 10s forwards;
-  color: rgb(255, 255, 255);
-  z-index: 5;
-  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
-
-
-}
-
-/* navbar */
-
-.navbar-nav {
-  font-size: 20px;
-  font-family: "Montserrat";
-  gap: 120px;
-  margin-left: 25%;
-  margin-top: 2%;
-}
-
-
-
-.navbar-brand {
-  margin-left: 2%;
-  font-family: "Roboto";
-  font-weight: lighter;
-  font-size: large;
-
-}
-
-
-
-.navbar .dropdown-menu {
-  right: 0;
-  /* align to right edge of parent */
-  left: auto;
-}
-
-/* Services Page */
-
-
-
 /* booking-button */
-
-
-
 #booking-button {
   width: 100%;
   margin-top: 2%;
@@ -172,10 +159,6 @@ body,
 }
 
 /* Services-Page */
-
-#services-page-container {}
-
-
 #services-page-container a {
   text-decoration: none;
   color: #000000;
@@ -294,14 +277,11 @@ body,
   font-weight: 300;
 }
 
-
-/* Hour-Page */
-
+/* AboutPage */
 #hourcard-container {
   margin-top: 5%;
   margin-left: 5%;
 }
-
 
 #hourcard {
   text-align: center;
@@ -315,7 +295,6 @@ body,
   box-shadow: 10px 10px;
   border-radius: 0%;
 }
-
 
 .hours ul {
   margin-top: 15%;
@@ -372,7 +351,6 @@ body,
   text-decoration: none;
 }
 
-
 /* Offcanvas */
 .dropdown-menu {
   border: 0cap;
@@ -389,7 +367,6 @@ body,
 }
 
 /* login Button */
-
 #login {
   height: 35px;
   margin-left: 90px;
@@ -528,11 +505,9 @@ body,
 
 }
 
-/* Wrap both fields in a container */
 .form-container {
   display: flex;
   gap: 10px;
-  /* Space between fields */
 }
 
 .input-block {
@@ -543,14 +518,12 @@ body,
 .signup-form-input-block:hover,
 .input-block:hover {
   border-bottom: solid 1.5px black;
-  /* Only change border on hover */
 }
 
 #signup-first_name:hover,
 #signup-last_name:hover {
   border-bottom: solid 1.5px black;
 }
-
 
 .input-block input {
   border: 0;
@@ -578,9 +551,7 @@ body,
   background-color: rgba(59, 59, 59, 0.706);
 }
 
-
 /* Scroll Text Animation */
-
 #signup-page {
   background-color: #ffffff;
 }
@@ -616,35 +587,7 @@ body,
   margin-bottom: 5%;
 }
 
-
-/* for Chrome */
-@-webkit-keyframes my-animation {
-  from {
-    -webkit-transform: translateX(100%);
-  }
-
-  to {
-    -webkit-transform: translateX(-100%);
-  }
-}
-
-
-@keyframes my-animation {
-  from {
-    -moz-transform: translateX(0%);
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-  }
-
-  to {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
 /* Service Menu - Offcanvas*/
-
 #name-field {
   display: flex;
 }
@@ -674,7 +617,6 @@ body,
 
 .price {
   white-space: nowrap;
-  /* prevents price wrapping */
   font-weight: 600;
 }
 
@@ -694,7 +636,6 @@ body,
 }
 
 /* Home Button */
-
 #home-button {
   margin-left: 1%;
   margin-top: 5px;
@@ -712,16 +653,11 @@ body,
 }
 
 /* Checkout Page */
-
 #checkout-page {
   height: 100vh;
   background-image: url("/jazmin-quaynor-e2sWuXQjOOI-unsplash.jpg");
   background-size: contain;
-
-
 }
-
-
 
 #checkout-body {
   display: flex;
@@ -780,9 +716,7 @@ body,
   margin-right: 10%;
 }
 
-
 /* Calendar */
-
 #calendar-container {
   display: flex;
   flex-wrap: wrap;
@@ -816,11 +750,8 @@ body,
 
 }
 
-
-
 #hours-list-container::-webkit-scrollbar {
   display: none;
-  /* Chrome/Safari */
 }
 
 #hours-list-container li a {
@@ -922,7 +853,53 @@ td:hover {
   background-color: gainsboro;
 }
 
+#hair-appointments {}
 
+#wig-appointments {
+  margin-top: 10%;
+}
+
+
+#billing-section {
+  margin-top: 5%;
+  text-align: center;
+  border: solid 1px black;
+  list-style: none;
+}
+
+#billing-section ul {
+  margin-top: 2%;
+  list-style: none;
+}
+
+#wig-appointments ul {
+  list-style: none;
+  margin-top: 2%;
+
+}
+
+#wig-appointments {
+  text-align: center;
+  border: solid 1px black;
+  list-style: none;
+}
+
+#hair-appointments {
+  text-align: center;
+  border: solid 1px black;
+  list-style: none;
+}
+
+#appointments-button {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  background-color: transparent;
+  border: solid 1px black;
+  margin-left: 45%;
+  margin-top: 1%;
+  padding: 10px;
+  text-align: center;
+}
 
 /* webkits */
 
@@ -1160,5 +1137,32 @@ only screen and (max-height: 768px) {
 
   100% {
     visibility: visible;
+  }
+}
+
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }

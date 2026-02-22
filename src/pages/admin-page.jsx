@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Homebutton from "../components/homebutton";
 const backendUrl = process.env.NODE_ENV === 'production'
     ? 'https://johannysunisex-cdc945aa3db4.herokuapp.com'
     : 'http://localhost:3001';
@@ -32,33 +32,20 @@ function AdminPage() {
     }
 
     return (
-        <>
-            <button onClick={appointmentLoader}>Load All Customers</button>
+        <>  
+            <Homebutton />
+            <button id ="appointments-button" onClick={appointmentLoader}>Load All Customers</button>
+            <section id="admin-header">
 
-            <div>
-                {hairAppointments.map((appointment) => (
-                    <ul className="appointment-card">
-                        <li key={appointment._id} >{appointment.first_name} {appointment.last_name} | {appointment.client_type} </li>
-                    </ul>
-                ))}
+                <div id="billing-section">
+                    {billing.map((bill) => (
+                        <ul className="appointment-card">
+                            <li key={bill._id} >{bill.first_name} {bill.last_name} | {bill.client_type} | {bill.appointment_date} | {bill.service_date} | {bill.service_name} </li>
+                        </ul>
+                    ))}
 
-            </div>
-            <div>
-                {wigAppointments.map((appointment) => (
-                    <ul className="appointment-card">
-                        <li key={appointment._id} >{appointment.first_name} {appointment.last_name} | {appointment.client_type} </li>
-                    </ul>
-                ))}
-
-            </div>
-            <div>
-                {billing.map((bill) => (
-                    <ul className="appointment-card">
-                        <li key={bill._id} >{bill.first_name} {bill.last_name} | {bill.client_type} | {bill.appointment_date} | {bill.service_date} </li>
-                    </ul>
-                ))}
-
-            </div>
+                </div>
+            </section>
 
 
         </>
