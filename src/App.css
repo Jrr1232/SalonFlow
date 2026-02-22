@@ -43,6 +43,26 @@ body,
   gap: 1rem;
 }
 
+
+/* testimonials */
+.about {
+  text-align: center;
+  padding: 0px 20px;
+  padding-bottom: 5%;
+}
+
+
+
+.about p {
+  font-family: 'Corinthia', serif;
+  font-size: 40px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  word-spacing: 10px;
+}
+
 /* hero */
 .overlay {
   position: absolute;
@@ -59,6 +79,7 @@ body,
   width: 100%;
   background: url("public/c388e5d7-5407-4c3d-8900-002cc985c23e-wm.png") center;
   overflow: hidden;
+  margin-bottom: 5%;
 }
 
 #hero-text-top {
@@ -72,14 +93,18 @@ body,
   font-weight: lighter;
 }
 
+
+
 #hero-text-top,
 #hero-text-bottom {
   text-align: center;
   font-family: 'Roboto';
   font-size: 150px;
   animation: fadeInText 10s forwards;
-  color: rgb(255, 166, 166);
+  color: rgb(255, 255, 255);
   z-index: 5;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+
 
 }
 
@@ -157,7 +182,7 @@ body,
 }
 
 #services-page-container div {
-  background-color: #eee;
+  background-color: rgb(255, 166, 166);
   border: solid 1px black;
   margin-top: 3%;
   margin-left: 5%;
@@ -273,7 +298,7 @@ body,
 /* Hour-Page */
 
 #hourcard-container {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 5%;
 }
 
@@ -283,7 +308,8 @@ body,
   align-items: center;
   background-color: transparent;
   border: solid 1px black;
-  margin-left: 40%;
+  text-align: center;
+  margin-left: 43%;
   height: 450px;
   width: 500px;
   box-shadow: 10px 10px;
@@ -292,12 +318,11 @@ body,
 
 
 .hours ul {
-
   margin-top: 15%;
   display: inline;
   list-style-type: none;
   font-size: 16px;
-  color: black;
+  color: #000000;
   font-weight: 400;
 }
 
@@ -314,6 +339,39 @@ body,
 #hours-list li {
   margin-bottom: 40px;
 }
+
+#hourcard-header {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  font-weight: lighter;
+  font-family: 'Roboto';
+}
+
+#address {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 5%;
+  font-size: x-large;
+  font-style: normal;
+  color: black;
+}
+
+#address a {
+  text-decoration: none;
+}
+
+#phone {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 2%;
+  font-size: large;
+}
+
+#phone a {
+  text-decoration: none;
+}
+
 
 /* Offcanvas */
 .dropdown-menu {
@@ -604,7 +662,7 @@ body,
   justify-content: space-between;
   /* pushes price right */
   align-items: center;
-  padding: 10px ;
+  padding: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 

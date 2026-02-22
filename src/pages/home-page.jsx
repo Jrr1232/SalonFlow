@@ -16,7 +16,12 @@ function Home() {
                     <p id="hero-text-bottom">Unisex</p>
                 </div>
             </div>
-
+            <section className="about">
+                <p>
+                    For over 20 years, Johanny has been providing expert haircuts, color, and treatments
+                    in a warm, welcoming environment. We make every client look and feel their best.
+                </p>
+            </section>
             <Scrolltext />
             <Offcanvas />
 

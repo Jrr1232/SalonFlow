@@ -30,13 +30,13 @@ function Header() {
                                     <a className="nav-link active" aria-current="page" href="#">ABOUT</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">TREATMENTS</a>
+                                    <a className="nav-link" href="/services">TREATMENTS</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">SHOP PRODUCTS</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">CONTACT</a>
+                                    <a className="nav-link" href="/about">CONTACT</a>
                                 </li>
                             </ul>
                         </div>
