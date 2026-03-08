@@ -5,18 +5,18 @@ function Scrolltext() {
             <div id="scroll-container">
                 <div className="scroll-track">
                     <span className="scroll-item">
-                        Johanny's Unisex Salon
+                        📍 332 Hooper St, Brooklyn, NY 11211
 
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </span>
 
                     <span className="scroll-item">
-                        20+ years experience
+                        📞 (347) 662-7049
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        Wigs | Blowouts | Cuts | Color
+                        ✂️ Walk-ins Welcome • Hair • Color • Braids • Wigs
 
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </span>

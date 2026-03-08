@@ -54,12 +54,12 @@ body,
   width: 100%;
   background: url("/c388e5d7-5407-4c3d-8900-002cc985c23e-wm.png") center;
   overflow: hidden;
-  margin-bottom: 5%;
 }
 
 #hero-text-top {
-  padding-top: 10%;
-  font-weight: 300;
+  position: relative;
+  padding-top: 3%;
+  font-weight: 100;
   z-index: 2;
 
 }
@@ -70,6 +70,7 @@ body,
 
 #hero-text-top,
 #hero-text-bottom {
+  position: relative;
   text-align: center;
   font-family: 'Roboto';
   font-size: 150px;
@@ -102,7 +103,7 @@ body,
 #scroll-container {
   width: 100%;
   overflow: hidden;
-  background-color: rgb(255, 237, 199);
+  background-color: rgb(249, 255, 199);
   border-top: 1px solid #D6CCC2;
   border-bottom: 1px solid #D6CCC2;
   padding: 0.8rem 0;
@@ -136,7 +137,24 @@ body,
   margin-top: 2%;
   height: 50px;
   background-color: rgb(255, 166, 166);
-  font-family: 'Montserrat'
+  font-family: 'Montserrat';
+
+}
+
+#booking-button-hero {
+  display: none;
+  position: relative;
+  width: 75%;
+  margin-left: 15%;
+  border: solid 1px black;
+  margin-top: 10%;
+  height: 50px;
+  background-color: rgb(247, 247, 247);
+  font-family: 'Montserrat';
+  z-index: 1;
+  animation: fadeInButton 15s forwards;
+
+
 }
 
 #navbarToggleExternalContent {
@@ -580,6 +598,16 @@ body,
   }
 }
 
+@keyframes fadeInButton {
+  0% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
 #services-title {
   font-family: 'Libre Caslon Display';
   font-size: xx-large;
@@ -935,13 +963,27 @@ only screen and (max-height: 768px) {
 
   }
 
+  #services-page-container{
+    margin-top: 20%;
+    margin-left: 5%;
+  }
+  #header-page {
+    display: none;
+  }
+
+
   #hero-text-top {
+    margin-top: 55%;
     font-size: 80px;
   }
+
   #hero-text-bottom {
     font-size: 80px;
   }
-  
+
+  #booking-button-hero {
+    display: block;
+  }
 
   #navbarToggleExternalContent {
     margin-left: 30%;
@@ -1131,6 +1173,20 @@ only screen and (max-height: 768px) {
   }
 }
 
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
 @keyframes fadeInOverlay {
   0% {
     opacity: 0;
@@ -1141,6 +1197,8 @@ only screen and (max-height: 768px) {
     visibility: visible;
   }
 }
+
+
 
 
 /* for Chrome */

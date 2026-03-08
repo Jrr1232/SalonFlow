@@ -219,7 +219,7 @@ function HairCheckout() {
                                 setCartOpen(true);
 
                             }}
-                            style={{ cursor: "pointer", marginBottom: "1rem" }}
+                            style={{ cursor: "pointer", marginBottom: "2rem" }}
                         >
                             <h2>{service.name}</h2>
                             <p>{service.subtitle}</p>
