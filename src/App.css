@@ -963,10 +963,16 @@ only screen and (max-height: 768px) {
 
   }
 
-  #services-page-container{
+  #booking-button {
+    color: black;
+
+  }
+
+  #services-page-container {
     margin-top: 20%;
     margin-left: 5%;
   }
+
   #header-page {
     display: none;
   }
